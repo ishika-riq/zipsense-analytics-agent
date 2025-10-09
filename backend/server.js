@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const OpenAI = require("openai");
+const path = require('path');
 require("dotenv").config();
 
 const app = express();
@@ -542,6 +543,13 @@ app.get("/api/health", (req, res) => {
     timestamp: new Date().toISOString(),
   });
 });
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 
 // Clean up old sessions (run periodically)
 setInterval(() => {
