@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const API_BASE = "http://localhost:3001";
+const API_BASE = process.env.REACT_APP_API_URL;
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -19,67 +19,6 @@ function App() {
   const [selectedCampaign, setSelectedCampaign] = useState(null);
   const [generationStatus, setGenerationStatus] = useState("idle");
   const [strategyDoc, setStrategyDoc] = useState(null);
-
-  // const strategyDoc = {
-  //   content: {
-  //     campaign_strategy: {
-  //       campaign_summary:
-  //         "The strategy focuses on leveraging brand excitement to announce the launch of a new, limited-time offer, encouraging repeat purchases among existing customers.",
-  //       primary_objective:
-  //         "Encourage repeat purchases by introducing a new Limited Edition Pack.",
-  //       target_segment:
-  //         "Customers engaged within the last 180 days, familiar with the brand, and active.",
-  //       key_messaging:
-  //         "Scarcity and urgency drive purchases of the limited-time Fall Pack.",
-  //       blocks: [
-  //         {
-  //           order: 1,
-  //           block_type: "header",
-  //           indicative_content:
-  //             "Brand header featuring our logo with navigation to New Products, Best Sellers, and Offers.",
-  //           redirection_url: "https://www.brandhomepage.com",
-  //         },
-  //         {
-  //           order: 2,
-  //           block_type: "hero_image",
-  //           indicative_content:
-  //             "Vibrant image of the Limited Edition Fall Pack with headline: 'Grab the Fall Pack Before It's Gone!'",
-  //           redirection_url: "https://www.brandhomepage.com/fall-pack",
-  //         },
-  //         {
-  //           order: 3,
-  //           block_type: "product_push",
-  //           indicative_content:
-  //             "Spotlighting the Fall Pack with images, a brief description emphasizing its unique flavors and limited availability.",
-  //           redirection_url: "https://www.brandhomepage.com/fall-pack",
-  //         },
-  //         {
-  //           order: 4,
-  //           block_type: "sale_block",
-  //           indicative_content:
-  //             "Highlight of an exclusive offer on the Fall Pack, including a 15% discount for returning customers. Use code FALL15.",
-  //           redirection_url: "https://www.brandhomepage.com/sale",
-  //         },
-  //         {
-  //           order: 5,
-  //           block_type: "product_review_block",
-  //           indicative_content:
-  //             "Testimonials praising previous limited editions, fostering trust and excitement for the new pack.",
-  //           redirection_url: "https://www.brandhomepage.com/reviews/fall-pack",
-  //         },
-  //         {
-  //           order: 6,
-  //           block_type: "footer",
-  //           indicative_content:
-  //             "Standard footer with links to unsubscribe, contact info, privacy policy, and social media profiles.",
-  //           redirection_url: null,
-  //         },
-  //       ],
-  //     },
-  //   },
-  //   strategy_doc_id: 10,
-  //   version: 8,
-  // };
 
   const lastIdRef = useRef("");
 
