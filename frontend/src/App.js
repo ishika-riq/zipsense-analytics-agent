@@ -1,53 +1,50 @@
 import React, { useState, useRef, useEffect } from "react";
+import {
+  LineChart,
+  Line,
+  BarChart,
+  Bar,
+  PieChart,
+  Pie,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 
-const API_BASE = process.env.REACT_APP_API_URL;
+const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:3001";
 
 function App() {
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isTyping, setIsTyping] = useState(false);
-  const [sessionStatus, setSessionStatus] = useState("ready");
-  const [showQuickActions, setShowQuickActions] = useState(false);
-  const messagesEndRef = useRef(null);
-  const textareaRef = useRef(null);
   const [connectionStatus, setConnectionStatus] = useState("connected");
   const [brands, setBrands] = useState([]);
   const [selectedBrand, setSelectedBrand] = useState("1");
   const [sessionId, setSessionId] = useState(null);
-  const [showOverlay, setShowOverlay] = useState(false);
-  const [selectedCampaign, setSelectedCampaign] = useState(null);
-  const [generationStatus, setGenerationStatus] = useState("idle");
-  const [strategyDoc, setStrategyDoc] = useState(null);
+  const messagesEndRef = useRef(null);
+  const textareaRef = useRef(null);
+  const [showQuickActions, setShowQuickActions] = useState(false);
+  const outputEndRef = useRef(null);
 
-  const lastIdRef = useRef("");
-
-  const generateId = () => {
-    // Get timestamp in milliseconds for uniqueness
-    let timestamp = Date.now();
-
-    // Add small random component (0-999) for extra collision protection
-    const random = Math.floor(Math.random() * 1000);
-
-    // Combine timestamp and random, convert to base-36 (0-9, a-z)
-    const id = (timestamp * 1000 + random).toString(36);
-
-    // Ensure we never return duplicate ID (extremely rare but possible)
-    if (id === lastIdRef.current) {
-      // If somehow duplicate, recursively call until unique
-      return generateId();
-    }
-
-    lastIdRef.current = id;
-    return id;
-  };
+  const COLORS = [
+    "#5B419C",
+    "#A48AFB",
+    "#C3B5FD",
+    "#DDD6FE",
+    "#EBE9FE",
+    "#ec4899",
+  ];
 
   const quickActions = [
-    "Show me the top 3 performing campaigns",
-    "Compare open rates across all campaigns",
-    "Create an email calendar for next month",
-    "Which campaigns had the lowest unsubscribe rates?",
-    "Generate a performance summary report",
+    "Show me the top 5 performing campaigns",
+    "Plot open rates for all campaigns",
+    "Compare click rates across campaigns",
+    "Show revenue distribution by campaign type",
+    "Which campaigns had the best engagement?",
   ];
 
   const styles = {
@@ -73,53 +70,6 @@ function App() {
       flexDirection: "column",
       overflow: "hidden",
     },
-    mainContent: {
-      display: "flex",
-      flex: 1,
-      overflow: "hidden",
-      position: "relative",
-    },
-    leftSection: {
-      width: "30%",
-      borderRight: "1px solid #e2e8f0",
-      display: "flex",
-      flexDirection: "column",
-      overflow: "hidden",
-    },
-
-    middleSection: {
-      width: "70%",
-      borderRight: "1px solid #e2e8f0",
-      display: "flex",
-      flexDirection: "column",
-      overflow: "hidden",
-    },
-
-    rightSection: {
-      width: "30%",
-      display: "flex",
-      flexDirection: "column",
-      overflow: "hidden",
-    },
-
-    sectionHeader: {
-      padding: "1rem 1.5rem",
-      borderBottom: "1px solid #e2e8f0",
-      backgroundColor: "#f8fafc",
-    },
-
-    sectionTitle: {
-      fontSize: "0.9rem",
-      fontWeight: "600",
-      color: "#1e293b",
-      margin: 0,
-    },
-
-    sectionContent: {
-      flex: 1,
-      overflowY: "auto",
-      padding: "1rem",
-    },
     header: {
       background: "linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%)",
       color: "#64748b",
@@ -144,18 +94,13 @@ function App() {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      overflow: "hidden",
+      fontSize: "1.2rem",
     },
     title: {
       fontSize: "1.1rem",
       fontWeight: "600",
       margin: 0,
       color: "#1e293b",
-    },
-    subtitle: {
-      color: "#64748b",
-      fontSize: "0.8rem",
-      margin: 0,
     },
     headerRight: {
       display: "flex",
@@ -184,17 +129,47 @@ function App() {
       fontWeight: "500",
       transition: "background-color 0.2s",
     },
+    mainContent: {
+      display: "flex",
+      flex: 1,
+      overflow: "hidden",
+    },
+    leftSection: {
+      width: "33.3",
+      minWidth: "33.3%",
+      maxWidth: "33.3%",
+      borderRight: "1px solid #e2e8f0",
+      display: "flex",
+      flexDirection: "column",
+      overflow: "hidden",
+    },
+    rightSection: {
+      width: "66.7%",
+      display: "flex",
+      flexDirection: "column",
+      overflow: "hidden",
+    },
+    sectionHeader: {
+      padding: "1rem 1.5rem",
+      borderBottom: "1px solid #e2e8f0",
+      backgroundColor: "#f8fafc",
+    },
+    sectionTitle: {
+      fontSize: "0.9rem",
+      fontWeight: "600",
+      color: "#1e293b",
+      margin: 0,
+    },
     messagesArea: {
       flex: 1,
       overflowY: "auto",
+      padding: "1rem",
       background: "rgba(248, 250, 252, 0.3)",
-      display: "flex",
-      flexDirection: "column",
-      gap: "1rem",
     },
     messageContainer: {
       display: "flex",
       gap: "0.6rem",
+      marginBottom: "1rem",
     },
     userMessageContainer: {
       justifyContent: "flex-end",
@@ -222,13 +197,13 @@ function App() {
       backgroundColor: "white",
       color: "#64748b",
       border: "1px solid #e2e8f0",
-      padding: "2px",
-      overflow: "hidden",
     },
     messageContent: {
-      maxWidth: "75%",
+      maxWidth: "80%",
+      minWidth: 0,
       display: "flex",
       flexDirection: "column",
+      overflow: "hidden",
     },
     messageBubble: {
       padding: "0.8rem 1rem",
@@ -236,6 +211,8 @@ function App() {
       fontSize: "0.8rem",
       lineHeight: "1.4",
       wordWrap: "break-word",
+      wordBreak: "break-word",
+      overflowWrap: "break-word",
       boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1)",
     },
     userMessage: {
@@ -247,7 +224,6 @@ function App() {
       backgroundColor: "white",
       color: "#1e293b",
       border: "1px solid #e2e8f0",
-      boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1)",
     },
     errorMessage: {
       backgroundColor: "#fef2f2",
@@ -261,22 +237,6 @@ function App() {
     },
     userTimestamp: {
       textAlign: "right",
-    },
-    suggestions: {
-      marginTop: "0.6rem",
-      display: "flex",
-      flexDirection: "column",
-      gap: "0.4rem",
-    },
-    suggestionButton: {
-      padding: "0.6rem",
-      backgroundColor: "white",
-      border: "1px solid #e2e8f0",
-      borderRadius: "6px",
-      textAlign: "left",
-      cursor: "pointer",
-      fontSize: "0.75rem",
-      transition: "all 0.2s",
     },
     typingIndicator: {
       display: "flex",
@@ -296,135 +256,16 @@ function App() {
       borderRadius: "50%",
       animation: "spin 1s linear infinite",
     },
-    calendarGrid: {
-      marginTop: "0.8rem",
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-      gap: "1rem",
-    },
-    calendarCard: {
-      backgroundColor: "#f8fafc",
-      border: "1px solid #e2e8f0",
-      borderRadius: "10px",
-      padding: "0.9rem",
-      transition: "all 0.2s",
-      position: "relative",
-      minHeight: "100px",
-    },
-    generateButton: {
-      position: "absolute",
-      bottom: "0.6rem",
-      right: "0.6rem",
-      width: "26px",
-      height: "26px",
-      backgroundColor: "#4f46e5",
-      border: "none",
-      borderRadius: "50%",
-      color: "white",
-      cursor: "pointer",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      fontSize: "0.75rem",
-      fontWeight: "bold",
-      transition: "all 0.2s",
-      opacity: 0.9,
-      boxShadow: "0 2px 6px rgba(79, 70, 229, 0.3)",
-    },
-    cardHeader: {
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "flex-start",
-      marginBottom: "0.6rem",
-      gap: "0.5rem",
-    },
-    cardTitle: {
-      fontSize: "0.85rem",
-      fontWeight: "600",
-      color: "#1e293b",
-      margin: 0,
-      lineHeight: "1.3",
-      flex: 1,
-      minWidth: 0,
-      wordBreak: "break-word",
-      hyphens: "auto",
-    },
-    cardDate: {
-      fontSize: "0.7rem",
-      color: "#64748b",
-      fontWeight: "500",
-    },
-    cardType: {
-      fontSize: "0.65rem",
-      padding: "0.2rem 0.5rem",
-      borderRadius: "12px",
-      fontWeight: "500",
-      textTransform: "uppercase",
-      letterSpacing: "0.5px",
-    },
-    cardContent: {
-      marginTop: "0.6rem",
-      paddingBottom: "1.2rem",
-    },
-    cardSubject: {
-      fontSize: "0.8rem",
-      color: "#374151",
-      fontWeight: "500",
-      marginBottom: "0.4rem",
-      lineHeight: "1.3",
-    },
-    cardPreview: {
-      fontSize: "0.75rem",
-      color: "#6b7280",
-      lineHeight: "1.4",
-      marginBottom: "0.3rem",
-    },
     inputArea: {
       borderTop: "1px solid #e2e8f0",
       backgroundColor: "white",
       padding: "1rem",
     },
-    quickActionsContainer: {
-      marginBottom: "0.8rem",
-    },
-    quickActionsTitle: {
-      fontSize: "0.75rem",
-      color: "#64748b",
-      fontWeight: "500",
-      marginBottom: "0.4rem",
-    },
-    quickActionsGrid: {
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-      gap: "0.4rem",
-    },
-    quickActionButton: {
-      textAlign: "left",
-      padding: "0.6rem",
-      fontSize: "0.75rem",
-      backgroundColor: "#f8fafc",
-      border: "1px solid #e2e8f0",
-      borderRadius: "6px",
-      cursor: "pointer",
-      transition: "all 0.2s",
-    },
     inputForm: {
       display: "flex",
-      alignItems: "end",
-      gap: "0.8rem",
-    },
-    quickActionToggle: {
-      width: "36px",
-      height: "36px",
-      backgroundColor: "#f1f5f9",
-      border: "none",
-      borderRadius: "6px",
-      display: "flex",
       alignItems: "center",
-      justifyContent: "center",
-      cursor: "pointer",
-      transition: "background-color 0.2s",
-      flexShrink: 0,
+      gap: "0.8rem",
+      height: "40px",
     },
     textareaContainer: {
       flex: 1,
@@ -446,6 +287,8 @@ function App() {
     sendButton: {
       width: "40px",
       height: "40px",
+      minHeight: "40px",
+      maxHeight: "40px",
       backgroundColor: "#4f46e5",
       border: "none",
       borderRadius: "8px",
@@ -461,78 +304,65 @@ function App() {
       backgroundColor: "#d1d5db",
       cursor: "not-allowed",
     },
-    helpText: {
-      fontSize: "0.65rem",
-      color: "#64748b",
-      textAlign: "center",
-      marginTop: "0.4rem",
-    },
-    overlay: {
-      position: "absolute",
-      top: 0,
-      right: 0,
-      width: "30%",
-      height: "100%",
-      backgroundColor: "white",
-      borderLeft: "1px solid #e2e8f0",
-      boxShadow: "-2px 0 10px rgba(0, 0, 0, 0.1)",
-      zIndex: 100,
+    quickActionsGrid: {
       display: "flex",
       flexDirection: "column",
-      animation: "slideInRight 0.3s ease-out",
+      gap: "0.5rem",
+      marginBottom: "0.8rem",
     },
-    overlayHeader: {
-      padding: "1rem 1.5rem",
-      borderBottom: "1px solid #e2e8f0",
+    quickActionButton: {
+      textAlign: "left",
+      padding: "0.75rem 1rem",
+      fontSize: "0.85rem",
       backgroundColor: "#f8fafc",
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
+      border: "1px solid #e2e8f0",
+      borderRadius: "8px",
+      cursor: "pointer",
+      transition: "all 0.2s",
+      width: "100%",
     },
-    overlayTitle: {
-      fontSize: "0.9rem",
+    outputArea: {
+      flex: 1,
+      overflowY: "auto",
+      padding: "1rem",
+      background: "rgba(248, 250, 252, 0.3)",
+    },
+    outputCard: {
+      backgroundColor: "white",
+      border: "1px solid #e2e8f0",
+      borderRadius: "12px",
+      padding: "1rem",
+      marginBottom: "1rem",
+      boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1)",
+    },
+    chartContainer: {
+      marginTop: "1rem",
+      padding: "1rem",
+      backgroundColor: "#f8fafc",
+      borderRadius: "8px",
+      border: "1px solid #e2e8f0",
+    },
+    chartTitle: {
+      fontSize: "0.85rem",
       fontWeight: "600",
       color: "#1e293b",
-      margin: 0,
+      marginBottom: "0.75rem",
     },
-    closeButton: {
-      width: "28px",
-      height: "28px",
-      border: "none",
-      borderRadius: "6px",
+    quickActionToggle: {
+      width: "40px",
+      height: "40px",
+      minHeight: "40px",
+      maxHeight: "40px",
       backgroundColor: "#f1f5f9",
-      cursor: "pointer",
+      border: "none",
+      borderRadius: "8px",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
+      cursor: "pointer",
       transition: "background-color 0.2s",
+      flexShrink: 0,
     },
-    overlayContent: {
-      flex: 1,
-      padding: "1rem",
-      overflowY: "auto",
-      backgroundColor: "white",
-    },
-  };
-
-  const getCardTypeStyle = (type) => {
-    const lowerType = type?.toLowerCase() || "";
-    if (lowerType.includes("sale") || lowerType.includes("promo")) {
-      return { backgroundColor: "#fef3c7", color: "#92400e" };
-    } else if (
-      lowerType.includes("newsletter") ||
-      lowerType.includes("education")
-    ) {
-      return { backgroundColor: "#dbeafe", color: "#1e40af" };
-    } else if (lowerType.includes("launch") || lowerType.includes("product")) {
-      return { backgroundColor: "#d1fae5", color: "#065f46" };
-    } else {
-      return { backgroundColor: "#f3e8ff", color: "#6b21a8" };
-    }
-  };
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -541,7 +371,6 @@ function App() {
 
   useEffect(() => {
     fetchBrands();
-    initializeSession();
     checkConnection();
   }, []);
 
@@ -551,16 +380,26 @@ function App() {
     }
   }, [brands]);
 
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const checkConnection = async () => {
     try {
       const response = await fetch(`${API_BASE}/api/health`);
-      if (response.ok) {
-        setConnectionStatus("connected");
-      } else {
-        setConnectionStatus("disconnected");
-      }
+      setConnectionStatus(response.ok ? "connected" : "disconnected");
     } catch (error) {
       setConnectionStatus("disconnected");
+    }
+  };
+
+  const fetchBrands = async () => {
+    try {
+      const response = await fetch(`${API_BASE}/api/brands`);
+      const data = await response.json();
+      setBrands(data.brands);
+    } catch (error) {
+      console.error("Failed to fetch brands:", error);
     }
   };
 
@@ -575,26 +414,22 @@ function App() {
 
       if (data.sessionId) {
         setSessionId(data.sessionId);
-        setSessionStatus(data.status);
-
         setMessages([
           {
             type: "assistant",
             content: data.greeting,
             timestamp: new Date(),
-            suggestions: quickActions.slice(0, 3),
           },
         ]);
       }
     } catch (error) {
       console.error("Failed to initialize session:", error);
-      setSessionStatus("error");
       setConnectionStatus("disconnected");
       setMessages([
         {
           type: "assistant",
           content:
-            "I'm having trouble connecting to the analytics engine. Please check that the backend server is running on port 3001.",
+            "I'm having trouble connecting. Please check that the backend server is running.",
           timestamp: new Date(),
           isError: true,
         },
@@ -602,15 +437,16 @@ function App() {
     }
   };
 
-  const fetchBrands = async () => {
-    try {
-      const response = await fetch(`${API_BASE}/api/brands`);
-      const data = await response.json();
-      setBrands(data.brands);
-    } catch (error) {
-      console.error("Failed to fetch brands:", error);
+  useEffect(() => {
+    const hasNewOutput = messages.some(
+      (msg, index) =>
+        msg.type === "assistant" && index > 0 && !msg.content.includes("?")
+    );
+
+    if (hasNewOutput) {
+      outputEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }
-  };
+  }, [messages]);
 
   const handleBrandChange = async (brandKey) => {
     setSelectedBrand(brandKey);
@@ -618,210 +454,127 @@ function App() {
     await initializeSession(brandKey);
   };
 
-  const parseCalendarData = (content) => {
-    // Check if this is a clarifying question (before calendar generation)
-    const isQuestion = content.includes("?");
-
+  const parseChartData = (content) => {
     try {
-      const jsonMatch =
-        content.match(/```json\s*([\s\S]*?)\s*```/) ||
-        content.match(/\{[\s\S]*"campaigns"[\s\S]*\}/);
-
+      const jsonMatch = content.match(/```json\s*([\s\S]*?)\s*```/);
       if (jsonMatch) {
-        const jsonStr = jsonMatch[1] || jsonMatch[0];
-        const data = JSON.parse(jsonStr);
-
-        const calendarId = generateId();
-
-        const campaignsWithIds = (data.campaigns || data).map((campaign) => ({
-          ...campaign,
-          campaign_id: generateId(),
-          calendar_id: calendarId,
-        }));
-
-        return {
-          campaigns: campaignsWithIds,
-          hasCalendar: true,
-          calendarId: calendarId,
-          isQuestion: false,
-        };
+        const data = JSON.parse(jsonMatch[1]);
+        return data;
       }
-      return { isQuestion }; // Return whether it's a question
+      return null;
     } catch (error) {
-      console.error("Failed to parse calendar JSON:", error);
-      return { isQuestion };
+      console.error("Failed to parse chart data:", error);
+      return null;
     }
   };
 
-  const cleanContentForCalendar = (content) => {
-    // Remove JSON code blocks if calendar data is present
-    let cleanContent = content.replace(/```json\s*[\s\S]*?\s*```/g, "");
-    // Remove standalone JSON objects
-    cleanContent = cleanContent.replace(/\{[\s\S]*"campaigns"[\s\S]*\}/g, "");
-    // Clean up extra whitespace and newlines
-    cleanContent = cleanContent.replace(/\n\s*\n\s*\n/g, "\n\n").trim();
-    return cleanContent;
+  const cleanContentForChart = (content) => {
+    return content.replace(/```json\s*[\s\S]*?\s*```/g, "").trim();
   };
 
-  const sendCalendarToAPI = async (campaigns, calendarId, brandId) => {
-    try {
-      const url = `https://zip.retainiq.io/strategydoc/brands/${brandId}/calendars/bulk/`;
+  const renderChart = (chartData) => {
+    if (!chartData || !chartData.type || !chartData.data) return null;
 
-      const payload = {
-        calender_id: calendarId,
-        campaigns: campaigns,
-      };
+    const commonProps = {
+      width: "100%",
+      height: 300,
+    };
 
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (!response.ok) {
-        throw new Error(`API call failed: ${response.status}`);
-      }
-
-      const result = await response.json();
-      console.log("Calendar data sent successfully:", result);
-      return result;
-    } catch (error) {
-      console.error("Failed to send calendar data to API:", error);
-      throw error;
-    }
-  };
-
-  const generateCampaignContent = async (campaign) => {
-    setSelectedCampaign(campaign);
-    setStrategyDoc(null);
-    setShowOverlay(true);
-    setGenerationStatus("loading");
-
-    if (!campaign.calendar_id) {
-      console.error("Calendar ID not found in campaign");
-      setGenerationStatus("error");
-      return;
-    }
-
-    try {
-      const url = `https://zip.retainiq.io/strategydoc/brands/${selectedBrand}/calendars/${campaign.calendar_id}/campaigns/${campaign.campaign_id}/generate/`;
-
-      console.log("Calling generate API:", url);
-
-      const response = await fetch(url, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error(`API call failed: ${response.status}`);
-      }
-
-      const result = await response.json();
-      console.log("Generate API response:", result);
-      setGenerationStatus("success");
-      setStrategyDoc(result);
-    } catch (error) {
-      console.error("Failed to generate campaign content:", error);
-      setGenerationStatus("error");
-    }
-  };
-  const renderCalendarCards = (campaigns) => {
-    console.log(campaigns);
-    if (!Array.isArray(campaigns)) return null;
-
-    return (
-      <div style={styles.calendarGrid}>
-        {campaigns.map((campaign) => (
-          <div
-            key={campaign.campaign_id}
-            style={styles.calendarCard}
-            onMouseOver={(e) => {
-              e.currentTarget.style.transform = "translateY(-2px)";
-              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.1)";
-              const generateBtn =
-                e.currentTarget.querySelector(".generate-btn");
-              if (generateBtn) generateBtn.style.opacity = "1";
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "none";
-              const generateBtn =
-                e.currentTarget.querySelector(".generate-btn");
-              if (generateBtn) generateBtn.style.opacity = "0.8";
-            }}
-          >
-            <button
-              className="generate-btn"
-              style={styles.generateButton}
-              onClick={() => generateCampaignContent(campaign)}
-              title="Generate content for this campaign"
-              onMouseOver={(e) => {
-                e.target.style.backgroundColor = "#4338ca";
-                e.target.style.transform = "scale(1.1)";
-              }}
-              onMouseOut={(e) => {
-                e.target.style.backgroundColor = "#4f46e5";
-                e.target.style.transform = "scale(1)";
-              }}
+    switch (chartData.type) {
+      case "line":
+        return (
+          <ResponsiveContainer {...commonProps}>
+            <LineChart
+              data={chartData.data}
+              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
             >
-              ✨
-            </button>
-            <div style={styles.cardHeader}>
-              <h4 style={styles.cardTitle}>
-                {campaign.campaign_name || campaign.name}
-              </h4>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-end",
-                  gap: "0.3rem",
-                  flexShrink: 0,
-                }}
+              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+              <XAxis
+                dataKey={chartData.xKey || "name"}
+                tick={{ fontSize: 12 }}
+              />
+              <YAxis tick={{ fontSize: 12 }} />
+              <Tooltip />
+              <Legend />
+              {chartData.lines?.map((line, idx) => (
+                <Line
+                  key={idx}
+                  type="monotone"
+                  dataKey={line.key}
+                  stroke={COLORS[idx % COLORS.length]}
+                  strokeWidth={2}
+                  name={line.name || line.key}
+                />
+              ))}
+            </LineChart>
+          </ResponsiveContainer>
+        );
+
+      case "bar":
+        return (
+          <ResponsiveContainer {...commonProps}>
+            <BarChart
+              data={chartData.data}
+              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+            >
+              <CartesianGrid
+                strokeDasharray="3 3"
+                stroke="#e2e8f0"
+                vertical={false}
+              />
+              <XAxis
+                dataKey={chartData.xKey || "name"}
+                tick={{ fontSize: 10 }}
+              />
+              <YAxis tick={{ fontSize: 10 }} />
+              <Tooltip />
+              <Legend />
+              {chartData.bars?.map((bar, idx) => (
+                <Bar
+                  key={idx}
+                  dataKey={bar.key}
+                  barSize={25}
+                  fill={COLORS[idx % COLORS.length]}
+                  name={bar.name || bar.key}
+                  radius={[6, 6, 0, 0]}
+                />
+              ))}
+            </BarChart>
+          </ResponsiveContainer>
+        );
+
+      case "pie":
+        return (
+          <ResponsiveContainer {...commonProps}>
+            <PieChart>
+              <Pie
+                data={chartData.data}
+                cx="50%"
+                cy="50%"
+                labelLine={false}
+                label={({ name, percent }) =>
+                  `${name}: ${(percent * 100).toFixed(0)}%`
+                }
+                outerRadius={80}
+                fill="#8884d8"
+                dataKey={chartData.valueKey || "value"}
               >
-                <span style={styles.cardDate}>
-                  {campaign.planned_date || campaign.date || campaign.send_date}
-                </span>
-                <span
-                  style={{
-                    ...styles.cardType,
-                    ...getCardTypeStyle(campaign.email_type || campaign.type),
-                  }}
-                >
-                  {campaign.email_type || campaign.type || "Email"}
-                </span>
-              </div>
-            </div>
-            <div style={styles.cardContent}>
-              <div style={styles.cardSubject}>
-                📧 {campaign.subject_line || campaign.subject}
-              </div>
-              {(campaign.preview_text || campaign.preview) && (
-                <div style={styles.cardPreview}>
-                  {campaign.preview_text || campaign.preview}
-                </div>
-              )}
-              {campaign.planned_time && (
-                <div
-                  style={{
-                    fontSize: "0.7rem",
-                    color: "#9ca3af",
-                    marginTop: "0.2rem",
-                  }}
-                >
-                  ⏰ {campaign.planned_time}
-                </div>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-    );
+                {chartData.data.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                  />
+                ))}
+              </Pie>
+              <Tooltip />
+              <Legend />
+            </PieChart>
+          </ResponsiveContainer>
+        );
+
+      default:
+        return null;
+    }
   };
 
   const sendMessage = async (messageText = null) => {
@@ -837,8 +590,6 @@ function App() {
     setMessages((prev) => [...prev, userMessage]);
     setInputMessage("");
     setIsLoading(true);
-    setIsTyping(true);
-    setShowQuickActions(false);
 
     try {
       const response = await fetch(`${API_BASE}/api/chat`, {
@@ -849,28 +600,11 @@ function App() {
 
       const data = await response.json();
 
-      await new Promise((resolve) => setTimeout(resolve, 800));
-
       if (data.status === "success") {
-        const calendarData = parseCalendarData(data.response);
-
-        const displayContent = calendarData?.hasCalendar
-          ? cleanContentForCalendar(data.response)
+        const chartData = parseChartData(data.response);
+        const displayContent = chartData
+          ? cleanContentForChart(data.response)
           : data.response;
-
-        if (calendarData?.hasCalendar && calendarData?.campaigns) {
-          sendCalendarToAPI(
-            calendarData.campaigns,
-            calendarData.calendarId,
-            selectedBrand
-          )
-            .then(() => {
-              console.log("Calendar synced to API");
-            })
-            .catch((error) => {
-              console.error("Failed to sync calendar:", error);
-            });
-        }
 
         setMessages((prev) => [
           ...prev,
@@ -878,9 +612,7 @@ function App() {
             type: "assistant",
             content: displayContent,
             timestamp: new Date(),
-            calendarData: calendarData?.campaigns || null,
-            calendarId: calendarData?.calendarId || null,
-            isQuestion: calendarData?.isQuestion || false, // Add this flag
+            chartData: chartData,
           },
         ]);
         setConnectionStatus("connected");
@@ -892,8 +624,7 @@ function App() {
         ...prev,
         {
           type: "assistant",
-          content:
-            "I encountered an issue processing your request. Please try again or rephrase your question.",
+          content: "I encountered an issue. Please try again.",
           timestamp: new Date(),
           isError: true,
         },
@@ -901,7 +632,6 @@ function App() {
       setConnectionStatus("disconnected");
     } finally {
       setIsLoading(false);
-      setIsTyping(false);
     }
   };
 
@@ -930,12 +660,10 @@ function App() {
 
   const formatMessage = (content) => {
     return content.split("\n").map((line, index) => {
-      // Replace **text** with bold formatting
       const formattedLine = line.replace(
         /\*\*(.*?)\*\*/g,
         "<strong>$1</strong>"
       );
-
       return (
         <React.Fragment key={index}>
           <span dangerouslySetInnerHTML={{ __html: formattedLine }}></span>
@@ -960,15 +688,6 @@ function App() {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
           }
-
-             @keyframes slideIn {
-      from {
-        transform: translateX(100%);
-      }
-      to {
-        transform: translateX(0);
-      }
-    }
         `}
       </style>
 
@@ -977,32 +696,9 @@ function App() {
         <header style={styles.header}>
           <div style={styles.headerContent}>
             <div style={styles.headerLeft}>
-              <div style={styles.icon}>
-                <img
-                  src="/zipsense-logo.png"
-                  alt="Zipsense Logo"
-                  style={{
-                    width: "24px",
-                    height: "24px",
-                    objectFit: "contain",
-                  }}
-                  onError={(e) => {
-                    e.target.style.display = "none";
-                    e.target.nextSibling.style.display = "block";
-                  }}
-                />
-                <svg
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  style={{ display: "none" }}
-                >
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
+              <div style={styles.icon}>📊</div>
               <div>
-                <h1 style={styles.title}>Zipsense AI Strategist</h1>
+                <h1 style={styles.title}>Zipsense Analytics</h1>
                 <div
                   style={{
                     display: "flex",
@@ -1035,21 +731,6 @@ function App() {
                       fontWeight: "500",
                       color: "#1e293b",
                       boxShadow: "0 1px 2px rgba(0, 0, 0, 0.05)",
-                      transition: "all 0.2s",
-                      appearance: "none",
-                      backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L2 4h8z'/%3E%3C/svg%3E")`,
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "right 0.5rem center",
-                    }}
-                    onMouseOver={(e) => {
-                      e.target.style.borderColor = "#c7d2fe";
-                      e.target.style.boxShadow =
-                        "0 0 0 3px rgba(139, 92, 246, 0.1)";
-                    }}
-                    onMouseOut={(e) => {
-                      e.target.style.borderColor = "#e2e8f0";
-                      e.target.style.boxShadow =
-                        "0 1px 2px rgba(0, 0, 0, 0.05)";
                     }}
                   >
                     {brands.map((brand) => (
@@ -1088,150 +769,122 @@ function App() {
           </div>
         </header>
 
-        {/* Messages Area */}
+        {/* Main Content */}
         <div style={styles.mainContent}>
           {/* Left Section - Chat */}
           <div style={styles.leftSection}>
             <div style={styles.sectionHeader}>
               <h2 style={styles.sectionTitle}>Chat</h2>
             </div>
-            <div
-              style={{
-                ...styles.sectionContent,
-                padding: "1rem",
-                background: "rgba(248, 250, 252, 0.3)",
-              }}
-            >
-              <div style={styles.messagesArea}>
-                {messages.map((message, index) => {
-                  const isWelcomeMessage =
-                    message.type === "assistant" && index === 0;
 
-                  const shouldShowInChat =
-                    message.type === "user" ||
-                    isWelcomeMessage ||
-                    (message.type === "assistant" && message.isQuestion); // Show questions in chat
+            <div style={styles.messagesArea}>
+              {messages.map((message, index) => {
+                // Check if it's the welcome message (first assistant message)
+                const isWelcomeMessage =
+                  index === 0 && message.type === "assistant";
+                const hasQuestionMark =
+                  message.content && message.content.includes("?");
 
-                  if (!shouldShowInChat) return null;
+                // Show in chat: all user messages, welcome message, or assistant messages with ?
+                const shouldShowInChat =
+                  message.type === "user" ||
+                  isWelcomeMessage ||
+                  (message.type === "assistant" && hasQuestionMark);
 
-                  return (
+                // Skip if shouldn't show in chat
+                if (!shouldShowInChat) return null;
+
+                return (
+                  <div
+                    key={index}
+                    style={{
+                      ...styles.messageContainer,
+                      ...(message.type === "user"
+                        ? styles.userMessageContainer
+                        : styles.assistantMessageContainer),
+                    }}
+                  >
                     <div
-                      key={index}
                       style={{
-                        ...styles.messageContainer,
+                        ...styles.avatar,
                         ...(message.type === "user"
-                          ? styles.userMessageContainer
-                          : styles.assistantMessageContainer),
+                          ? styles.userAvatar
+                          : styles.assistantAvatar),
+                        order: message.type === "user" ? 2 : 1,
                       }}
                     >
-                      {/* Avatar */}
+                      {message.type === "user" ? "You" : "AI"}
+                    </div>
+                    <div
+                      style={{
+                        ...styles.messageContent,
+                        order: message.type === "user" ? 1 : 2,
+                      }}
+                    >
                       <div
                         style={{
-                          ...styles.avatar,
+                          ...styles.messageBubble,
                           ...(message.type === "user"
-                            ? styles.userAvatar
-                            : styles.assistantAvatar),
-                          order: message.type === "user" ? 2 : 1,
+                            ? styles.userMessage
+                            : message.isError
+                            ? styles.errorMessage
+                            : styles.assistantMessage),
                         }}
                       >
-                        {message.type === "user" ? (
-                          "You"
-                        ) : (
-                          <img
-                            src="/zipsense-logo.png"
-                            alt="Zipsense AI"
-                            style={{
-                              width: "20px",
-                              height: "20px",
-                              objectFit: "contain",
-                            }}
-                            onError={(e) => {
-                              e.target.style.display = "none";
-                              e.target.nextSibling.style.display = "block";
-                            }}
-                          />
-                        )}
-                        {message.type === "assistant" && (
-                          <span style={{ display: "none", fontSize: "0.7rem" }}>
-                            AI
-                          </span>
-                        )}
+                        {formatMessage(message.content)}
                       </div>
-
-                      {/* Message Content */}
                       <div
                         style={{
-                          ...styles.messageContent,
-                          order: message.type === "user" ? 1 : 2,
+                          ...styles.timestamp,
+                          ...(message.type === "user"
+                            ? styles.userTimestamp
+                            : {}),
                         }}
                       >
-                        {/* Message bubble */}
-                        <div
-                          style={{
-                            ...styles.messageBubble,
-                            ...(message.type === "user"
-                              ? styles.userMessage
-                              : message.isError
-                              ? styles.errorMessage
-                              : styles.assistantMessage),
-                          }}
-                        >
-                          <div>{formatMessage(message.content)}</div>
-                        </div>
-
-                        {/* Suggestions - only for welcome message */}
-                        {message.suggestions && isWelcomeMessage && (
-                          <div style={styles.suggestions}>
-                            {message.suggestions.map((suggestion, idx) => (
-                              <button
-                                key={idx}
-                                onClick={() => sendMessage(suggestion)}
-                                style={styles.suggestionButton}
-                                onMouseOver={(e) => {
-                                  e.target.style.backgroundColor = "#f8fafc";
-                                  e.target.style.borderColor = "#4f46e5";
-                                }}
-                                onMouseOut={(e) => {
-                                  e.target.style.backgroundColor = "white";
-                                  e.target.style.borderColor = "#e2e8f0";
-                                }}
-                              >
-                                {suggestion}
-                              </button>
-                            ))}
-                          </div>
-                        )}
-
-                        {/* Timestamp */}
-                        <div
-                          style={{
-                            ...styles.timestamp,
-                            ...(message.type === "user"
-                              ? styles.userTimestamp
-                              : {}),
-                          }}
-                        >
-                          {formatTimestamp(message.timestamp)}
-                        </div>
+                        {formatTimestamp(message.timestamp)}
                       </div>
                     </div>
-                  );
-                })}
+                  </div>
+                );
+              })}
 
-                <div ref={messagesEndRef} />
-              </div>
+              {isLoading && (
+                <div style={styles.messageContainer}>
+                  <div style={{ ...styles.avatar, ...styles.assistantAvatar }}>
+                    AI
+                  </div>
+                  <div style={styles.messageContent}>
+                    <div style={styles.typingIndicator}>
+                      <div style={styles.spinner}></div>
+                      <span style={{ fontSize: "0.75rem", color: "#64748b" }}>
+                        Analyzing...
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <div ref={messagesEndRef} />
             </div>
 
-            {/* Input Area - Moved inside left section */}
+            {/* Input Area */}
             <div style={styles.inputArea}>
-              {/* Quick Actions */}
               {showQuickActions && (
-                <div style={styles.quickActionsContainer}>
-                  <div style={styles.quickActionsTitle}>Quick Actions:</div>
+                <div>
+                  <div
+                    style={{
+                      fontSize: "0.75rem",
+                      color: "#64748b",
+                      fontWeight: "500",
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Quick Actions:
+                  </div>
                   <div style={styles.quickActionsGrid}>
-                    {quickActions.map((action, index) => (
+                    {quickActions.map((action, idx) => (
                       <button
-                        key={index}
+                        key={idx}
                         onClick={() => sendMessage(action)}
                         style={styles.quickActionButton}
                         onMouseOver={(e) => {
@@ -1250,8 +903,8 @@ function App() {
                 </div>
               )}
 
-              {/* Input form */}
               <div style={styles.inputForm}>
+                {/* Thunder bolt button */}
                 <button
                   onClick={() => setShowQuickActions(!showQuickActions)}
                   style={styles.quickActionToggle}
@@ -1285,10 +938,10 @@ function App() {
                     value={inputMessage}
                     onChange={(e) => setInputMessage(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    placeholder="Ask about campaign performance..."
+                    placeholder="Ask about analytics.."
                     style={styles.textarea}
-                    disabled={isLoading}
                     rows={1}
+                    disabled={isLoading}
                     onFocus={(e) => (e.target.style.borderColor = "#4f46e5")}
                     onBlur={(e) => (e.target.style.borderColor = "#d1d5db")}
                   />
@@ -1302,9 +955,6 @@ function App() {
                     ...(isLoading || !inputMessage.trim()
                       ? styles.sendButtonDisabled
                       : {}),
-                    ...(!isLoading && inputMessage.trim()
-                      ? {}
-                      : { cursor: "not-allowed" }),
                   }}
                   onMouseOver={(e) => {
                     if (!isLoading && inputMessage.trim()) {
@@ -1337,560 +987,53 @@ function App() {
                   )}
                 </button>
               </div>
-
-              <div style={styles.helpText}>
-                Press Enter to send • Shift+Enter for new line
-              </div>
             </div>
           </div>
 
-          {/* Middle Section - Output */}
-          <div style={styles.middleSection}>
+          {/* Right Section - Output */}
+          <div style={styles.rightSection}>
             <div style={styles.sectionHeader}>
-              <h2 style={styles.sectionTitle}>Output</h2>
+              <h2 style={styles.sectionTitle}>Output & Visualizations</h2>
             </div>
-            <div
-              style={{
-                ...styles.sectionContent,
-                background: "rgba(248, 250, 252, 0.3)",
-              }}
-            >
-              {messages.map((message, index) => {
-                const isWelcomeMessage = index === 0;
 
-                const shouldShowInOutput =
-                  message.type === "assistant" &&
-                  !isWelcomeMessage &&
-                  !message.isQuestion; // Don't show questions in output
-
-                if (!shouldShowInOutput) return null;
-
-                return (
-                  <div key={index} style={{ marginBottom: "1rem" }}>
+            <div style={styles.outputArea}>
+              {messages
+                .filter((msg, index) => {
+                  const isWelcomeMessage = index === 0;
+                  const hasQuestionMark =
+                    msg.content && msg.content.includes("?");
+                  return (
+                    msg.type === "assistant" &&
+                    !isWelcomeMessage &&
+                    !hasQuestionMark
+                  );
+                })
+                .map((message, index) => (
+                  <div key={index} style={styles.outputCard}>
                     <div
                       style={{
-                        ...styles.messageContainer,
-                        ...styles.assistantMessageContainer,
+                        fontSize: "0.8rem",
+                        lineHeight: "1.4",
+                        color: "#1e293b",
                       }}
                     >
-                      {/* Avatar */}
-                      <div
-                        style={{
-                          ...styles.avatar,
-                          ...styles.assistantAvatar,
-                          order: 1,
-                        }}
-                      >
-                        <img
-                          src="/zipsense-logo.png"
-                          alt="Zipsense AI"
-                          style={{
-                            width: "20px",
-                            height: "20px",
-                            objectFit: "contain",
-                          }}
-                          onError={(e) => {
-                            e.target.style.display = "none";
-                            e.target.nextSibling.style.display = "block";
-                          }}
-                        />
-                        <span style={{ display: "none", fontSize: "0.7rem" }}>
-                          AI
-                        </span>
-                      </div>
-
-                      {/* Message Content */}
-                      <div
-                        style={{
-                          ...styles.messageContent,
-                          order: 2,
-                        }}
-                      >
-                        {/* Message bubble */}
-                        <div
-                          style={{
-                            ...styles.messageBubble,
-                            ...(message.isError
-                              ? styles.errorMessage
-                              : styles.assistantMessage),
-                          }}
-                        >
-                          <div>{formatMessage(message.content)}</div>
-                        </div>
-
-                        {/* Calendar Cards */}
-                        {message.calendarData &&
-                          renderCalendarCards(message.calendarData)}
-
-                        {/* Suggestions */}
-                        {message.suggestions && (
-                          <div style={styles.suggestions}>
-                            {message.suggestions.map((suggestion, idx) => (
-                              <button
-                                key={idx}
-                                onClick={() => sendMessage(suggestion)}
-                                style={styles.suggestionButton}
-                                onMouseOver={(e) => {
-                                  e.target.style.backgroundColor = "#f8fafc";
-                                  e.target.style.borderColor = "#4f46e5";
-                                }}
-                                onMouseOut={(e) => {
-                                  e.target.style.backgroundColor = "white";
-                                  e.target.style.borderColor = "#e2e8f0";
-                                }}
-                              >
-                                {suggestion}
-                              </button>
-                            ))}
-                          </div>
-                        )}
-
-                        {/* Timestamp */}
-                        <div style={styles.timestamp}>
-                          {formatTimestamp(message.timestamp)}
-                        </div>
-                      </div>
+                      {formatMessage(message.content)}
                     </div>
-                  </div>
-                );
-              })}
 
-              {/* Typing indicator */}
-              {isTyping && (
-                <div style={styles.messageContainer}>
-                  <div style={{ ...styles.avatar, ...styles.assistantAvatar }}>
-                    <img
-                      src="/zipsense-logo.png"
-                      alt="Zipsense AI"
-                      style={{
-                        width: "20px",
-                        height: "20px",
-                        objectFit: "contain",
-                      }}
-                      onError={(e) => {
-                        e.target.style.display = "none";
-                        e.target.nextSibling.style.display = "block";
-                      }}
-                    />
-                    <span style={{ display: "none", fontSize: "0.7rem" }}>
-                      AI
-                    </span>
+                    {message.chartData && (
+                      <div style={styles.chartContainer}>
+                        <h4 style={styles.chartTitle}>
+                          {message.chartData.title || "Data Visualization"}
+                        </h4>
+                        {renderChart(message.chartData)}
+                      </div>
+                    )}
                   </div>
-                  <div style={styles.messageContent}>
-                    <div style={styles.typingIndicator}>
-                      <div style={styles.spinner}></div>
-                      <span style={{ fontSize: "0.75rem", color: "#64748b" }}>
-                        AI is analyzing...
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              )}
+                ))}
+
+              <div ref={outputEndRef} />
             </div>
           </div>
-          {showOverlay && (
-            <div style={styles.overlay}>
-              <div style={styles.overlayHeader}>
-                <h3 style={styles.overlayTitle}>Strategy</h3>
-                <button
-                  style={styles.closeButton}
-                  onClick={() => {
-                    setShowOverlay(false);
-                    setGenerationStatus("idle");
-                  }}
-                  onMouseOver={(e) =>
-                    (e.target.style.backgroundColor = "#e2e8f0")
-                  }
-                  onMouseOut={(e) =>
-                    (e.target.style.backgroundColor = "#f1f5f9")
-                  }
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 4l8 8M12 4l-8 8"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div style={styles.overlayContent}>
-                {generationStatus === "loading" && (
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      padding: "3rem 1rem",
-                      gap: "1rem",
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: "40px",
-                        height: "40px",
-                        border: "3px solid #e2e8f0",
-                        borderTop: "3px solid #4f46e5",
-                        borderRadius: "50%",
-                        animation: "spin 1s linear infinite",
-                      }}
-                    ></div>
-                    <p
-                      style={{
-                        fontSize: "0.85rem",
-                        color: "#64748b",
-                        margin: 0,
-                      }}
-                    >
-                      Generating campaign strategy...
-                    </p>
-                  </div>
-                )}
-                {generationStatus === "error" && (
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      padding: "3rem 1rem",
-                      gap: "1rem",
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: "48px",
-                        height: "48px",
-                        backgroundColor: "#fef2f2",
-                        borderRadius: "50%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontSize: "1.5rem",
-                      }}
-                    >
-                      ⚠️
-                    </div>
-                    <p
-                      style={{
-                        fontSize: "0.85rem",
-                        color: "#dc2626",
-                        margin: 0,
-                        textAlign: "center",
-                      }}
-                    >
-                      Failed to generate campaign strategy. Please try again.
-                    </p>
-                    <button
-                      style={{
-                        backgroundColor: "#4f46e5",
-                        color: "white",
-                        border: "none",
-                        borderRadius: "6px",
-                        padding: "0.5rem 1rem",
-                        fontSize: "0.8rem",
-                        fontWeight: "500",
-                        cursor: "pointer",
-                        marginTop: "0.5rem",
-                      }}
-                      onClick={() => generateCampaignContent(selectedCampaign)}
-                      onMouseOver={(e) =>
-                        (e.target.style.backgroundColor = "#4338ca")
-                      }
-                      onMouseOut={(e) =>
-                        (e.target.style.backgroundColor = "#4f46e5")
-                      }
-                    >
-                      Retry
-                    </button>
-                  </div>
-                )}
-                {generationStatus === "success" && strategyDoc && (
-                  <div style={{ fontSize: "0.85rem" }}>
-                    <div style={{ marginBottom: "1.5rem" }}>
-                      <h4
-                        style={{
-                          fontSize: "1.1rem",
-                          fontWeight: "600",
-                          color: "black",
-                          textTransform: "uppercase",
-                          letterSpacing: "0.5px",
-                          marginBottom: "0.5rem",
-                        }}
-                      >
-                       {selectedCampaign.campaign_name}
-                      </h4>
-                    </div>
-
-                    <div style={{ marginBottom: "1.5rem" }}>
-                      <h4
-                        style={{
-                          fontSize: "0.75rem",
-                          fontWeight: "600",
-                          color: "#64748b",
-                          textTransform: "uppercase",
-                          letterSpacing: "0.5px",
-                          marginBottom: "0.5rem",
-                        }}
-                      >
-                        Campaign Summary
-                      </h4>
-                      <p
-                        style={{
-                          color: "#1e293b",
-                          lineHeight: "1.6",
-                          margin: 0,
-                        }}
-                      >
-                        {strategyDoc.content.campaign_strategy.campaign_summary}
-                      </p>
-                    </div>
-
-                    {/* Primary Objective */}
-                    <div style={{ marginBottom: "1.5rem" }}>
-                      <h4
-                        style={{
-                          fontSize: "0.75rem",
-                          fontWeight: "600",
-                          color: "#64748b",
-                          textTransform: "uppercase",
-                          letterSpacing: "0.5px",
-                          marginBottom: "0.5rem",
-                        }}
-                      >
-                        Primary Objective
-                      </h4>
-                      <p
-                        style={{
-                          color: "#1e293b",
-                          lineHeight: "1.6",
-                          margin: 0,
-                        }}
-                      >
-                        {
-                          strategyDoc.content.campaign_strategy
-                            .primary_objective
-                        }
-                      </p>
-                    </div>
-
-                    {/* Target Segment */}
-                    <div style={{ marginBottom: "1.5rem" }}>
-                      <h4
-                        style={{
-                          fontSize: "0.75rem",
-                          fontWeight: "600",
-                          color: "#64748b",
-                          textTransform: "uppercase",
-                          letterSpacing: "0.5px",
-                          marginBottom: "0.5rem",
-                        }}
-                      >
-                        Target Segment
-                      </h4>
-                      <p
-                        style={{
-                          color: "#1e293b",
-                          lineHeight: "1.6",
-                          margin: 0,
-                        }}
-                      >
-                        {strategyDoc.content.campaign_strategy.target_segment}
-                      </p>
-                    </div>
-
-                    {/* Key Messaging */}
-                    <div style={{ marginBottom: "1.5rem" }}>
-                      <h4
-                        style={{
-                          fontSize: "0.75rem",
-                          fontWeight: "600",
-                          color: "#64748b",
-                          textTransform: "uppercase",
-                          letterSpacing: "0.5px",
-                          marginBottom: "0.5rem",
-                        }}
-                      >
-                        Key Messaging
-                      </h4>
-                      <p
-                        style={{
-                          color: "#1e293b",
-                          lineHeight: "1.6",
-                          margin: 0,
-                        }}
-                      >
-                        {strategyDoc.content.campaign_strategy.key_messaging}
-                      </p>
-                    </div>
-
-                    {/* Content Blocks */}
-                    <div>
-                      <h4
-                        style={{
-                          fontSize: "0.75rem",
-                          fontWeight: "600",
-                          color: "#64748b",
-                          textTransform: "uppercase",
-                          letterSpacing: "0.5px",
-                          marginBottom: "0.75rem",
-                        }}
-                      >
-                        Email Content Blocks
-                      </h4>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          gap: "0.75rem",
-                        }}
-                      >
-                        {strategyDoc.content.campaign_strategy.blocks.map(
-                          (block, index) => (
-                            <div
-                              key={index}
-                              style={{
-                                backgroundColor: "#f8fafc",
-                                border: "1px solid #e2e8f0",
-                                borderRadius: "8px",
-                                padding: "0.75rem",
-                              }}
-                            >
-                              <div
-                                style={{
-                                  display: "flex",
-                                  justifyContent: "space-between",
-                                  alignItems: "center",
-                                  marginBottom: "0.5rem",
-                                }}
-                              >
-                                <span
-                                  style={{
-                                    fontSize: "0.7rem",
-                                    fontWeight: "600",
-                                    color: "#4f46e5",
-                                    textTransform: "uppercase",
-                                    letterSpacing: "0.5px",
-                                  }}
-                                >
-                                  {block.block_type.replace(/_/g, " ")}
-                                </span>
-                                <span
-                                  style={{
-                                    fontSize: "0.65rem",
-                                    color: "#64748b",
-                                    backgroundColor: "white",
-                                    padding: "0.2rem 0.5rem",
-                                    borderRadius: "12px",
-                                    border: "1px solid #e2e8f0",
-                                  }}
-                                >
-                                  Block {block.order}
-                                </span>
-                              </div>
-                              <p
-                                style={{
-                                  fontSize: "0.75rem",
-                                  color: "#475569",
-                                  lineHeight: "1.5",
-                                  margin: "0 0 0.5rem 0",
-                                }}
-                              >
-                                {block.indicative_content}
-                              </p>
-                              {block.redirection_url && (
-                                <a
-                                  href={block.redirection_url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  style={{
-                                    fontSize: "0.7rem",
-                                    color: "#4f46e5",
-                                    textDecoration: "none",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    gap: "0.25rem",
-                                  }}
-                                  onMouseOver={(e) =>
-                                    (e.target.style.textDecoration =
-                                      "underline")
-                                  }
-                                  onMouseOut={(e) =>
-                                    (e.target.style.textDecoration = "none")
-                                  }
-                                >
-                                  🔗 {block.redirection_url}
-                                </a>
-                              )}
-                            </div>
-                          )
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Generate Email Button */}
-                    <div
-                      style={{
-                        marginTop: "1.5rem",
-                        paddingTop: "1rem",
-                        borderTop: "1px solid #e2e8f0",
-                        display: "flex",
-                        justifyContent: "flex-end",
-                      }}
-                    >
-                      <button
-                        style={{
-                          backgroundColor: "#4f46e5",
-                          color: "white",
-                          border: "none",
-                          borderRadius: "8px",
-                          padding: "0.75rem 1.5rem",
-                          fontSize: "0.85rem",
-                          fontWeight: "600",
-                          cursor: "pointer",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "0.5rem",
-                          transition: "all 0.2s",
-                          boxShadow: "0 2px 4px rgba(79, 70, 229, 0.2)",
-                        }}
-                        onMouseOver={(e) => {
-                          e.target.style.backgroundColor = "#4338ca";
-                          e.target.style.transform = "translateY(-1px)";
-                          e.target.style.boxShadow =
-                            "0 4px 8px rgba(79, 70, 229, 0.3)";
-                        }}
-                        onMouseOut={(e) => {
-                          e.target.style.backgroundColor = "#4f46e5";
-                          e.target.style.transform = "translateY(0)";
-                          e.target.style.boxShadow =
-                            "0 2px 4px rgba(79, 70, 229, 0.2)";
-                        }}
-                        onClick={() => {
-                          console.log(
-                            "Generate email for campaign:",
-                            selectedCampaign
-                          );
-                          // Add your generate email logic here
-                        }}
-                      >
-                        <span>✨</span>
-                        Generate Email
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>
