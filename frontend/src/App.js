@@ -31,19 +31,24 @@ function App() {
   const outputEndRef = useRef(null);
 
   const COLORS = [
-    "#5B419C",
-    "#A48AFB",
-    "#C3B5FD",
-    "#DDD6FE",
-    "#EBE9FE",
-    "#ec4899",
+    "#1F77B4",
+    "#FF7F0E",
+    "#2CA02C",
+    "#D62728",
+    "#9467BD",
+    "#17BECF",
+    "#8C564B",
+    "#BCBD22",
   ];
 
   const quickActions = [
     "Show me the top 5 performing campaigns",
     "Plot open rates for all campaigns",
     "Compare click rates across campaigns",
-    "Show revenue distribution by campaign type",
+    "Show me top performing flows",
+    "Compare flow performance across metrics",
+    "Compare campaigns vs flows performance",
+    "Show flow revenue trends over time",
     "Which campaigns had the best engagement?",
   ];
 
@@ -660,10 +665,74 @@ function App() {
 
   const formatMessage = (content) => {
     return content.split("\n").map((line, index) => {
-      const formattedLine = line.replace(
-        /\*\*(.*?)\*\*/g,
-        "<strong>$1</strong>"
+      let formattedLine = line;
+
+      // Handle headers
+      if (line.startsWith("### ")) {
+        formattedLine = `<h3 style="font-size: 0.95rem; font-weight: 600; color: #1e293b; margin: 0.75rem 0 0.4rem 0;">${line.replace(
+          "### ",
+          ""
+        )}</h3>`;
+      } else if (line.startsWith("## ")) {
+        formattedLine = `<h2 style="font-size: 1rem; font-weight: 600; color: #1e293b; margin: 0.85rem 0 0.5rem 0;">${line.replace(
+          "## ",
+          ""
+        )}</h2>`;
+      } else if (line.startsWith("# ")) {
+        formattedLine = `<h1 style="font-size: 1.1rem; font-weight: 600; color: #1e293b; margin: 1rem 0 0.6rem 0;">${line.replace(
+          "# ",
+          ""
+        )}</h1>`;
+      }
+      // Handle bold
+      else {
+        formattedLine = line.replace(
+          /\*\*(.*?)\*\*/g,
+          "<strong style='font-weight: 600; color: #1e293b;'>$1</strong>"
+        );
+      }
+
+      // Handle italic
+      formattedLine = formattedLine.replace(
+        /\*(.*?)\*/g,
+        "<em style='font-style: italic;'>$1</em>"
       );
+
+      // Handle inline code
+      formattedLine = formattedLine.replace(
+        /`(.*?)`/g,
+        "<code style='background-color: #f1f5f9; padding: 0.15rem 0.35rem; border-radius: 3px; font-size: 0.85em; font-family: monospace;'>$1</code>"
+      );
+
+      // Handle bullet points
+      if (line.trim().startsWith("- ") || line.trim().startsWith("* ")) {
+        formattedLine = `<li style="margin-left: 1.25rem; margin-bottom: 0.25rem; color: #475569;">${formattedLine.replace(
+          /^[\-\*]\s+/,
+          ""
+        )}</li>`;
+      }
+
+      // Handle numbered lists
+      if (/^\d+\.\s/.test(line.trim())) {
+        formattedLine = `<li style="margin-left: 1.25rem; margin-bottom: 0.25rem; color: #475569; list-style-type: decimal;">${formattedLine.replace(
+          /^\d+\.\s+/,
+          ""
+        )}</li>`;
+      }
+
+      // Handle blockquotes
+      if (line.trim().startsWith("> ")) {
+        formattedLine = `<blockquote style="border-left: 3px solid #8b5cf6; padding-left: 0.75rem; margin: 0.5rem 0; color: #64748b; font-style: italic;">${line.replace(
+          "> ",
+          ""
+        )}</blockquote>`;
+      }
+
+      // Handle horizontal rules
+      if (line.trim() === "---" || line.trim() === "***") {
+        formattedLine = `<hr style="border: none; border-top: 1px solid #e2e8f0; margin: 0.75rem 0;" />`;
+      }
+
       return (
         <React.Fragment key={index}>
           <span dangerouslySetInnerHTML={{ __html: formattedLine }}></span>
