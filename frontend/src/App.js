@@ -28,7 +28,6 @@ function App() {
   const messagesEndRef = useRef(null);
   const textareaRef = useRef(null);
   const [showQuickActions, setShowQuickActions] = useState(false);
-  const outputEndRef = useRef(null);
 
   const COLORS = [
     "#1F77B4",
@@ -65,7 +64,7 @@ function App() {
     },
     chatContainer: {
       width: "100%",
-      maxWidth: "1400px",
+      margin: '0 4px',
       height: "95vh",
       backgroundColor: "white",
       borderRadius: "16px",
@@ -134,47 +133,16 @@ function App() {
       fontWeight: "500",
       transition: "background-color 0.2s",
     },
-    mainContent: {
-      display: "flex",
-      flex: 1,
-      overflow: "hidden",
-    },
-    leftSection: {
-      width: "33.3",
-      minWidth: "33.3%",
-      maxWidth: "33.3%",
-      borderRight: "1px solid #e2e8f0",
-      display: "flex",
-      flexDirection: "column",
-      overflow: "hidden",
-    },
-    rightSection: {
-      width: "66.7%",
-      display: "flex",
-      flexDirection: "column",
-      overflow: "hidden",
-    },
-    sectionHeader: {
-      padding: "1rem 1.5rem",
-      borderBottom: "1px solid #e2e8f0",
-      backgroundColor: "#f8fafc",
-    },
-    sectionTitle: {
-      fontSize: "0.9rem",
-      fontWeight: "600",
-      color: "#1e293b",
-      margin: 0,
-    },
     messagesArea: {
       flex: 1,
       overflowY: "auto",
-      padding: "1rem",
+      padding: "1.5rem",
       background: "rgba(248, 250, 252, 0.3)",
     },
     messageContainer: {
       display: "flex",
-      gap: "0.6rem",
-      marginBottom: "1rem",
+      gap: "0.75rem",
+      marginBottom: "1.5rem",
     },
     userMessageContainer: {
       justifyContent: "flex-end",
@@ -183,13 +151,13 @@ function App() {
       justifyContent: "flex-start",
     },
     avatar: {
-      width: "28px",
-      height: "28px",
+      width: "32px",
+      height: "32px",
       borderRadius: "50%",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      fontSize: "0.7rem",
+      fontSize: "0.75rem",
       fontWeight: "500",
       flexShrink: 0,
     },
@@ -204,17 +172,17 @@ function App() {
       border: "1px solid #e2e8f0",
     },
     messageContent: {
-      maxWidth: "80%",
+      maxWidth: "75%",
       minWidth: 0,
       display: "flex",
       flexDirection: "column",
       overflow: "hidden",
     },
     messageBubble: {
-      padding: "0.8rem 1rem",
+      padding: "0.9rem 1.1rem",
       borderRadius: "12px",
-      fontSize: "0.8rem",
-      lineHeight: "1.4",
+      fontSize: "0.875rem",
+      lineHeight: "1.5",
       wordWrap: "break-word",
       wordBreak: "break-word",
       overflowWrap: "break-word",
@@ -236,9 +204,9 @@ function App() {
       border: "1px solid #fecaca",
     },
     timestamp: {
-      fontSize: "0.65rem",
+      fontSize: "0.7rem",
       color: "#64748b",
-      marginTop: "0.3rem",
+      marginTop: "0.35rem",
     },
     userTimestamp: {
       textAlign: "right",
@@ -247,7 +215,7 @@ function App() {
       display: "flex",
       alignItems: "center",
       gap: "0.5rem",
-      padding: "0.8rem 1rem",
+      padding: "0.9rem 1.1rem",
       backgroundColor: "white",
       border: "1px solid #e2e8f0",
       borderRadius: "12px",
@@ -281,7 +249,7 @@ function App() {
       padding: "0.6rem 0.8rem",
       border: "1px solid #d1d5db",
       borderRadius: "8px",
-      fontSize: "0.8rem",
+      fontSize: "0.875rem",
       resize: "none",
       minHeight: "40px",
       maxHeight: "100px",
@@ -326,32 +294,18 @@ function App() {
       transition: "all 0.2s",
       width: "100%",
     },
-    outputArea: {
-      flex: 1,
-      overflowY: "auto",
-      padding: "1rem",
-      background: "rgba(248, 250, 252, 0.3)",
-    },
-    outputCard: {
-      backgroundColor: "white",
-      border: "1px solid #e2e8f0",
-      borderRadius: "12px",
-      padding: "1rem",
-      marginBottom: "1rem",
-      boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1)",
-    },
     chartContainer: {
       marginTop: "1rem",
-      padding: "1rem",
+      padding: "1.25rem",
       backgroundColor: "#f8fafc",
-      borderRadius: "8px",
+      borderRadius: "10px",
       border: "1px solid #e2e8f0",
     },
     chartTitle: {
-      fontSize: "0.85rem",
+      fontSize: "0.9rem",
       fontWeight: "600",
       color: "#1e293b",
-      marginBottom: "0.75rem",
+      marginBottom: "1rem",
     },
     quickActionToggle: {
       width: "40px",
@@ -442,17 +396,6 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    const hasNewOutput = messages.some(
-      (msg, index) =>
-        msg.type === "assistant" && index > 0 && !msg.content.includes("?")
-    );
-
-    if (hasNewOutput) {
-      outputEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [messages]);
-
   const handleBrandChange = async (brandKey) => {
     setSelectedBrand(brandKey);
     setMessages([]);
@@ -482,7 +425,7 @@ function App() {
 
     const commonProps = {
       width: "100%",
-      height: 300,
+      height: 350,
     };
 
     switch (chartData.type) {
@@ -560,7 +503,7 @@ function App() {
                 label={({ name, percent }) =>
                   `${name}: ${(percent * 100).toFixed(0)}%`
                 }
-                outerRadius={80}
+                outerRadius={100}
                 fill="#8884d8"
                 dataKey={chartData.valueKey || "value"}
               >
@@ -595,6 +538,7 @@ function App() {
     setMessages((prev) => [...prev, userMessage]);
     setInputMessage("");
     setIsLoading(true);
+    setShowQuickActions(false);
 
     try {
       const response = await fetch(`${API_BASE}/api/chat`, {
@@ -667,7 +611,6 @@ function App() {
     return content.split("\n").map((line, index) => {
       let formattedLine = line;
 
-      // Handle headers
       if (line.startsWith("### ")) {
         formattedLine = `<h3 style="font-size: 0.95rem; font-weight: 600; color: #1e293b; margin: 0.75rem 0 0.4rem 0;">${line.replace(
           "### ",
@@ -683,28 +626,23 @@ function App() {
           "# ",
           ""
         )}</h1>`;
-      }
-      // Handle bold
-      else {
+      } else {
         formattedLine = line.replace(
           /\*\*(.*?)\*\*/g,
           "<strong style='font-weight: 600; color: #1e293b;'>$1</strong>"
         );
       }
 
-      // Handle italic
       formattedLine = formattedLine.replace(
         /\*(.*?)\*/g,
         "<em style='font-style: italic;'>$1</em>"
       );
 
-      // Handle inline code
       formattedLine = formattedLine.replace(
         /`(.*?)`/g,
         "<code style='background-color: #f1f5f9; padding: 0.15rem 0.35rem; border-radius: 3px; font-size: 0.85em; font-family: monospace;'>$1</code>"
       );
 
-      // Handle bullet points
       if (line.trim().startsWith("- ") || line.trim().startsWith("* ")) {
         formattedLine = `<li style="margin-left: 1.25rem; margin-bottom: 0.25rem; color: #475569;">${formattedLine.replace(
           /^[\-\*]\s+/,
@@ -712,7 +650,6 @@ function App() {
         )}</li>`;
       }
 
-      // Handle numbered lists
       if (/^\d+\.\s/.test(line.trim())) {
         formattedLine = `<li style="margin-left: 1.25rem; margin-bottom: 0.25rem; color: #475569; list-style-type: decimal;">${formattedLine.replace(
           /^\d+\.\s+/,
@@ -720,7 +657,6 @@ function App() {
         )}</li>`;
       }
 
-      // Handle blockquotes
       if (line.trim().startsWith("> ")) {
         formattedLine = `<blockquote style="border-left: 3px solid #8b5cf6; padding-left: 0.75rem; margin: 0.5rem 0; color: #64748b; font-style: italic;">${line.replace(
           "> ",
@@ -728,7 +664,6 @@ function App() {
         )}</blockquote>`;
       }
 
-      // Handle horizontal rules
       if (line.trim() === "---" || line.trim() === "***") {
         formattedLine = `<hr style="border: none; border-top: 1px solid #e2e8f0; margin: 0.75rem 0;" />`;
       }
@@ -761,7 +696,6 @@ function App() {
       </style>
 
       <div style={styles.chatContainer}>
-        {/* Header */}
         <header style={styles.header}>
           <div style={styles.headerContent}>
             <div style={styles.headerLeft}>
@@ -838,270 +772,203 @@ function App() {
           </div>
         </header>
 
-        {/* Main Content */}
-        <div style={styles.mainContent}>
-          {/* Left Section - Chat */}
-          <div style={styles.leftSection}>
-            <div style={styles.sectionHeader}>
-              <h2 style={styles.sectionTitle}>Chat</h2>
-            </div>
-
-            <div style={styles.messagesArea}>
-              {messages.map((message, index) => {
-                // Check if it's the welcome message (first assistant message)
-                const isWelcomeMessage =
-                  index === 0 && message.type === "assistant";
-                const hasQuestionMark =
-                  message.content && message.content.includes("?");
-
-                // Show in chat: all user messages, welcome message, or assistant messages with ?
-                const shouldShowInChat =
-                  message.type === "user" ||
-                  isWelcomeMessage ||
-                  (message.type === "assistant" && hasQuestionMark);
-
-                // Skip if shouldn't show in chat
-                if (!shouldShowInChat) return null;
-
-                return (
-                  <div
-                    key={index}
-                    style={{
-                      ...styles.messageContainer,
-                      ...(message.type === "user"
-                        ? styles.userMessageContainer
-                        : styles.assistantMessageContainer),
-                    }}
-                  >
-                    <div
-                      style={{
-                        ...styles.avatar,
-                        ...(message.type === "user"
-                          ? styles.userAvatar
-                          : styles.assistantAvatar),
-                        order: message.type === "user" ? 2 : 1,
-                      }}
-                    >
-                      {message.type === "user" ? "You" : "AI"}
-                    </div>
-                    <div
-                      style={{
-                        ...styles.messageContent,
-                        order: message.type === "user" ? 1 : 2,
-                      }}
-                    >
-                      <div
-                        style={{
-                          ...styles.messageBubble,
-                          ...(message.type === "user"
-                            ? styles.userMessage
-                            : message.isError
-                            ? styles.errorMessage
-                            : styles.assistantMessage),
-                        }}
-                      >
-                        {formatMessage(message.content)}
-                      </div>
-                      <div
-                        style={{
-                          ...styles.timestamp,
-                          ...(message.type === "user"
-                            ? styles.userTimestamp
-                            : {}),
-                        }}
-                      >
-                        {formatTimestamp(message.timestamp)}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-
-              {isLoading && (
-                <div style={styles.messageContainer}>
-                  <div style={{ ...styles.avatar, ...styles.assistantAvatar }}>
-                    AI
-                  </div>
-                  <div style={styles.messageContent}>
-                    <div style={styles.typingIndicator}>
-                      <div style={styles.spinner}></div>
-                      <span style={{ fontSize: "0.75rem", color: "#64748b" }}>
-                        Analyzing...
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              <div ref={messagesEndRef} />
-            </div>
-
-            {/* Input Area */}
-            <div style={styles.inputArea}>
-              {showQuickActions && (
-                <div>
-                  <div
-                    style={{
-                      fontSize: "0.75rem",
-                      color: "#64748b",
-                      fontWeight: "500",
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    Quick Actions:
-                  </div>
-                  <div style={styles.quickActionsGrid}>
-                    {quickActions.map((action, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => sendMessage(action)}
-                        style={styles.quickActionButton}
-                        onMouseOver={(e) => {
-                          e.target.style.backgroundColor = "#f0f9ff";
-                          e.target.style.borderColor = "#4f46e5";
-                        }}
-                        onMouseOut={(e) => {
-                          e.target.style.backgroundColor = "#f8fafc";
-                          e.target.style.borderColor = "#e2e8f0";
-                        }}
-                      >
-                        {action}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              <div style={styles.inputForm}>
-                {/* Thunder bolt button */}
-                <button
-                  onClick={() => setShowQuickActions(!showQuickActions)}
-                  style={styles.quickActionToggle}
-                  onMouseOver={(e) =>
-                    (e.target.style.backgroundColor = "#e2e8f0")
-                  }
-                  onMouseOut={(e) =>
-                    (e.target.style.backgroundColor = "#f1f5f9")
-                  }
-                  title="Quick Actions"
-                >
-                  <svg
-                    width="18"
-                    height="18"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </button>
-
-                <div style={styles.textareaContainer}>
-                  <textarea
-                    ref={textareaRef}
-                    value={inputMessage}
-                    onChange={(e) => setInputMessage(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                    placeholder="Ask about analytics.."
-                    style={styles.textarea}
-                    rows={1}
-                    disabled={isLoading}
-                    onFocus={(e) => (e.target.style.borderColor = "#4f46e5")}
-                    onBlur={(e) => (e.target.style.borderColor = "#d1d5db")}
-                  />
-                </div>
-
-                <button
-                  onClick={() => sendMessage()}
-                  disabled={isLoading || !inputMessage.trim()}
+        <div style={styles.messagesArea}>
+          {messages.map((message, index) => (
+            <div
+              key={index}
+              style={{
+                ...styles.messageContainer,
+                ...(message.type === "user"
+                  ? styles.userMessageContainer
+                  : styles.assistantMessageContainer),
+              }}
+            >
+              <div
+                style={{
+                  ...styles.avatar,
+                  ...(message.type === "user"
+                    ? styles.userAvatar
+                    : styles.assistantAvatar),
+                  order: message.type === "user" ? 2 : 1,
+                }}
+              >
+                {message.type === "user" ? "You" : "AI"}
+              </div>
+              <div
+                style={{
+                  ...styles.messageContent,
+                  order: message.type === "user" ? 1 : 2,
+                }}
+              >
+                <div
                   style={{
-                    ...styles.sendButton,
-                    ...(isLoading || !inputMessage.trim()
-                      ? styles.sendButtonDisabled
-                      : {}),
-                  }}
-                  onMouseOver={(e) => {
-                    if (!isLoading && inputMessage.trim()) {
-                      e.target.style.backgroundColor = "#4338ca";
-                    }
-                  }}
-                  onMouseOut={(e) => {
-                    if (!isLoading && inputMessage.trim()) {
-                      e.target.style.backgroundColor = "#4f46e5";
-                    }
+                    ...styles.messageBubble,
+                    ...(message.type === "user"
+                      ? styles.userMessage
+                      : message.isError
+                      ? styles.errorMessage
+                      : styles.assistantMessage),
                   }}
                 >
-                  {isLoading ? (
-                    <div style={styles.spinner}></div>
-                  ) : (
-                    <svg
-                      width="18"
-                      height="18"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                      />
-                    </svg>
+                  {formatMessage(message.content)}
+                  
+                  {message.chartData && (
+                    <div style={styles.chartContainer}>
+                      <h4 style={styles.chartTitle}>
+                        {message.chartData.title || "Data Visualization"}
+                      </h4>
+                      {renderChart(message.chartData)}
+                    </div>
                   )}
-                </button>
+                </div>
+                <div
+                  style={{
+                    ...styles.timestamp,
+                    ...(message.type === "user" ? styles.userTimestamp : {}),
+                  }}
+                >
+                  {formatTimestamp(message.timestamp)}
+                </div>
               </div>
             </div>
-          </div>
+          ))}
 
-          {/* Right Section - Output */}
-          <div style={styles.rightSection}>
-            <div style={styles.sectionHeader}>
-              <h2 style={styles.sectionTitle}>Output & Visualizations</h2>
+          {isLoading && (
+            <div style={styles.messageContainer}>
+              <div style={{ ...styles.avatar, ...styles.assistantAvatar }}>
+                AI
+              </div>
+              <div style={styles.messageContent}>
+                <div style={styles.typingIndicator}>
+                  <div style={styles.spinner}></div>
+                  <span style={{ fontSize: "0.8rem", color: "#64748b" }}>
+                    Analyzing...
+                  </span>
+                </div>
+              </div>
             </div>
+          )}
 
-            <div style={styles.outputArea}>
-              {messages
-                .filter((msg, index) => {
-                  const isWelcomeMessage = index === 0;
-                  const hasQuestionMark =
-                    msg.content && msg.content.includes("?");
-                  return (
-                    msg.type === "assistant" &&
-                    !isWelcomeMessage &&
-                    !hasQuestionMark
-                  );
-                })
-                .map((message, index) => (
-                  <div key={index} style={styles.outputCard}>
-                    <div
-                      style={{
-                        fontSize: "0.8rem",
-                        lineHeight: "1.4",
-                        color: "#1e293b",
-                      }}
-                    >
-                      {formatMessage(message.content)}
-                    </div>
+          <div ref={messagesEndRef} />
+        </div>
 
-                    {message.chartData && (
-                      <div style={styles.chartContainer}>
-                        <h4 style={styles.chartTitle}>
-                          {message.chartData.title || "Data Visualization"}
-                        </h4>
-                        {renderChart(message.chartData)}
-                      </div>
-                    )}
-                  </div>
+        <div style={styles.inputArea}>
+          {showQuickActions && (
+            <div>
+              <div
+                style={{
+                  fontSize: "0.75rem",
+                  color: "#64748b",
+                  fontWeight: "500",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Quick Actions:
+              </div>
+              <div style={styles.quickActionsGrid}>
+                {quickActions.map((action, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => sendMessage(action)}
+                    style={styles.quickActionButton}
+                    onMouseOver={(e) => {
+                      e.target.style.backgroundColor = "#f0f9ff";
+                      e.target.style.borderColor = "#4f46e5";
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.backgroundColor = "#f8fafc";
+                      e.target.style.borderColor = "#e2e8f0";
+                    }}
+                  >
+                    {action}
+                  </button>
                 ))}
-
-              <div ref={outputEndRef} />
+              </div>
             </div>
+          )}
+
+          <div style={styles.inputForm}>
+            <button
+              onClick={() => setShowQuickActions(!showQuickActions)}
+              style={styles.quickActionToggle}
+              onMouseOver={(e) =>
+                (e.target.style.backgroundColor = "#e2e8f0")
+              }
+              onMouseOut={(e) =>
+                (e.target.style.backgroundColor = "#f1f5f9")
+              }
+              title="Quick Actions"
+            >
+              <svg
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </button>
+
+            <div style={styles.textareaContainer}>
+              <textarea
+                ref={textareaRef}
+                value={inputMessage}
+                onChange={(e) => setInputMessage(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder="Ask about analytics..."
+                style={styles.textarea}
+                rows={1}
+                disabled={isLoading}
+                onFocus={(e) => (e.target.style.borderColor = "#4f46e5")}
+                onBlur={(e) => (e.target.style.borderColor = "#d1d5db")}
+              />
+            </div>
+
+            <button
+              onClick={() => sendMessage()}
+              disabled={isLoading || !inputMessage.trim()}
+              style={{
+                ...styles.sendButton,
+                ...(isLoading || !inputMessage.trim()
+                  ? styles.sendButtonDisabled
+                  : {}),
+              }}
+              onMouseOver={(e) => {
+                if (!isLoading && inputMessage.trim()) {
+                  e.target.style.backgroundColor = "#4338ca";
+                }
+              }}
+              onMouseOut={(e) => {
+                if (!isLoading && inputMessage.trim()) {
+                  e.target.style.backgroundColor = "#4f46e5";
+                }
+              }}
+            >
+              {isLoading ? (
+                <div style={styles.spinner}></div>
+              ) : (
+                <svg
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                  />
+                </svg>
+              )}
+            </button>
           </div>
         </div>
       </div>
