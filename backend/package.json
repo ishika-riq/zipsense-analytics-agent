@@ -1,6 +1,7 @@
 {
     "name": "klaviyo-ai-backend",
     "version": "1.0.0",
+    "homepage": "/analytics-agent",
     "description": "Klaviyo AI Chat Tool Backend",
     "main": "server.js",
     "scripts": {
