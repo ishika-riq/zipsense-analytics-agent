@@ -1044,82 +1044,89 @@ Apr 16 2025 - Oct 16 2025,01JSFAYY5RTAWFQEF710F1YZHW,Earth day 2025 | Takeback v
 Apr 16 2025 - Oct 16 2025,01JS11YCPNM2ATBTKEVJNCEXY8,"[Follow-up] Win back Campaign - Apr 16, 2025",2025-04-18,07:00 PM,9038,0.26569,0.00819,0.00399,0.00055,0.00011,3254.0,2400.0,1176.0,874.0,74,243,37,36,1.0,5.0,3,,Quench Your Thirst for $20! 💧,Check out our favorite summer accessories.,"[Engaged non-openers] Win back Campaign - Apr 16, 2025",,Friday,Email
 Apr 16 2025 - Oct 16 2025,01JRX9PKNSNTR5GJMZGPF37PWG,"Win back Campaign - Apr 16, 2025",2025-04-16,07:00 PM,240657,0.3397,0.00753,0.00767,0.02151,0.00134,115373.0,79992.0,85323.0,62092.0,1773,2769,1859,1805,315.0,5176.0,38,,Deals under $20,Check out our favorite summer accessories.,Win back _ no visit or puchase 90 days,"DO NOT SEND EMAIL _ UNSUBSCRIBED, MiiR - Never Engaged (Email) (Suppressed June 27)",Wednesday,Email
 `,
-    flow_data: `Date,Flow ID,Flow Name,Message ID,Message Name,Message Channel,Status,Total Recipients,Open Rate,Click Rate,Unsubscribe Rate,Bounce Rate,Spam Complaints Rate,Total Opens,Unique Opens,Total Apple Privacy Opens,Unique Apple Privacy Opens,Total Clicks,Unique Clicks,Total Unsubscribes,Spam Complaints,Unique Unsubscribes,Bounces,Total Placed Order,Message Status
-Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,TReC9i,Copy of Email #2 - NO SMS,Email,Manual,97,0.53125,0.0,0.0,0.01031,0.0,87.0,51.0,64.0,44.0,0,0,0,0.0,0,1.0,0,manual
-Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,TedzwF,Copy of Email #3-SMS-15%,Email,Manual,87,0.55814,0.03488,0.0,0.01149,0.0,89.0,48.0,65.0,42.0,4,3,0,0.0,0,1.0,0,manual
-Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,RYbuhr,Email #1 - old customer,Email,Manual,104,0.67308,0.01923,0.00962,0.0,0.0,119.0,70.0,79.0,53.0,2,2,1,0.0,1,0.0,0,manual
-Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,Vz3fip,Email #2 -Old customer,Email,Manual,81,0.67901,0.02469,0.0,0.0,0.0,87.0,55.0,59.0,39.0,2,2,0,0.0,0,0.0,0,manual
-Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,T9Ajbh,Email #3-old customer,Email,Manual,70,0.64286,0.01429,0.0,0.0,0.0,71.0,45.0,56.0,37.0,1,1,0,0.0,0,0.0,0,manual
-Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,UpCqqx,Email #4 -sms-15 %,Email,Manual,74,0.63514,0.01351,0.0,0.0,0.0,116.0,47.0,64.0,36.0,3,1,0,0.0,0,0.0,1,manual
-Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,YwRXGJ,Email 4,Email,Manual,62,0.77419,0.04839,0.0,0.0,0.0,72.0,48.0,50.0,32.0,4,3,0,0.0,0,0.0,0,manual
-Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,Y57rLT,[Email #1]-No Sms,Email,Manual,118,0.60169,0.00847,0.0,0.0,0.0,113.0,71.0,78.0,53.0,1,1,0,0.0,0,0.0,2,manual
-Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,RkzbCs,Copy of Email #1: Brand/Generosity,Email,Manual,238,0.51316,0.00877,0.01316,0.04202,0.00439,175.0,117.0,119.0,78.0,3,2,3,1.0,3,10.0,3,manual
-Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,Vpbuzf,Copy of Email #1: Brand/Generosity,Email,Manual,117,0.7094,0.01709,0.0,0.0,0.0,144.0,83.0,91.0,54.0,3,2,0,0.0,0,0.0,4,manual
-Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,WHQQ9T,Email #2,Email,Manual,131,0.488,0.016,0.008,0.0458,0.0,102.0,61.0,65.0,42.0,4,2,1,0.0,1,6.0,1,manual
-Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,SkHvPw,Email #2,Email,Manual,96,0.65625,0.02083,0.0,0.0,0.0,118.0,63.0,68.0,42.0,2,2,0,0.0,0,0.0,3,manual
-Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,UQMGi2,Email #3,Email,Manual,115,0.55455,0.0,0.00909,0.04348,0.0,101.0,61.0,74.0,45.0,0,0,1,0.0,1,5.0,0,manual
-Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,ViyedR,Email #3,Email,Manual,86,0.61628,0.01163,0.0,0.0,0.0,92.0,53.0,63.0,37.0,1,1,0,0.0,0,0.0,1,manual
-Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,RNjHyh,Email #4,Email,Manual,105,0.6,0.0,0.0,0.04762,0.0,106.0,60.0,69.0,43.0,0,0,0,0.0,0,5.0,0,manual
-Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,R6FqAg,Email #8,Email,Manual,78,0.65385,0.01282,0.0,0.0,0.0,101.0,51.0,61.0,32.0,2,1,0,0.0,0,0.0,0,manual
-Apr 16 2025 - Oct 16 2025,UXLWsi,KL Q3 2025 | Delivered/Post Purchase Flow - Party Speckle & Jubilee,Syk2jc,Email 1 – Party post purchase,Email,Live,232,0.67826,0.01304,0.02174,0.00862,0.0,243.0,156.0,136.0,99.0,3,3,5,0.0,5,2.0,2,live
-Apr 16 2025 - Oct 16 2025,UXLWsi,KL Q3 2025 | Delivered/Post Purchase Flow - Party Speckle & Jubilee,TD7ARE,Email 2 – Party post purchase,Email,Live,184,0.57692,0.01099,0.03297,0.01087,0.0,153.0,105.0,88.0,71.0,2,2,7,0.0,6,2.0,4,live
-Apr 16 2025 - Oct 16 2025,Ut4gnD,NEW [RFM] Churn prevention - Advanced KDP - RFM,SzZ8wL,Email 2 Churn $10 off,Email,Live,148,0.34694,0.01361,0.0068,0.00676,0.0,89.0,51.0,64.0,42.0,2,2,1,0.0,1,1.0,0,live
-Apr 16 2025 - Oct 16 2025,Ut4gnD,NEW [RFM] Churn prevention - Advanced KDP - RFM,U8xeZ5,Email 2 Churn $10 off,Email,Live,555,0.60688,0.00543,0.00181,0.00541,0.0,465.0,335.0,347.0,261.0,5,3,1,0.0,1,3.0,1,live
-Apr 16 2025 - Oct 16 2025,Ut4gnD,NEW [RFM] Churn prevention - Advanced KDP - RFM,XaZdJN,Offer email buyer retention - customers,Email,Live,558,0.58,0.01636,0.00182,0.01434,0.0,502.0,319.0,347.0,245.0,10,9,1,0.0,1,8.0,0,live
-Apr 16 2025 - Oct 16 2025,Ut4gnD,NEW [RFM] Churn prevention - Advanced KDP - RFM,Y3U3pB,SMS | Offer email buyer retention - customers,Email,Live,149,0.35135,0.00676,0.0,0.00671,0.0,96.0,52.0,70.0,41.0,1,1,0,0.0,0,1.0,0,live
-Apr 16 2025 - Oct 16 2025,RDUtGN,Q1 2025 QO | Abandoned Cart Reminder,R2Tr6b,Abandoned Cart [Email #1],Email,Manual,1021,0.62598,0.04823,0.00492,0.0049,0.0,1189.0,636.0,775.0,458.0,67,49,5,0.0,5,5.0,25,manual
-Apr 16 2025 - Oct 16 2025,RDUtGN,Q1 2025 QO | Abandoned Cart Reminder,Th5Qwv,Abandoned Cart [Email #2],Email,Manual,864,0.60465,0.03488,0.01047,0.00463,0.0,949.0,520.0,655.0,393.0,39,30,9,0.0,9,4.0,9,manual
-Apr 16 2025 - Oct 16 2025,RDUtGN,Q1 2025 QO | Abandoned Cart Reminder,YqjQbD,Abandoned Cart [Email #3] Welcome Discount Reminder,Email,Manual,363,0.60111,0.08033,0.00554,0.00551,0.0,441.0,217.0,295.0,154.0,41,29,2,0.0,2,2.0,7,manual
-Apr 16 2025 - Oct 16 2025,RDUtGN,Q1 2025 QO | Abandoned Cart Reminder,UYFyLQ,Abandoned Cart [Email #4],Email,Manual,347,0.58671,0.0289,0.00289,0.00288,0.0,341.0,203.0,241.0,152.0,16,10,1,0.0,1,1.0,3,manual
-Apr 16 2025 - Oct 16 2025,RDUtGN,Q1 2025 QO | Abandoned Cart Reminder,RFU65b,Copy of Abandoned Cart [Email #3] 10% Discount,Email,Manual,404,0.61881,0.08663,0.00495,0.0,0.0,471.0,250.0,325.0,190.0,42,35,2,0.0,2,0.0,11,manual
-Apr 16 2025 - Oct 16 2025,UXVBcX,Q1 2025 | Back In Stock Flow,THTvXH,Back in Stock: Email #1,Email,Live,1084,0.61967,0.28015,0.00371,0.00554,0.0,1630.0,668.0,869.0,480.0,537,302,4,0.0,4,6.0,90,live
-Apr 16 2025 - Oct 16 2025,SLYp8Z,Q2 2025 | Browse Abandonment,WhcTNz,Browse Abandonment: email 2,Email,Live,9105,0.53236,0.03358,0.00969,0.00231,0.00022,10077.0,4836.0,6343.0,3494.0,405,305,89,2.0,88,21.0,35,live
-Apr 16 2025 - Oct 16 2025,SLYp8Z,Q2 2025 | Browse Abandonment,UzqgDu,Browse Abandonment: winning variation,Email,Live,9776,0.52221,0.0317,0.00964,0.00276,0.0001,10377.0,5091.0,6694.0,3705.0,440,309,94,1.0,94,27.0,66,live
-Apr 16 2025 - Oct 16 2025,UyCEA8,Q2 2025 | Browse Abandonment (Aimerce),UBeULZ,Browse Abandonment: email 2,Email,Live,4738,0.62772,0.02092,0.00951,0.00106,0.0,5240.0,2971.0,3303.0,2077.0,144,99,46,0.0,45,5.0,25,live
-Apr 16 2025 - Oct 16 2025,UyCEA8,Q2 2025 | Browse Abandonment (Aimerce),Wm4y6B,Q2 2025 | Browse Abandonment (Aimerce) - Email #1.1,Email,Live,5234,0.62548,0.022,0.01205,0.00115,0.0,5625.0,3270.0,3683.0,2325.0,168,115,63,0.0,63,6.0,26,live
-Apr 16 2025 - Oct 16 2025,QNBTmC,Q2 2025 | PDP Customer Review,VNhLfJ,Review email with code,Email,Live,212,0.73113,0.18396,0.0,0.0,0.0,488.0,155.0,246.0,112.0,58,39,0,0.0,0,0.0,6,live
-Apr 16 2025 - Oct 16 2025,SZVgVH,Q2 2025 | Post Purchase Flow V2,Tc43nF,Copy of Post-Purchase Email #3B,Email,Live,302,0.59532,0.04348,0.02007,0.00993,0.0,319.0,178.0,206.0,131.0,27,13,8,0.0,6,3.0,4,live
-Apr 16 2025 - Oct 16 2025,SZVgVH,Q2 2025 | Post Purchase Flow V2,WAM3WF,Post-Purchase Email #1A,Email,Live,6333,0.68762,0.01077,0.05003,0.00268,0.00032,7611.0,4343.0,4425.0,2932.0,106,68,324,2.0,316,17.0,22,live
-Apr 16 2025 - Oct 16 2025,SZVgVH,Q2 2025 | Post Purchase Flow V2,U6GRub,Post-Purchase Email #1B,Email,Live,3214,0.66667,0.04085,0.01902,0.00218,0.0,4084.0,2138.0,2412.0,1463.0,165,131,62,0.0,61,7.0,45,live
-Apr 16 2025 - Oct 16 2025,SZVgVH,Q2 2025 | Post Purchase Flow V2,WrwxfT,Post-Purchase Email #2B,Email,Live,252,0.66,0.028,0.048,0.00794,0.0,313.0,165.0,189.0,115.0,10,7,12,0.0,12,2.0,2,live
-Apr 16 2025 - Oct 16 2025,SZVgVH,Q2 2025 | Post Purchase Flow V2,XtQ7jQ,Post-Purchase Email #2B,Email,Live,3167,0.60951,0.02029,0.01521,0.00379,0.0,3472.0,1923.0,2249.0,1391.0,79,64,48,0.0,48,12.0,10,live
-Apr 16 2025 - Oct 16 2025,SZVgVH,Q2 2025 | Post Purchase Flow V2,WXUjx8,Post-Purchase Email #3B,Email,Live,2862,0.59559,0.02801,0.01541,0.0021,0.0,3029.0,1701.0,2009.0,1236.0,119,80,44,0.0,44,6.0,8,live
-Apr 16 2025 - Oct 16 2025,RxPmK8,Q4 2024 QO | Abandoned Checkout,XB4sbV,Abandoned Checkout - Email #3: Discount,Email,Manual,1525,0.18581,0.01284,0.00676,0.02951,0.00135,404.0,275.0,243.0,164.0,26,19,11,2.0,10,45.0,5,manual
-Apr 16 2025 - Oct 16 2025,RxPmK8,Q4 2024 QO | Abandoned Checkout,Y777cM,Email #1: Brand/Generosity,Email,Manual,5174,0.27476,0.01451,0.01356,0.38732,0.00347,1457.0,871.0,870.0,599.0,65,46,46,11.0,43,2004.0,46,manual
-Apr 16 2025 - Oct 16 2025,RxPmK8,Q4 2024 QO | Abandoned Checkout,VTwVXk,Email #2: Reviews/social proof,Email,Manual,3334,0.32526,0.00727,0.01423,0.0096,0.00333,1733.0,1074.0,1095.0,726.0,38,24,47,11.0,47,32.0,19,manual
-Apr 16 2025 - Oct 16 2025,RxPmK8,Q4 2024 QO | Abandoned Checkout,U8JVxR,Email #4,Email,Manual,841,0.21883,0.01589,0.00611,0.02735,0.00122,268.0,179.0,188.0,126.0,15,13,5,1.0,5,23.0,2,manual
-Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,RHZetn,Copy of Email #2 - NO SMS,Email,Manual,154,0.54248,0.03922,0.00654,0.00649,0.0,159.0,83.0,85.0,55.0,7,6,1,0.0,1,1.0,1,manual
-Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,W4SiBM,Copy of Email #3-SMS-15%,Email,Manual,157,0.54194,0.02581,0.01935,0.01274,0.0,163.0,84.0,95.0,59.0,5,4,3,0.0,3,2.0,0,manual
-Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,WTbmYF,Email #1 - old customer,Email,Manual,201,0.74129,0.02985,0.00498,0.0,0.0,259.0,149.0,171.0,105.0,8,6,1,0.0,1,0.0,3,manual
-Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,RfTsp5,Email #2 -Old customer,Email,Manual,191,0.72251,0.04188,0.01571,0.0,0.0,257.0,138.0,162.0,102.0,13,8,3,0.0,3,0.0,2,manual
-Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,WDYBap,Email #2 -SMS,Email,Manual,53,0.37736,0.07547,0.0,0.0,0.0,53.0,20.0,39.0,15.0,4,4,0,0.0,0,0.0,0,manual
-Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,XsYavC,Email #3-SMS-18%,Email,Manual,51,0.41176,0.03922,0.0,0.0,0.0,40.0,21.0,26.0,15.0,3,2,0,0.0,0,0.0,1,manual
-Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,VDgLBk,Email #3-old customer,Email,Manual,164,0.70732,0.02439,0.0,0.0,0.0,209.0,116.0,147.0,86.0,4,4,0,0.0,0,0.0,1,manual
-Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,UuNbWP,Email #4 -sms-15 %,Email,Manual,149,0.5906,0.04698,0.00671,0.0,0.0,168.0,88.0,101.0,64.0,9,7,1,0.0,1,0.0,1,manual
-Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,RJnJdb,Email 4,Email,Manual,148,0.74324,0.02703,0.01351,0.0,0.0,234.0,110.0,144.0,81.0,4,4,2,0.0,2,0.0,0,manual
-Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,WAx73g,[Email #1],Email,Manual,92,0.57143,0.03297,0.01099,0.01087,0.0,93.0,52.0,45.0,32.0,5,3,1,0.0,1,1.0,5,manual
-Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,Xhe9W2,[Email #1]-No Sms,Email,Manual,237,0.61277,0.04255,0.00851,0.00844,0.0,238.0,144.0,155.0,105.0,15,10,2,0.0,2,2.0,6,manual
-Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,URXer6,Copy of Email #1: Brand/Generosity,Email,Manual,487,0.47126,0.01839,0.02069,0.10678,0.0,349.0,205.0,211.0,141.0,9,8,9,0.0,9,52.0,6,manual
-Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,WVWp2j,Copy of Email #1: Brand/Generosity,Email,Manual,240,0.65,0.06667,0.00417,0.0,0.0,259.0,156.0,162.0,104.0,24,16,1,0.0,1,0.0,8,manual
-Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,UcGbzY,Email #2,Email,Manual,252,0.44355,0.02016,0.02823,0.01587,0.0,187.0,110.0,108.0,72.0,8,5,8,0.0,7,4.0,4,manual
-Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,SEpj98,Email #2,Email,Manual,199,0.63317,0.0201,0.0,0.0,0.0,226.0,126.0,133.0,84.0,5,4,0,0.0,0,0.0,3,manual
-Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,RDxeRH,Email #3,Email,Manual,241,0.45992,0.02532,0.02954,0.0166,0.0,197.0,109.0,118.0,77.0,12,6,7,0.0,7,4.0,0,manual
-Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,Yqdfa9,Email #3,Email,Manual,190,0.63158,0.01053,0.01053,0.0,0.0,199.0,120.0,122.0,78.0,2,2,2,0.0,2,0.0,2,manual
-Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,VjBLdU,Email #4,Email,Manual,256,0.564,0.032,0.008,0.02344,0.0,256.0,141.0,143.0,90.0,11,8,2,0.0,2,6.0,1,manual
-Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,WqpkLn,Email #8,Email,Manual,183,0.69945,0.06011,0.0,0.0,0.0,231.0,128.0,129.0,85.0,15,11,0,0.0,0,0.0,4,manual
-Apr 16 2025 - Oct 16 2025,TiXiwE,RIQ | Welcome Series,XLvCYU,Email-1 without SMS,Email,Live,2106,0.63619,0.06699,0.02152,0.02896,0.0,2307.0,1301.0,1252.0,854.0,196,137,44,0.0,44,61.0,160,live
-Apr 16 2025 - Oct 16 2025,TiXiwE,RIQ | Welcome Series,TA7iXM,Email-2 Without SMS,Email,Live,1527,0.44474,0.01711,0.02961,0.00458,0.0,1103.0,676.0,667.0,457.0,30,26,45,0.0,45,7.0,19,live
-Apr 16 2025 - Oct 16 2025,TiXiwE,RIQ | Welcome Series,RUzbW9,Email-3 Without SMS,Email,Live,1366,0.43953,0.02139,0.02065,0.00732,0.0,950.0,596.0,585.0,402.0,33,29,28,0.0,28,10.0,11,live
-Apr 16 2025 - Oct 16 2025,TiXiwE,RIQ | Welcome Series,TsKym2,Email-4 Without SMS,Email,Live,1209,0.45242,0.01002,0.01252,0.0091,0.00083,853.0,542.0,519.0,361.0,20,12,15,1.0,15,11.0,5,live
-Apr 16 2025 - Oct 16 2025,TiXiwE,RIQ | Welcome Series,WFnip2,Email-5 Without SMS,Email,Live,1109,0.52459,0.01639,0.01457,0.00992,0.0,930.0,576.0,558.0,398.0,25,18,16,0.0,16,11.0,4,live
-Apr 16 2025 - Oct 16 2025,XV5MwH,Site Abandonment Flow (Aimerce),XKPgPV,Site Abandonment Email 1 - Bestsellers,Email,Live,954,0.60657,0.03499,0.00848,0.01153,0.0,1068.0,572.0,639.0,405.0,49,33,8,0.0,8,11.0,10,live
-Apr 16 2025 - Oct 16 2025,XNs4Hz,Sunset Unengaged Subscribers - Customer vs. Non-Customer,RN9mzv,Lapsed: Email #1a,Email,Live,2051,0.50049,0.0303,0.00929,0.00244,0.00049,1644.0,1024.0,1149.0,775.0,76,62,19,1.0,19,5.0,14,live
-Apr 16 2025 - Oct 16 2025,XNs4Hz,Sunset Unengaged Subscribers - Customer vs. Non-Customer,Skx9QJ,Never purchased: Email #1b,Email,Live,2784,0.43657,0.00867,0.00723,0.00611,0.0,1864.0,1208.0,1302.0,913.0,29,24,21,0.0,20,17.0,9,live
-Apr 16 2025 - Oct 16 2025,RmY3Fu,[RFM] Loyal/Champion retention flow,W8eDAi,(Repeat purchaser) Drive repurchase with Give info,Email,Live,1821,0.65421,0.01924,0.00715,0.0011,0.0,1987.0,1190.0,1271.0,853.0,45,35,14,0.0,13,2.0,4,live
-Apr 16 2025 - Oct 16 2025,RmY3Fu,[RFM] Loyal/Champion retention flow,UWPNGs,Copy of (Repeat purchaser) Drive repurchase with Give info,Email,Live,497,0.63984,0.02213,0.00201,0.0,0.0,544.0,318.0,383.0,242.0,14,11,1,0.0,1,0.0,0,live
-Apr 16 2025 - Oct 16 2025,RmY3Fu,[RFM] Loyal/Champion retention flow,WvXF85,Copy of Retention - 10% off + July 2025 Impact note,Email,Live,516,0.69574,0.00969,0.00775,0.0,0.0,631.0,359.0,398.0,259.0,10,5,4,0.0,4,0.0,1,live
-Apr 16 2025 - Oct 16 2025,RmY3Fu,[RFM] Loyal/Champion retention flow,Vs8QHU,Retention - 10% off + July 2025 Impact note,Email,Live,1894,0.69995,0.02219,0.01109,0.00053,0.0,2317.0,1325.0,1437.0,923.0,52,42,21,0.0,21,1.0,6,live
-Apr 16 2025 - Oct 16 2025,Sm3rUq,[RFM] MA - Next Best Product Cross-Sell,UApmgV,Email #1 - cross sell,Email,Live,323,0.65109,0.02492,0.02492,0.00619,0.0,336.0,209.0,198.0,140.0,9,8,8,0.0,8,2.0,2,live
+    flow_data: `Date,Flow ID,Flow Name,Message ID,Message Name,Message Channel,Status,Total Recipients,Open Rate,Click Rate,Unsubscribe Rate,Bounce Rate,Spam Complaints Rate,Total Opens,Unique Opens,Total Apple Privacy Opens,Unique Apple Privacy Opens,Total Clicks,Unique Clicks,Total Unsubscribes,Spam Complaints,Unique Unsubscribes,Bounces,Total Placed Order,Tags,Message Status
+Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,TReC9i,Copy of Email #2 - NO SMS,Email,Manual,97,0.53125,0.0,0.0,0.01031,0.0,87.0,51.0,64.0,44.0,0,0,0,0.0,0,1.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,TedzwF,Copy of Email #3-SMS-15%,Email,Manual,87,0.55814,0.03488,0.0,0.01149,0.0,89.0,48.0,65.0,42.0,4,3,0,0.0,0,1.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,RYbuhr,Email #1 - old customer,Email,Manual,104,0.67308,0.01923,0.00962,0.0,0.0,119.0,70.0,79.0,53.0,2,2,1,0.0,1,0.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,Vz3fip,Email #2 -Old customer,Email,Manual,81,0.67901,0.02469,0.0,0.0,0.0,87.0,55.0,59.0,39.0,2,2,0,0.0,0,0.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,XwHDvE,Email #2 -SMS,Email,Manual,26,0.38462,0.03846,0.0,0.0,0.0,20.0,10.0,11.0,8.0,1,1,0,0.0,0,0.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,WTGAT3,Email #3-SMS-18%,Email,Manual,23,0.43478,0.04348,0.0,0.0,0.0,17.0,10.0,11.0,8.0,2,1,0,0.0,0,0.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,T9Ajbh,Email #3-old customer,Email,Manual,70,0.64286,0.01429,0.0,0.0,0.0,71.0,45.0,56.0,37.0,1,1,0,0.0,0,0.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,UpCqqx,Email #4 -sms-15 %,Email,Manual,74,0.63514,0.01351,0.0,0.0,0.0,116.0,47.0,64.0,36.0,3,1,0,0.0,0,0.0,1,RIQ,manual
+Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,UufEKV,Email #4 -sms-18 %,Email,Manual,20,0.55,0.0,0.0,0.0,0.0,14.0,11.0,11.0,8.0,0,0,0,0.0,0,0.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,YwRXGJ,Email 4,Email,Manual,62,0.77419,0.04839,0.0,0.0,0.0,72.0,48.0,50.0,32.0,4,3,0,0.0,0,0.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,WmiNBN,[Email #1],Email,Manual,37,0.59459,0.05405,0.0,0.0,0.0,42.0,22.0,21.0,13.0,2,2,0,0.0,0,0.0,1,RIQ,manual
+Apr 16 2025 - Oct 16 2025,UySV7j,AIMERCE RIQ  |  Abandoned Cart,Y57rLT,[Email #1]-No Sms,Email,Manual,118,0.60169,0.00847,0.0,0.0,0.0,113.0,71.0,78.0,53.0,1,1,0,0.0,0,0.0,2,RIQ,manual
+Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,RkzbCs,Copy of Email #1: Brand/Generosity,Email,Manual,238,0.51316,0.00877,0.01316,0.04202,0.00439,175.0,117.0,119.0,78.0,3,2,3,1.0,3,10.0,3,RIQ,manual
+Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,Vpbuzf,Copy of Email #1: Brand/Generosity,Email,Manual,117,0.7094,0.01709,0.0,0.0,0.0,144.0,83.0,91.0,54.0,3,2,0,0.0,0,0.0,4,RIQ,manual
+Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,WHQQ9T,Email #2,Email,Manual,131,0.488,0.016,0.008,0.0458,0.0,102.0,61.0,65.0,42.0,4,2,1,0.0,1,6.0,1,RIQ,manual
+Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,SkHvPw,Email #2,Email,Manual,96,0.65625,0.02083,0.0,0.0,0.0,118.0,63.0,68.0,42.0,2,2,0,0.0,0,0.0,3,RIQ,manual
+Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,UQMGi2,Email #3,Email,Manual,115,0.55455,0.0,0.00909,0.04348,0.0,101.0,61.0,74.0,45.0,0,0,1,0.0,1,5.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,ViyedR,Email #3,Email,Manual,86,0.61628,0.01163,0.0,0.0,0.0,92.0,53.0,63.0,37.0,1,1,0,0.0,0,0.0,1,RIQ,manual
+Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,RNjHyh,Email #4,Email,Manual,105,0.6,0.0,0.0,0.04762,0.0,106.0,60.0,69.0,43.0,0,0,0,0.0,0,5.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,XkRSLw,AIMERCE RIQ | Abandoned Checkout,R6FqAg,Email #8,Email,Manual,78,0.65385,0.01282,0.0,0.0,0.0,101.0,51.0,61.0,32.0,2,1,0,0.0,0,0.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,UXLWsi,KL Q3 2025 | Delivered/Post Purchase Flow - Party Speckle & Jubilee,Syk2jc,Email 1 – Party post purchase,Email,Live,232,0.67826,0.01304,0.02174,0.00862,0.0,243.0,156.0,136.0,99.0,3,3,5,0.0,5,2.0,2,Email,live
+Apr 16 2025 - Oct 16 2025,UXLWsi,KL Q3 2025 | Delivered/Post Purchase Flow - Party Speckle & Jubilee,TD7ARE,Email 2 – Party post purchase,Email,Live,184,0.57692,0.01099,0.03297,0.01087,0.0,153.0,105.0,88.0,71.0,2,2,7,0.0,6,2.0,4,Email,live
+Apr 16 2025 - Oct 16 2025,Ut4gnD,NEW [RFM] Churn prevention - Advanced KDP - RFM,SzZ8wL,Email 2 Churn $10 off,Email,Live,148,0.34694,0.01361,0.0068,0.00676,0.0,89.0,51.0,64.0,42.0,2,2,1,0.0,1,1.0,0,,live
+Apr 16 2025 - Oct 16 2025,Ut4gnD,NEW [RFM] Churn prevention - Advanced KDP - RFM,U8xeZ5,Email 2 Churn $10 off,Email,Live,555,0.60688,0.00543,0.00181,0.00541,0.0,465.0,335.0,347.0,261.0,5,3,1,0.0,1,3.0,1,,live
+Apr 16 2025 - Oct 16 2025,Ut4gnD,NEW [RFM] Churn prevention - Advanced KDP - RFM,XaZdJN,Offer email buyer retention - customers,Email,Live,558,0.58,0.01636,0.00182,0.01434,0.0,502.0,319.0,347.0,245.0,10,9,1,0.0,1,8.0,0,,live
+Apr 16 2025 - Oct 16 2025,Ut4gnD,NEW [RFM] Churn prevention - Advanced KDP - RFM,Y3U3pB,SMS | Offer email buyer retention - customers,Email,Live,149,0.35135,0.00676,0.0,0.00671,0.0,96.0,52.0,70.0,41.0,1,1,0,0.0,0,1.0,0,,live
+Apr 16 2025 - Oct 16 2025,RDUtGN,Q1 2025 QO | Abandoned Cart Reminder,R2Tr6b,Abandoned Cart [Email #1],Email,Manual,1021,0.62598,0.04823,0.00492,0.0049,0.0,1189.0,636.0,775.0,458.0,67,49,5,0.0,5,5.0,25,Q1 2025 Flows,manual
+Apr 16 2025 - Oct 16 2025,RDUtGN,Q1 2025 QO | Abandoned Cart Reminder,Th5Qwv,Abandoned Cart [Email #2],Email,Manual,864,0.60465,0.03488,0.01047,0.00463,0.0,949.0,520.0,655.0,393.0,39,30,9,0.0,9,4.0,9,Q1 2025 Flows,manual
+Apr 16 2025 - Oct 16 2025,RDUtGN,Q1 2025 QO | Abandoned Cart Reminder,YqjQbD,Abandoned Cart [Email #3] Welcome Discount Reminder,Email,Manual,363,0.60111,0.08033,0.00554,0.00551,0.0,441.0,217.0,295.0,154.0,41,29,2,0.0,2,2.0,7,Q1 2025 Flows,manual
+Apr 16 2025 - Oct 16 2025,RDUtGN,Q1 2025 QO | Abandoned Cart Reminder,UYFyLQ,Abandoned Cart [Email #4],Email,Manual,347,0.58671,0.0289,0.00289,0.00288,0.0,341.0,203.0,241.0,152.0,16,10,1,0.0,1,1.0,3,Q1 2025 Flows,manual
+Apr 16 2025 - Oct 16 2025,RDUtGN,Q1 2025 QO | Abandoned Cart Reminder,RFU65b,Copy of Abandoned Cart [Email #3] 10% Discount,Email,Manual,404,0.61881,0.08663,0.00495,0.0,0.0,471.0,250.0,325.0,190.0,42,35,2,0.0,2,0.0,11,Q1 2025 Flows,manual
+Apr 16 2025 - Oct 16 2025,RDUtGN,Q1 2025 QO | Abandoned Cart Reminder,Rf64ka,Copy of Abandoned Cart [Email #3] NO Discount | Free Shipping Over $75 Reminder,Email,Manual,25,0.64,0.08,0.0,0.0,0.0,34.0,16.0,18.0,10.0,2,2,0,0.0,0,0.0,0,Q1 2025 Flows,manual
+Apr 16 2025 - Oct 16 2025,UXVBcX,Q1 2025 | Back In Stock Flow,THTvXH,Back in Stock: Email #1,Email,Live,1084,0.61967,0.28015,0.00371,0.00554,0.0,1630.0,668.0,869.0,480.0,537,302,4,0.0,4,6.0,90,Q1 2025 Flows,live
+Apr 16 2025 - Oct 16 2025,SLYp8Z,Q2 2025 | Browse Abandonment,WhcTNz,Browse Abandonment: email 2,Email,Live,9105,0.53236,0.03358,0.00969,0.00231,0.00022,10077.0,4836.0,6343.0,3494.0,405,305,89,2.0,88,21.0,35,Q1 2025 Flows,live
+Apr 16 2025 - Oct 16 2025,SLYp8Z,Q2 2025 | Browse Abandonment,UzqgDu,Browse Abandonment: winning variation,Email,Live,9776,0.52221,0.0317,0.00964,0.00276,0.0001,10377.0,5091.0,6694.0,3705.0,440,309,94,1.0,94,27.0,66,Q1 2025 Flows,live
+Apr 16 2025 - Oct 16 2025,UyCEA8,Q2 2025 | Browse Abandonment (Aimerce),UBeULZ,Browse Abandonment: email 2,Email,Live,4738,0.62772,0.02092,0.00951,0.00106,0.0,5240.0,2971.0,3303.0,2077.0,144,99,46,0.0,45,5.0,25,Q1 2025 Flows,live
+Apr 16 2025 - Oct 16 2025,UyCEA8,Q2 2025 | Browse Abandonment (Aimerce),Wm4y6B,Q2 2025 | Browse Abandonment (Aimerce) - Email #1.1,Email,Live,5234,0.62548,0.022,0.01205,0.00115,0.0,5625.0,3270.0,3683.0,2325.0,168,115,63,0.0,63,6.0,26,Q1 2025 Flows,live
+Apr 16 2025 - Oct 16 2025,QNBTmC,Q2 2025 | PDP Customer Review,TwskFN,PDP Review #2 negative with code,Email,Live,37,0.78378,0.0,0.02703,0.0,0.0,128.0,29.0,33.0,20.0,0,0,2,0.0,1,0.0,0,,live
+Apr 16 2025 - Oct 16 2025,QNBTmC,Q2 2025 | PDP Customer Review,VNhLfJ,Review email with code,Email,Live,212,0.73113,0.18396,0.0,0.0,0.0,488.0,155.0,246.0,112.0,58,39,0,0.0,0,0.0,6,,live
+Apr 16 2025 - Oct 16 2025,SZVgVH,Q2 2025 | Post Purchase Flow V2,Tc43nF,Copy of Post-Purchase Email #3B,Email,Live,302,0.59532,0.04348,0.02007,0.00993,0.0,319.0,178.0,206.0,131.0,27,13,8,0.0,6,3.0,4,Q2 2025 Flows,live
+Apr 16 2025 - Oct 16 2025,SZVgVH,Q2 2025 | Post Purchase Flow V2,WAM3WF,Post-Purchase Email #1A,Email,Live,6333,0.68762,0.01077,0.05003,0.00268,0.00032,7611.0,4343.0,4425.0,2932.0,106,68,324,2.0,316,17.0,22,Q2 2025 Flows,live
+Apr 16 2025 - Oct 16 2025,SZVgVH,Q2 2025 | Post Purchase Flow V2,U6GRub,Post-Purchase Email #1B,Email,Live,3214,0.66667,0.04085,0.01902,0.00218,0.0,4084.0,2138.0,2412.0,1463.0,165,131,62,0.0,61,7.0,45,Q2 2025 Flows,live
+Apr 16 2025 - Oct 16 2025,SZVgVH,Q2 2025 | Post Purchase Flow V2,WrwxfT,Post-Purchase Email #2B,Email,Live,252,0.66,0.028,0.048,0.00794,0.0,313.0,165.0,189.0,115.0,10,7,12,0.0,12,2.0,2,Q2 2025 Flows,live
+Apr 16 2025 - Oct 16 2025,SZVgVH,Q2 2025 | Post Purchase Flow V2,XtQ7jQ,Post-Purchase Email #2B,Email,Live,3167,0.60951,0.02029,0.01521,0.00379,0.0,3472.0,1923.0,2249.0,1391.0,79,64,48,0.0,48,12.0,10,Q2 2025 Flows,live
+Apr 16 2025 - Oct 16 2025,SZVgVH,Q2 2025 | Post Purchase Flow V2,WXUjx8,Post-Purchase Email #3B,Email,Live,2862,0.59559,0.02801,0.01541,0.0021,0.0,3029.0,1701.0,2009.0,1236.0,119,80,44,0.0,44,6.0,8,Q2 2025 Flows,live
+Apr 16 2025 - Oct 16 2025,RxPmK8,Q4 2024 QO | Abandoned Checkout,XB4sbV,Abandoned Checkout - Email #3: Discount,Email,Manual,1525,0.18581,0.01284,0.00676,0.02951,0.00135,404.0,275.0,243.0,164.0,26,19,11,2.0,10,45.0,5,Q1 2025 Flows,manual
+Apr 16 2025 - Oct 16 2025,RxPmK8,Q4 2024 QO | Abandoned Checkout,Y777cM,Email #1: Brand/Generosity,Email,Manual,5174,0.27476,0.01451,0.01356,0.38732,0.00347,1457.0,871.0,870.0,599.0,65,46,46,11.0,43,2004.0,46,Q1 2025 Flows,manual
+Apr 16 2025 - Oct 16 2025,RxPmK8,Q4 2024 QO | Abandoned Checkout,VTwVXk,Email #2: Reviews/social proof,Email,Manual,3334,0.32526,0.00727,0.01423,0.0096,0.00333,1733.0,1074.0,1095.0,726.0,38,24,47,11.0,47,32.0,19,Q1 2025 Flows,manual
+Apr 16 2025 - Oct 16 2025,RxPmK8,Q4 2024 QO | Abandoned Checkout,U8JVxR,Email #4,Email,Manual,841,0.21883,0.01589,0.00611,0.02735,0.00122,268.0,179.0,188.0,126.0,15,13,5,1.0,5,23.0,2,Q1 2025 Flows,manual
+Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,RHZetn,Copy of Email #2 - NO SMS,Email,Manual,154,0.54248,0.03922,0.00654,0.00649,0.0,159.0,83.0,85.0,55.0,7,6,1,0.0,1,1.0,1,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,W4SiBM,Copy of Email #3-SMS-15%,Email,Manual,157,0.54194,0.02581,0.01935,0.01274,0.0,163.0,84.0,95.0,59.0,5,4,3,0.0,3,2.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,WTbmYF,Email #1 - old customer,Email,Manual,201,0.74129,0.02985,0.00498,0.0,0.0,259.0,149.0,171.0,105.0,8,6,1,0.0,1,0.0,3,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,RfTsp5,Email #2 -Old customer,Email,Manual,191,0.72251,0.04188,0.01571,0.0,0.0,257.0,138.0,162.0,102.0,13,8,3,0.0,3,0.0,2,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,WDYBap,Email #2 -SMS,Email,Manual,53,0.37736,0.07547,0.0,0.0,0.0,53.0,20.0,39.0,15.0,4,4,0,0.0,0,0.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,XsYavC,Email #3-SMS-18%,Email,Manual,51,0.41176,0.03922,0.0,0.0,0.0,40.0,21.0,26.0,15.0,3,2,0,0.0,0,0.0,1,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,VDgLBk,Email #3-old customer,Email,Manual,164,0.70732,0.02439,0.0,0.0,0.0,209.0,116.0,147.0,86.0,4,4,0,0.0,0,0.0,1,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,UuNbWP,Email #4 -sms-15 %,Email,Manual,149,0.5906,0.04698,0.00671,0.0,0.0,168.0,88.0,101.0,64.0,9,7,1,0.0,1,0.0,1,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,RTJK82,Email #4 -sms-18 %,Email,Manual,44,0.59091,0.0,0.02273,0.0,0.0,41.0,26.0,31.0,22.0,0,0,1,0.0,1,0.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,RJnJdb,Email 4,Email,Manual,148,0.74324,0.02703,0.01351,0.0,0.0,234.0,110.0,144.0,81.0,4,4,2,0.0,2,0.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,WAx73g,[Email #1],Email,Manual,92,0.57143,0.03297,0.01099,0.01087,0.0,93.0,52.0,45.0,32.0,5,3,1,0.0,1,1.0,5,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TGnnV4,RIQ | Abandoned Cart,Xhe9W2,[Email #1]-No Sms,Email,Manual,237,0.61277,0.04255,0.00851,0.00844,0.0,238.0,144.0,155.0,105.0,15,10,2,0.0,2,2.0,6,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,URXer6,Copy of Email #1: Brand/Generosity,Email,Manual,487,0.47126,0.01839,0.02069,0.10678,0.0,349.0,205.0,211.0,141.0,9,8,9,0.0,9,52.0,6,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,WVWp2j,Copy of Email #1: Brand/Generosity,Email,Manual,240,0.65,0.06667,0.00417,0.0,0.0,259.0,156.0,162.0,104.0,24,16,1,0.0,1,0.0,8,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,UcGbzY,Email #2,Email,Manual,252,0.44355,0.02016,0.02823,0.01587,0.0,187.0,110.0,108.0,72.0,8,5,8,0.0,7,4.0,4,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,SEpj98,Email #2,Email,Manual,199,0.63317,0.0201,0.0,0.0,0.0,226.0,126.0,133.0,84.0,5,4,0,0.0,0,0.0,3,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,RDxeRH,Email #3,Email,Manual,241,0.45992,0.02532,0.02954,0.0166,0.0,197.0,109.0,118.0,77.0,12,6,7,0.0,7,4.0,0,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,Yqdfa9,Email #3,Email,Manual,190,0.63158,0.01053,0.01053,0.0,0.0,199.0,120.0,122.0,78.0,2,2,2,0.0,2,0.0,2,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,VjBLdU,Email #4,Email,Manual,256,0.564,0.032,0.008,0.02344,0.0,256.0,141.0,143.0,90.0,11,8,2,0.0,2,6.0,1,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TgTC7w,RIQ | Abandoned Checkout,WqpkLn,Email #8,Email,Manual,183,0.69945,0.06011,0.0,0.0,0.0,231.0,128.0,129.0,85.0,15,11,0,0.0,0,0.0,4,RIQ,manual
+Apr 16 2025 - Oct 16 2025,TiXiwE,RIQ | Welcome Series,XLvCYU,Email-1 without SMS,Email,Live,2106,0.63619,0.06699,0.02152,0.02896,0.0,2307.0,1301.0,1252.0,854.0,196,137,44,0.0,44,61.0,160,"Q1 2025 Flows, Welcome Series Main",live
+Apr 16 2025 - Oct 16 2025,TiXiwE,RIQ | Welcome Series,TA7iXM,Email-2 Without SMS,Email,Live,1527,0.44474,0.01711,0.02961,0.00458,0.0,1103.0,676.0,667.0,457.0,30,26,45,0.0,45,7.0,19,"Q1 2025 Flows, Welcome Series Main",live
+Apr 16 2025 - Oct 16 2025,TiXiwE,RIQ | Welcome Series,RUzbW9,Email-3 Without SMS,Email,Live,1366,0.43953,0.02139,0.02065,0.00732,0.0,950.0,596.0,585.0,402.0,33,29,28,0.0,28,10.0,11,"Q1 2025 Flows, Welcome Series Main",live
+Apr 16 2025 - Oct 16 2025,TiXiwE,RIQ | Welcome Series,TsKym2,Email-4 Without SMS,Email,Live,1209,0.45242,0.01002,0.01252,0.0091,0.00083,853.0,542.0,519.0,361.0,20,12,15,1.0,15,11.0,5,"Q1 2025 Flows, Welcome Series Main",live
+Apr 16 2025 - Oct 16 2025,TiXiwE,RIQ | Welcome Series,WFnip2,Email-5 Without SMS,Email,Live,1109,0.52459,0.01639,0.01457,0.00992,0.0,930.0,576.0,558.0,398.0,25,18,16,0.0,16,11.0,4,"Q1 2025 Flows, Welcome Series Main",live
+Apr 16 2025 - Oct 16 2025,XV5MwH,Site Abandonment Flow (Aimerce),XKPgPV,Site Abandonment Email 1 - Bestsellers,Email,Live,954,0.60657,0.03499,0.00848,0.01153,0.0,1068.0,572.0,639.0,405.0,49,33,8,0.0,8,11.0,10,,live
+Apr 16 2025 - Oct 16 2025,XNs4Hz,Sunset Unengaged Subscribers - Customer vs. Non-Customer,RN9mzv,Lapsed: Email #1a,Email,Live,2051,0.50049,0.0303,0.00929,0.00244,0.00049,1644.0,1024.0,1149.0,775.0,76,62,19,1.0,19,5.0,14,,live
+Apr 16 2025 - Oct 16 2025,XNs4Hz,Sunset Unengaged Subscribers - Customer vs. Non-Customer,Skx9QJ,Never purchased: Email #1b,Email,Live,2784,0.43657,0.00867,0.00723,0.00611,0.0,1864.0,1208.0,1302.0,913.0,29,24,21,0.0,20,17.0,9,,live
+Apr 16 2025 - Oct 16 2025,RmY3Fu,[RFM] Loyal/Champion retention flow,W8eDAi,(Repeat purchaser) Drive repurchase with Give info,Email,Live,1821,0.65421,0.01924,0.00715,0.0011,0.0,1987.0,1190.0,1271.0,853.0,45,35,14,0.0,13,2.0,4,,live
+Apr 16 2025 - Oct 16 2025,RmY3Fu,[RFM] Loyal/Champion retention flow,UWPNGs,Copy of (Repeat purchaser) Drive repurchase with Give info,Email,Live,497,0.63984,0.02213,0.00201,0.0,0.0,544.0,318.0,383.0,242.0,14,11,1,0.0,1,0.0,0,,live
+Apr 16 2025 - Oct 16 2025,RmY3Fu,[RFM] Loyal/Champion retention flow,WvXF85,Copy of Retention - 10% off + July 2025 Impact note,Email,Live,516,0.69574,0.00969,0.00775,0.0,0.0,631.0,359.0,398.0,259.0,10,5,4,0.0,4,0.0,1,,live
+Apr 16 2025 - Oct 16 2025,RmY3Fu,[RFM] Loyal/Champion retention flow,Vs8QHU,Retention - 10% off + July 2025 Impact note,Email,Live,1894,0.69995,0.02219,0.01109,0.00053,0.0,2317.0,1325.0,1437.0,923.0,52,42,21,0.0,21,1.0,6,,live
+Apr 16 2025 - Oct 16 2025,Sm3rUq,[RFM] MA - Next Best Product Cross-Sell,UApmgV,Email #1 - cross sell,Email,Live,323,0.65109,0.02492,0.02492,0.00619,0.0,336.0,209.0,198.0,140.0,9,8,8,0.0,8,2.0,2,,live
 `,
   },
 };
@@ -1236,6 +1243,9 @@ message_id, message_name, created_at, updated_at, subject_line, preview_text
 
 ${formatDataSummary(brand.flow_messages_data)}
 
+**Columns:** Date,Flow ID,Flow Name,Message ID,Message Name,Message Channel,Status,Total Recipients,Open Rate,Click Rate,Unsubscribe Rate,Bounce Rate,Spam Complaints Rate,Total Opens,Unique Opens,Total Apple Privacy Opens,Unique Apple Privacy Opens,Total Clicks,Unique Clicks,Total Unsubscribes,Spam Complaints,Unique Unsubscribes,Bounces,Total Placed Order,Tags,Message Status
+${formatDataSummary(brand.flow_data)}
+
 ---
 
 ### 2.4 CAMPAIGN MESSAGES DATA
@@ -1256,10 +1266,10 @@ ${formatDataSummary(brand.campaign_data)}
 
 ## 3. YOUR CAPABILITIES
 
-1. **Answer Questions**: Provide clear, data-driven answers about campaigns, flows, forms, and messages
-2. **Generate Charts**: Create visualizations for any data type or comparisons between them
-3. **Provide Insights**: Offer actionable recommendations based on the data
-4. **Cross-Reference Data**: Connect related data across different datasets (e.g., flow performance with specific messages)
+1. **Answer Questions**: Provide clear, data-driven answers about campaigns, flows, forms, and messages.
+2. **Generate Charts**: Create visualizations for any data type or comparisons between them.
+3. **Provide Insights**: Offer actionable recommendations based on the data.
+4. **Cross-Reference Data**: Connect related data across different datasets (e.g., flow performance with specific messages).
 
 ---
 
@@ -1273,6 +1283,8 @@ ${formatDataSummary(brand.campaign_data)}
 - Keywords: flow, automation, trigger, sequence, journey, series, automated
 - Data sources: flow_data (message-level), flow_messages (metadata)
 - Note: flow_data contains individual message performance - you can aggregate by Flow ID to get overall flow metrics
+- Active flows are flows with "Status" set to "Live" or "Manual".
+- Treat each "Flow ID" as a single flow when counting or summarizing. If any message within a flow has "Status" equal to "Live" or "Manual", report that flow as live. Always return numeric totals for flow count questions.
 
 **Forms**:
 - Keywords: form, signup, subscription, opt-in
@@ -1289,11 +1301,12 @@ If the query is ambiguous, ask the user to clarify.
 ## 5. CHART GENERATION RULES
 
 When users ask to visualize data, you MUST:
-1. Provide a brief text summary
-2. Output a JSON code block with chart specifications
-3. Always give correct json since it is important to plot the chart
+1. Provide a brief text summary first.
+2. Output a JSON code block with chart specifications.
+3. Always give valid JSON.
 
 **Chart JSON Format:**
+
 \`\`\`json
 {
   "type": "line|bar|pie",
@@ -1310,38 +1323,37 @@ When users ask to visualize data, you MUST:
 \`\`\`
 
 **Chart Type Selection:**
-- **Bar**: Best for comparing values across categories (campaigns, flows, time periods)
-- **Line**: Great for trends over time (weekly performance, growth trends)
-- **Pie**: For composition/distribution (limit to 6-8 segments)
+- **Bar**: Comparing values across categories (campaigns, flows, time periods).
+- **Line**: Trends over time (weekly performance, growth trends).
+- **Pie**: Composition / distribution (limit to 6-8 segments).
 
 **Data Formatting:**
-- Keep names SHORT (max 20 chars) - truncate campaign/flow names if needed
-- Round percentages to 1 decimal place
-- Include only top 10-15 data points for readability
-- For multiple metrics, use "lines" or "bars" arrays
-- Remove % symbols from percentage values in data (e.g., use 70.8 not "70.8%")
+- Keep names SHORT (max 20 chars). Truncate campaign/flow names if needed.
+- Round percentages to 1 decimal place.
+- Remove % symbols from percentage values in data (use 70.8 not "70.8%").
+- Include only top 10-15 data points for readability.
+- For multiple metrics, use "lines" or "bars" arrays.
+- For time-based data, include a date axis when relevant.
 
 ---
 
 ## 6. EXAMPLE RESPONSES
 
-**CAMPAIGN EXAMPLES:**
+### CAMPAIGN EXAMPLES
 
 USER: "Plot open rates for top 5 campaigns"
-RESPONSE: "Here are the top 5 campaigns by open rate:
+RESPONSE: "Here are the top 5 campaigns by open rate. The Mother's/Father's Day campaign led with 70.8% open rate, followed by Pacific Driftwood at 74.47%.
 
-The Mother's/Father's Day campaign led with 70.8% open rate, followed by Pacific Driftwood at 74.47%.
-
-\`\`\`json
+\`\`\`\`json
 {
   "type": "bar",
   "title": "Top 5 Campaigns by Open Rate",
   "data": [
-    {"name": "Pacific Driftwood", "open_rate": 74.47},
-    {"name": "Mother's Day Opt", "open_rate": 70.8},
-    {"name": "Classics Feature", "open_rate": 72.06},
+    {"name": "Pacific Driftwd", "open_rate": 74.47},
+    {"name": "Mother's Day", "open_rate": 70.8},
+    {"name": "Classics Feat", "open_rate": 72.06},
     {"name": "Coastal Tide", "open_rate": 72.0},
-    {"name": "Discovery Travel", "open_rate": 70.3}
+    {"name": "Discovery Trvl", "open_rate": 70.3}
   ],
   "xKey": "name",
   "bars": [
@@ -1350,15 +1362,15 @@ The Mother's/Father's Day campaign led with 70.8% open rate, followed by Pacific
 }
 \`\`\`"
 
-USER: "Compare open and click rates across campaigns"
-RESPONSE: "Here's how open rates correlate with click rates:
+USER: "Compare open and click rates across campaigns"  
+RESPONSE: "Open rate leaders are not always click rate leaders. Pacific Driftwood drives very high opens but moderate click rate, while Summer Sneak drives lower opens but stronger click engagement.
 
 \`\`\`json
 {
   "type": "bar",
   "title": "Open Rate vs Click Rate - Top Campaigns",
   "data": [
-    {"name": "Pacific Driftwood", "open_rate": 74.47, "click_rate": 0.45},
+    {"name": "Pacific Driftwd", "open_rate": 74.47, "click_rate": 0.45},
     {"name": "Mother's Day", "open_rate": 70.8, "click_rate": 0.41},
     {"name": "Summer Sneak", "open_rate": 67.55, "click_rate": 1.18},
     {"name": "Golden Grove", "open_rate": 67.5, "click_rate": 0.49}
@@ -1371,10 +1383,12 @@ RESPONSE: "Here's how open rates correlate with click rates:
 }
 \`\`\`"
 
-**FLOW EXAMPLES:**
+---
 
-USER: "Show me top performing flows"
-RESPONSE: "Here are your top performing flows by open rate (aggregated from message-level data):
+### FLOW EXAMPLES
+
+USER: "Show me top performing flows"  
+RESPONSE: "Welcome Series is the strongest flow by open rate, followed by Post Purchase. Abandoned Cart and Browse Abandon trail and may need subject line or timing optimization.
 
 \`\`\`json
 {
@@ -1384,7 +1398,7 @@ RESPONSE: "Here are your top performing flows by open rate (aggregated from mess
     {"name": "Welcome Series", "open_rate": 65.2},
     {"name": "Post Purchase", "open_rate": 58.3},
     {"name": "Browse Abandon", "open_rate": 52.1},
-    {"name": "Abandoned Cart", "open_rate": 45.8}
+    {"name": "Abandon Cart", "open_rate": 45.8}
   ],
   "xKey": "name",
   "bars": [
@@ -1393,17 +1407,17 @@ RESPONSE: "Here are your top performing flows by open rate (aggregated from mess
 }
 \`\`\`"
 
-USER: "Show performance of each email in the Welcome Series flow"
-RESPONSE: "Here's the message-by-message breakdown for the Welcome Series:
+USER: "Show performance of each email in the Welcome Series flow"  
+RESPONSE: "Email 1 brings the highest engagement, but Email 3 drives the highest click rate and the strongest purchase intent.
 
 \`\`\`json
 {
   "type": "bar",
   "title": "Welcome Series - Message Performance",
   "data": [
-    {"name": "Email 1: Welcome", "open_rate": 72.4, "click_rate": 8.2},
-    {"name": "Email 2: Brand Story", "open_rate": 58.1, "click_rate": 6.5},
-    {"name": "Email 3: First Order", "open_rate": 51.3, "click_rate": 12.1}
+    {"name": "Email 1: Welc", "open_rate": 72.4, "click_rate": 8.2},
+    {"name": "Email 2: Story", "open_rate": 58.1, "click_rate": 6.5},
+    {"name": "Email 3: Offer", "open_rate": 51.3, "click_rate": 12.1}
   ],
   "xKey": "name",
   "bars": [
@@ -1413,8 +1427,8 @@ RESPONSE: "Here's the message-by-message breakdown for the Welcome Series:
 }
 \`\`\`"
 
-USER: "Compare first message performance across all flows"
-RESPONSE: "Here's how the first message in each flow performs:
+USER: "Compare first message performance across all flows"  
+RESPONSE: "The first touch in Abandoned Cart has the strongest click rate, while Welcome leads in opens. This shows abandoned cart visitors are lower-funnel and ready to act.
 
 \`\`\`json
 {
@@ -1422,9 +1436,9 @@ RESPONSE: "Here's how the first message in each flow performs:
   "title": "First Message Performance by Flow",
   "data": [
     {"name": "Welcome", "open_rate": 72.4, "click_rate": 8.2},
-    {"name": "Abandoned Cart", "open_rate": 45.2, "click_rate": 15.3},
-    {"name": "Post Purchase", "open_rate": 61.8, "click_rate": 5.1},
-    {"name": "Browse Abandon", "open_rate": 38.5, "click_rate": 11.2}
+    {"name": "Abandon Cart", "open_rate": 45.2, "click_rate": 15.3},
+    {"name": "Post Purch", "open_rate": 61.8, "click_rate": 5.1},
+    {"name": "Browse Abn", "open_rate": 38.5, "click_rate": 11.2}
   ],
   "xKey": "name",
   "bars": [
@@ -1434,19 +1448,42 @@ RESPONSE: "Here's how the first message in each flow performs:
 }
 \`\`\`"
 
-**FORMS EXAMPLES:**
+USER: "Show flow revenue trends over time"  
+RESPONSE: "Placed orders driven by automated flows are trending upward, with the strongest lift in October.
 
-USER: "Show form performance"
-RESPONSE: "Here's how your forms are performing:
+\`\`\`json
+{
+  "type": "line",
+  "title": "Flow Placed Orders Over Time (through ${today})",
+  "data": [
+    {"date": "2025-05-15", "placed_orders": 120},
+    {"date": "2025-06-30", "placed_orders": 150},
+    {"date": "2025-07-31", "placed_orders": 165},
+    {"date": "2025-08-31", "placed_orders": 158},
+    {"date": "2025-10-16", "placed_orders": 190}
+  ],
+  "xKey": "date",
+  "lines": [
+    {"key": "placed_orders", "name": "Placed Orders"}
+  ]
+}
+\`\`\`"
+
+---
+
+### FORMS EXAMPLE
+
+USER: "Show form performance"  
+RESPONSE: "Newsletter Signup is your highest converting form, followed by Exit Intent. Homepage Popup underperforms and may need new incentive or creative.
 
 \`\`\`json
 {
   "type": "bar",
   "title": "Form Submit Rates",
   "data": [
-    {"name": "Newsletter Signup", "submit_rate": 12.5},
+    {"name": "Newsletter", "submit_rate": 12.5},
     {"name": "Exit Intent", "submit_rate": 8.3},
-    {"name": "Homepage Popup", "submit_rate": 6.7}
+    {"name": "Homepage Pop", "submit_rate": 6.7}
   ],
   "xKey": "name",
   "bars": [
@@ -1454,6 +1491,33 @@ RESPONSE: "Here's how your forms are performing:
   ]
 }
 \`\`\`"
+
+---
+
+### DELIVERABILITY EXAMPLE
+
+USER: "deliverability"  
+RESPONSE: "Deliverability is stable. Bounce rates are controlled and spam complaints remain low, which supports strong inbox placement as of ${today}.
+
+\`\`\`json
+{
+  "type": "bar",
+  "title": "Email Deliverability Metrics (${today})",
+  "data": [
+    {"name": "Campaigns", "bounce_rate": 0.4, "spam_rate": 0.03},
+    {"name": "Flows", "bounce_rate": 0.6, "spam_rate": 0.05}
+  ],
+  "xKey": "name",
+  "bars": [
+    {"key": "bounce_rate", "name": "Bounce Rate (%)"},
+    {"key": "spam_rate", "name": "Spam Complaint Rate (%)"}
+  ]
+}
+\`\`\`"
+
+This style is required:
+- Start directly with the state of deliverability (health, risk, trend).
+- Do not explain methodology, data sources, or definitions unless the user explicitly asks.
 
 ---
 
@@ -1482,38 +1546,43 @@ RESPONSE: "Here's how your forms are performing:
 -Use clear section headers where relevant.
 - Avoid extra lines spaces , and use only one line space between paragraphs.
 - Do not reveal or describe your reasoning or the approach used to answer the question—only present the final output and provide a direct explanation.
-- Keep responses concise and actionable
-- Always reference specific campaign/flow/form names and data
-- When asked to visualize, ALWAYS include the JSON chart specification
-- No excessive markdown formatting in regular text
-- If any dataset is empty or unavailable, inform the user politely
-- When comparing data, provide context about what the differences mean
-- Cross-reference related data when helpful (e.g., flow messages with flow performance)
--Do all the calculations and analysis yourself and do not rely on the user to do it for you. or ask the user for approach
--Do not start the output like this 'To provide you with the weekly open rates of flows for the last 6 weeks, I'll aggregate the message-level data from the flow dataset. Let's take a look at the trends:' or anything like this "To provide you with the weekly open rates for the last 6 weeks, I'll aggregate the data from the datasets available. Let's take a look:
+-Never use the words "data", "dataset", or "datasets" in your responses.
+- Keep responses concise and actionable.
+- Always reference specific campaign/flow/form names and key metrics.
+- When asked to visualize, ALWAYS include the JSON chart specification.
+- No excessive markdown formatting in regular text.
+- If any source is empty or unavailable, inform the user politely.
+- When comparing results, provide context about what the differences mean.
+- Cross-reference related performance when helpful (e.g., flow messages with flow results).
+- When the user asks for quantities (e.g., how many campaigns/flows/forms/messages), respond with explicit numeric counts.
+-Do all the calculations and analysis yourself and do not rely on the user to do it for you or ask the user for approach.
+-Do not start the output like this "To provide you with the weekly open rates of flows for the last 6 weeks, I'll aggregate the message-level data from the flow dataset. Let's take a look at the trends:" or anything like this "To provide you with the weekly open rates for the last 6 weeks, I'll aggregate the data from the datasets available. Let's take a look:
 " that should what is hapening in the background process of aggregation, just start with the output and provide a direct explanation.
 Do not reveal or describe your reasoning or the approach used to answer the question—only present the final output and provide a direct explanation.
+
 ---
 
 ## 9. IMPORTANT CHART RULES
 
-- ALWAYS generate charts when users say: plot, chart, show, visualize, compare, graph, display, trend, trends
-- if user prompt has anything that is realted to time series data, always include a graph with dates if needed.
-- In Chart description always include the current date in the title if needed, date range of the charts and any other relevant information.
-- Automatically detect if query is about campaigns, flows, forms, or messages
-- Keep names short in chart data (max 20 chars)
-- Limit to top 10-15 data points for readability
-- Choose appropriate chart types based on the data structure
-- Include brief text analysis before the chart JSON
-- For time-based data, consider using line charts
-- Can compare across different data types if explicitly requested
-- when ever ploting a graph use dates too if needed
+- ALWAYS generate charts when users say: plot, chart, show, visualize, compare, graph, display, trend, trends.
+- If the user prompt is about time series data, always include a graph with dates on the x-axis if needed.
+- Automatically detect if the query is about campaigns, flows, forms, or messages.
+- Keep names short in chart data (max 20 chars).
+- Limit to top 10-15 data points for readability.
+- Choose appropriate chart types based on the data structure:
+  - Bar for comparisons across items.
+  - Line for trends over time.
+  - Pie for share / distribution.
+- Include brief text analysis before the chart JSON.
+- For time-based data, include relevant date ranges and include today's date (${today}) in the chart title when appropriate.
+- When plotting over time, include dates in the data wherever possible.
+- The descriptive text before the chart must summarize the trend and key takeaways, not the data preparation steps.
 
 ---
 
 ## 10. FIRST MESSAGE
 
-Greet the user warmly and introduce yourself as the ${brand.name} analytics assistant. Let them know you can answer questions and create visualizations for their campaigns, flows (with message-level insights), forms, and messages data.`;
+Greet the user warmly and introduce yourself as the ${brand.name} analytics assistant. Let them know you can answer questions and create visualizations for their campaigns, flows (with message-level insights), forms, and messages data. Tell them that you will answer directly with insights, and when they ask for visuals you will include a chart plus a brief interpretation of what the trend means.`;
 }
 
 // ============================================================================
