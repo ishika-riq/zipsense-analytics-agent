@@ -172,6 +172,250 @@ September 2025,19521.02,36666.47,17145.45,149504.45
 October 2025,16265.41,30960.80,14695.39,147722.48
 `,
   },
+  2: {
+    name: "Grow Fragrance",
+    description:
+      "Grow Fragrance is a modern home fragrance brand that creates 100% plant-based air fresheners and candles designed to smell amazing while being safe for people and the planet. Founded with the goal of replacing traditional synthetic fragrances, Grow uses real botanicals and essential oils to craft clean, non-toxic scents that elevate any space without harmful chemicals.",
+    forms_data: `form_id,form_name,form_status,created_at,updated_at,closed_form,viewed_form,viewed_form_uniques,submits,submit_rate
+SdXAFr,Email Subscribe Signup form - Web,live,2025-09-22T19:55:04+00:00,2025-09-22T19:55:04+00:00,0.0,5.0,2.0,0.0,0.0
+W84UV7,RIQ: MIIR: Signup-New-(mobile/SMS),live,2025-07-28T12:42:30+00:00,2025-07-28T12:42:30+00:00,68756.0,84753.0,67014.0,3161.0,0.0373
+UrTNaJ,RIQ: MIIR: Signup-New-(Desktop),live,2025-07-28T11:31:09+00:00,2025-07-28T11:31:09+00:00,28053.0,69554.0,50760.0,1110.0,0.01596
+RsPaK5,DTC:  SMS opt in for email subscribers,live,2025-05-20T17:25:45+00:00,2025-05-20T17:25:45+00:00,5315.0,7064.0,5485.0,581.0,0.08225
+`,
+    campaign_data: `
+    Campaign Message ID,Campaign Message Name,Send Date,Send Time,Open Rate,Click Rate,Unsubscribe Rate,Bounce Rate,Spam Complaints Rate,Total Opens,Unique Opens,Total Clicks,Unique Clicks,Total Unsubscribes,Unique Unsubscribes,Spam Complaints,Bounces,Subject,Preview Text,Day of Week,Campaign Message Channel
+01K8QRGKHBPS4K6DEGWVRCYJ9G,[SMS] Holiday Launch,2025-10-29,05:00 PM,,0.18444,0.00868,,,,,616,595,28,28,,,,,Wednesday,SMS
+01K8NHDYT3JNJPY9D9R95TN4KP,RIQ: 29th Oct - Holiday Scent Teaser ,2025-10-29,04:00 PM,0.67253,0.01622,0.00128,0.00133,7e-05,43048.0,37772.0,1290,911,72,72,4.0,75.0,Holiday Scents Are Coming to Town 🎅,,Wednesday,Email
+01K8B47VEVACG0EATR07MTBDVH,RIQ: 26th Oct - Fragranceverse,2025-10-27,08:30 AM,0.73357,0.00512,0.00283,0.00156,2e-05,48698.0,41426.0,364,289,160,160,1.0,88.0,You’ve been summoned to Blondewood ✨,,Monday,Email
+01K7VNKPXMYACND21D0BAQNHW8,RIQ: 23rd October - Halloween Scent,2025-10-23,09:30 AM,0.54398,0.00525,0.00257,0.00399,8e-05,51161.0,42509.0,500,410,201,201,6.0,313.0,The Scent of Halloween Is Here 👻🎃,,Thursday,Email
+01K7V30VDDZE3J853QP5RNHMPZ,RIQ: 20th October,2025-10-20,11:00 AM,0.68647,0.00425,0.00295,0.00996,3e-05,51880.0,42629.0,360,264,183,183,2.0,625.0,Where Is Your Fragrance Really Made? 🌎,,Monday,Email
+01K7Q47MJKHMRQFC73DKAP53Y8,[SMS] Fall Scent Winner,2025-10-17,05:00 PM,,0.15388,0.00501,,,,,488,307,10,10,,,,,Friday,SMS
+01K7RG009QHA6G78F6R4ZTV6JV,RIQ: 17th Oct - Fall Scent Winner,2025-10-17,03:30 PM,0.63842,0.00726,0.00187,0.00182,3e-05,53463.0,43106.0,627,490,126,126,2.0,123.0,We Have a Winner! 🥁🍁,,Friday,Email
+01K6Z866EP82HD003Q93NRQ82W,RIQ: 8th October Best seller highlight,2025-10-15,10:30 AM,0.3583,0.00291,0.00286,0.0098,0.00033,16236.0,13173.0,141,107,105,105,12.0,364.0,What’s All the Hype About? Our Top Scents Explained!,,Wednesday,Email
+01K7EX0S26DCR7P7MF8XFKS9DZ,RIQ: 14th October,2025-10-14,12:00 PM,0.87556,0.00388,0.00197,0.00308,0.00012,46830.0,37692.0,226,167,85,85,5.0,133.0,🎉 Meet the Glow Game Winners! (You might know them…),,Tuesday,Email
+01K7EMY9Y4HRR1XJZ14VTDBHTJ,RIQ: 13th October - National Book Month,2025-10-13,03:00 PM,0.60759,0.00553,0.00246,0.00462,0.00011,53916.0,43478.0,622,396,176,176,8.0,332.0,Light Up Your Reading Nook This Book Month 🕯️✨,,Monday,Email
+01K6Z8RP3JJWW2167AQAVSWQCS,[SMS] Discovery Set,2025-10-08,12:00 PM,,0.17707,0.01681,,,,,532,295,28,28,,,,,Wednesday,SMS
+01K6Z7VRYPTK7B5SQFRHB350JJ,RIQ: 7th Sept - Discovery Set ,2025-10-08,10:30 AM,0.49722,0.00418,0.00338,0.01156,0.0002,15615.0,12502.0,175,105,85,85,5.0,294.0,Which scent will you fall in love with? 💖,,Wednesday,Email
+01K6MWC2KW1GKJ404HFGKY4HJ1,RIQ: 3rd Oct - Fall Scent Survey,2025-10-03,02:30 PM,0.4831,0.03584,0.00266,0.00245,0.0,3138.0,2359.0,244,175,13,13,0.0,12.0,🍁 Vote for Your Favorite Fall Scent,,Friday,Email
+01K6FQHK2VZ2TQ4F2FC87PNFJ5,RIQ: 2nd October,2025-10-01,03:30 PM,0.42452,0.00504,0.00296,0.00582,0.00015,56367.0,43893.0,1045,521,306,306,15.0,605.0,Play the Glow Game → Win $100 💳✨,,Wednesday,Email
+01K6D0EZ7ZTY516KX4VMS790V4,RIQ : 30th September,2025-09-30,03:30 PM,0.66732,0.00547,0.00219,0.00352,0.00014,55520.0,43588.0,489,357,143,143,9.0,231.0,Plot Twist: Candles and Cars Have Something in Common 🚗🕯️,,Tuesday,Email
+01K62YYJY241S7RSAA2JS3FXXM,RIQ: 27th September - Fall Movies,2025-09-27,10:00 AM,0.53134,0.00396,0.00266,0.00525,9e-05,54642.0,43152.0,472,322,216,216,7.0,429.0,"Lights, Camera, Cozy: Your Fall Movie & Candle Guide 🎬✨",,Saturday,Email
+01K5RA4HE0SFWB0SHQBCGC9TZY,RIQ: 25th September,2025-09-25,09:30 AM,0.54716,0.0053,0.00228,0.00338,0.00017,54431.0,42809.0,497,415,178,178,13.0,265.0,Enter the Fragranceverse: Ginger Pumpkin awaits🚪,,Thursday,Email
+01K5RDRX33SHHSFQRCB9R7HFTE,RIQ:22nd Sept - First Day of Fall,2025-09-22,03:00 PM,0.64934,0.00548,0.00234,0.00361,7e-05,55537.0,43610.0,446,368,157,157,5.0,243.0,It’s Here: The First Day of Fall 🍂,,Monday,Email
+01K5K718F7VFK8X76WW763AYBQ,RIQ:20th Sept - Pear Cider Follow-up,2025-09-20,02:30 PM,0.71162,0.00581,0.00209,0.00453,8e-05,55846.0,43824.0,439,358,129,129,5.0,280.0,🍐✨ Fall Into Comfort with Pear Cider,,Saturday,Email
+01K5977WKH1RYFXX4Z7A2BW3Z0,RIQ:18th Sept - Pear Cider Launch,2025-09-18,08:45 AM,0.4256,0.00663,0.00285,0.0075,0.00016,57401.0,44833.0,854,698,300,300,17.0,796.0,🍐 New Scent: Pear Cider has arrived,,Thursday,Email
+01K593W7X7JA9ZX6V0C1QTM7QT,RIQ: 17th September Join the waitlist.,2025-09-17,01:30 PM,0.71516,0.01171,0.00183,0.00416,3e-05,56320.0,44047.0,929,721,113,113,2.0,257.0,🍐 New fall fragrance lands tomorrow,,Wednesday,Email
+01K563D231D5VP2C3NBE5RHH4Y,RIQ:15th September,2025-09-15,02:00 PM,0.64618,0.00535,0.00274,0.007,0.00011,53827.0,42236.0,446,350,182,179,7.0,461.0,🔥Fragrance Showdown: Grow vs Big Box,,Monday,Email
+01K4SWZ3Y0AB5FWHJ50FR3AFP3,RIQ: 11th September - Easy Hack,2025-09-11,03:30 PM,0.61246,0.00651,0.00292,0.00407,7e-05,56869.0,44491.0,624,473,217,212,5.0,297.0,We’re letting you in on our cozy sweater secret 🧣,,Thursday,Email
+01K4AQGPFPGAMDS9BY8A0HYT6M,RIQ:7th Sept - 3 Wick Candle Feature,2025-09-07,10:00 AM,0.54026,0.01548,0.00405,0.0023,6e-05,22599.0,17591.0,657,504,134,132,2.0,75.0,One candle. Three flames. Big energy.,,Sunday,Email
+01K4AJ6VFVQYQB63R4GMGPH704,RIQ: 4th Sept (clone),2025-09-04,11:30 AM,0.56364,0.00457,0.00296,0.007,0.00017,53505.0,41910.0,480,340,222,220,13.0,524.0,Spot These 3 Sneaky Toxins in 5 Seconds,,Thursday,Email
+01K4807QG7GDCY4WMRPFH68FBA,RIQ: 4th Sept,2025-09-04,10:30 AM,0.56503,0.00536,0.00364,0.00784,0.00022,32178.0,25310.0,344,240,165,163,10.0,354.0,Spot These 3 Sneaky Toxins in 5 Seconds,,Thursday,Email
+01K3V661JEX92TS9A6CYBRMBZ2,RIQ:1st Sept - Labor Day ,2025-09-01,10:00 AM,0.61395,0.00546,0.00505,0.00397,0.00011,54242.0,42951.0,464,382,357,353,8.0,279.0,Wishing You a Calm & Cozy Labor Day 🍃,,Monday,Email
+01K3RADCMSM44H9QEB0J5KVNFX,[SMS] Texas SMS,2025-08-28,02:00 PM,,0.12281,0.0,,,,,8,7,0,0,,,,,Thursday,SMS
+01K3GXC6C81KZ6FXSBYK3DQP1H,RIQ:28th August - Autumn Heirloom,2025-08-28,02:00 PM,0.54178,0.01056,0.00569,0.00328,7e-05,18916.0,14473.0,342,282,156,152,2.0,88.0,Experience the season’s most beloved scent 🍂✨,,Thursday,Email
+01K3G8WWWKKEV0X80354XW36M4,RIQ: 26th August - National Dog Day,2025-08-26,11:00 AM,0.7159,0.00205,0.00615,0.0,0.0,936.0,698.0,2,2,6,6,0.0,0.0,"Celebrate National Dog Day with Safe, Cruelty-Free Fragrance 🌿🐾",,Tuesday,Email
+01K3K70AC0E58ECSA8YEKAHAAD,RIQ: 26th August - National Dog Day (clone),2025-08-26,09:30 AM,0.61011,0.00481,0.00599,0.00098,0.00013,54499.0,43107.0,462,340,434,423,9.0,69.0,"Celebrate National Dog Day with Safe, Cruelty-Free Fragrance 🌿🐾",,Tuesday,Email
+01K3GTSFVARNV2NFRY5AZBMT96,RIQ:23rd August - Refill Email (Personalized),2025-08-25,02:00 PM,0.47534,0.01229,0.00556,0.0015,0.00017,10937.0,8549.0,295,221,101,100,3.0,27.0,Your candle’s ready for a refill 🕯️,,Monday,Email
+01K396A6DHST6WWQ3Z6VB0381Q,RIQ:23rd August - Refill Email,2025-08-23,11:00 AM,0.5431,0.04023,0.00575,0.00287,0.0,258.0,189.0,19,14,2,2,0.0,1.0,Your candle’s ready for a refill 🕯️,,Saturday,Email
+01K2Z6E6EEMWX4ZAXCSTNB931A,RIQ:21st August - Behind the Scent: Flannel,2025-08-21,11:45 AM,0.56561,0.00481,0.00652,0.00128,6e-05,46689.0,36688.0,380,312,428,423,4.0,83.0,Behind the Scent: Flannel & Leaves 🍁,,Thursday,Email
+01K2Z5WXJ3PG1W34SVS85P16EV,RIQ:19th August - Flannel + leaves: new scent feature,2025-08-19,11:00 AM,0.67893,0.00723,0.00681,0.00244,0.00016,54396.0,42544.0,624,453,433,427,10.0,153.0,Meet the new scent of fall - just launched! 🍂,,Tuesday,Email
+01K2S8FTP54QNGE9KTVXB9YGV5,RIQ:16th August - Fall Launch Follow-Up,2025-08-16,11:00 AM,0.54782,0.01769,0.00792,0.0009,0.00016,17425.0,13347.0,575,431,193,193,4.0,22.0,Have you met our new fall scents yet? 🍁,,Saturday,Email
+01K2M44ZE0DAKYXD145NE9G7Z6,[MMS] Fall Collection Launch,2025-08-14,12:00 PM,,0.18177,0.00339,,,,,419,375,7,7,,,,,Thursday,SMS
+01K2578R1XBXYAHVPY6MQVFQ9N,RIQ:14th August - Fall Collection Launch ,2025-08-14,08:30 AM,0.56795,0.01628,0.00732,0.00333,7e-05,48578.0,37933.0,1511,1087,495,489,5.0,223.0,It smells like fall in here  🍂,,Thursday,Email
+01K24W0SE6T6FM3FNSWJJ72WV0,RIQ:12th August - Fall Collection Teaser,2025-08-12,02:00 PM,0.67595,0.0108,0.00832,0.00196,0.0002,55844.0,43694.0,983,698,544,538,13.0,127.0,Fall’s Finest Scents Are Almost Here 🍁,,Tuesday,Email
+01K1XKH5CQR6ZJPDFQ1WAKMYBW,Car Freshner Follow-Up,2025-08-09,09:30 AM,0.17051,0.00467,0.01219,0.00199,0.0,6602.0,5555.0,220,152,402,397,0.0,65.0,That moment when your car smells too good..,,Saturday,Email
+01K22CHG8B14FEDTTP2RT4MWFQ,[MMS] Car Freshner Launch,2025-08-07,12:09 PM,,0.1527,0.0053,,,,,332,317,11,11,,,,,Thursday,SMS
+01K1XJ1G6H29VSGG4SRQEEXZS0,7th August - Car Freshener Launch (Waitlist/Repeats),2025-08-07,11:00 AM,0.48284,0.01885,0.00696,0.00179,0.0,2844.0,2152.0,173,84,31,31,0.0,8.0,NEW: Car Fresheners Got a Glow Up 🚗✨,,Thursday,Email
+01K22BF832X2W9CPTN5DZ1J9MS,7th August - Car Freshener Launch (full list),2025-08-07,09:28 AM,0.46996,0.00625,0.00748,0.00487,0.00013,53442.0,41826.0,706,556,674,666,12.0,436.0,NEW: Car Fresheners Got a Glow Up 🚗✨,,Thursday,Email
+01K1XGRKKZCP2E8C3FN9EAETNY,5th August - Car Freshner Teaser (clone),2025-08-05,02:00 PM,0.67159,0.00994,0.0092,0.00203,6e-05,55640.0,43235.0,861,640,600,592,4.0,131.0,We’ve been working on something fresh,,Tuesday,Email
+01K1G4DP4FJWKNS40WZBD52APA,RIQ:2nd August,2025-08-02,11:00 AM,0.47779,0.00338,0.01087,0.01153,0.00029,16982.0,13273.0,160,94,308,302,8.0,324.0,✨ “As seen in People Magazine…”,,Saturday,Email
+01K18R3Z4HTJF3S9Q1B0DHXA4H,Pacific Driftwood Reviews 2025,2025-07-30,01:00 AM,0.70669,0.00738,0.00871,0.00215,9e-05,65869.0,48867.0,710,510,612,602,6.0,149.0,Smells too good to be this clean 💙,Rave reviews. Non-toxic. Loved by you.,Wednesday,Email
+01K1403CNPP8DXZ3FHMBG3R2VY,[Follow-up] Last Call Summer Email 2025,2025-07-28,08:23 PM,0.39534,0.00645,0.01472,0.00083,0.0,6056.0,4780.0,101,78,179,178,0.0,10.0,Last Chance for Summer Faves! ⛱️,"Last chance to grab Cabana, Coastal Tide, and Coconut Pineapple",Monday,Email
+01JWXJSP38RWEQJ0FM9MGRRP0A,Last Call Summer Email 2025,2025-07-26,08:23 AM,0.62246,0.00509,0.00753,0.00325,8e-05,62191.0,46960.0,519,384,573,568,6.0,246.0,Low stock alert: Your summer favorites,"Last chance to grab Cabana, Coastal Tide, and Coconut Pineapple",Saturday,Email
+01JWXTK2RC08NHWNHSXZ2KYHX1,Summer Last Call SMS 2025,2025-07-25,12:36 PM,,0.13194,0.00794,,,,,271,266,16,16,,,,,Friday,SMS
+01K0Q0EYNGH5290PDG1FG7H519,Pacific Driftwood Review Ask,2025-07-23,07:45 PM,0.6822,0.05085,0.01271,0.00211,0.0,475.0,322.0,27,24,6,6,0.0,1.0,Can we ask you something?,"You gave our new scent a chance, thank you 💙",Wednesday,Email
+01K0Q73KPFCD4RXBH9X8PFEMKF,Spray it where? Email Campaign,2025-07-22,01:00 AM,0.71235,0.00728,0.008,0.00213,4e-05,65846.0,49124.0,681,502,561,552,3.0,147.0,Don’t sleep on these spray hacks (or this deal),Our best spray tips + $2 off each when you grab more than one,Tuesday,Email
+01K0CXYQ31NNGREVKGXZ0WJ5NZ,[Follow-up] Behind the Scent: Pacific Driftwood,2025-07-19,09:19 AM,0.49551,0.00706,0.00863,0.00174,0.0,7031.0,5685.0,259,81,100,99,0.0,20.0,How this scent won over our entire team,It was love at first smell 💙,Saturday,Email
+01JWXJ9F51M95V5GB3M180SBKZ,Behind the Scent: Pacific Driftwood,2025-07-17,09:19 AM,0.74484,0.00448,0.00647,0.00228,8e-05,61761.0,46359.0,387,279,411,403,5.0,142.0,“Wait… what is that?”,It was love at first smell 💙,Thursday,Email
+01JWXJ7EKCF9YND84QHQBDBSAM,Pacific Driftwood Launch Reminder,2025-07-15,11:15 AM,0.68162,0.00472,0.00623,0.00236,6e-05,61147.0,46052.0,430,319,424,421,4.0,160.0,You've never smelled the coast like this,This new scent is making waves,Tuesday,Email
+01JWRZAPP6GBYGFATBZP02VMT0,Pacific Driftwood Launch 2025 SMS,2025-07-11,11:47 AM,,0.13346,0.00633,,,,,287,274,13,13,,,,,Friday,SMS
+01JWRVJ07TDF5YGFEJ05T892E8,Pacific Driftwood Launch 2025,2025-07-11,08:33 AM,0.50265,0.0057,0.00484,0.00544,0.00012,56252.0,42360.0,608,480,412,408,10.0,461.0,NEW: Pacific Driftwood 🌊,A new limited-edition scent that smells like the sea meeting the shore,Friday,Email
+01JZTA82E2WDZ38Y63VTWB4XTN,Pacific Driftwood Early Release 2025 SMS (clone),2025-07-10,11:47 AM,,0.30055,0.01639,,,,,67,55,3,3,,,,,Thursday,SMS
+01JZTA4V80EG37CHDDYXYP0WHJ,Pacific Driftwood Early Release 2025 (Re-send),2025-07-10,10:00 AM,0.72509,0.24399,0.0,0.00683,0.0,344.0,211.0,99,71,0,0,0.0,2.0,Your Exclusive Access is Here 🌊 🪵,"{{ first_name }}, be the first to experience this new scent",Thursday,Email
+01JWXJJMCYPN78G9SVTHJ1QNRA,Pacific Driftwood Early Release 2025,2025-07-10,08:18 AM,1.0,1.0,0.0,0.0,0.0,2.0,1.0,1,1,0,0,0.0,0.0,Your Exclusive Access is Here 🌊 🪵,"{{ first_name }}, be the first to experience this new scent",Thursday,Email
+01JWXJG50X76M7BAVSAMDCW8K1,Pacific Driftwood Sneak Peek,2025-07-08,11:47 AM,0.72813,0.00552,0.00549,0.00221,9e-05,63329.0,47646.0,519,361,364,359,6.0,145.0,A sneak peek at our new scent 🌊,Join the waitlist and get early access,Tuesday,Email
+01JY26FQFMHB60H6Q2F2MQ8P8G,Classics Feature Summer 2025,2025-07-05,08:08 AM,0.72065,0.00288,0.00505,0.00202,5e-05,61760.0,47059.0,273,188,336,330,3.0,132.0,"Always in season, always in carts 🛒",Not just a one-spray stand,Saturday,Email
+01JWXJD5MSJE5S880RWJD85SF3,Pacific Driftwood Waitlist Sign Up 2025,2025-07-03,08:18 AM,0.67895,0.00588,0.0049,0.00232,3e-05,62076.0,46799.0,526,405,343,338,2.0,160.0,A new scent is on the horizon ⛰️,Be first in line to try it,Thursday,Email
+01JV80K4WJC03QMS2PFJ3KXZVH,Behind the Scent: Coastal Tide 2025,2025-07-01,12:45 PM,0.42837,0.0036,0.00569,0.00342,0.00015,26958.0,20112.0,310,169,271,267,7.0,161.0,The story behind our cleanest summer scent,A look at the plant-based process that brings this calming scent to life,Tuesday,Email
+01JYQ3A5NBYVWBKC16ZYFKADNQ,[Follow-up] Blondewood Scent Feature (Engaged),2025-06-28,11:38 AM,0.22751,0.00529,0.00529,0.0,0.0,57.0,43.0,1,1,1,1,0.0,0.0,The vanilla that went viral.,"A fragrance so good, you’ll forget it’s non-toxic",Saturday,Email
+01JY27B6JZZN6SFNE1E97XE3SN,Summer Favorite Winner 2025,2025-06-28,08:33 AM,0.64353,0.0136,0.00444,0.00281,0.00017,61776.0,46561.0,1208,984,323,321,12.0,204.0,This was a close one...😮,See which scent won the summer favorite,Saturday,Email
+01JRDWYPMBD2X9P92VXC337Z3Q,Blondewood Scent Feature (Engaged),2025-06-26,11:38 AM,0.6922,0.00394,0.00394,0.00183,6e-05,60563.0,45633.0,323,260,261,260,4.0,121.0,Calling all vanilla lovers ✨,"A fragrance so good, you’ll forget it’s non-toxic",Thursday,Email
+01JV7M19TQT3DR976K5V6H1FNG,Summer Reviews 2025,2025-06-24,07:47 PM,0.66618,0.00527,0.00368,0.00239,4e-05,64517.0,48307.0,591,382,269,267,3.0,174.0,Customer Favorites: Summer Edition ✨,We crunched the numbers (and read your reviews). These scents won summer.,Tuesday,Email
+01JVD4SS00600GEQT9AWCCD0PV,1st day of Summer 2025,2025-06-20,11:12 AM,0.44,0.00489,0.00387,0.00349,0.00011,27859.0,20709.0,363,230,184,182,5.0,165.0,Your Guide to a Relaxing Summer 😌,You don’t need a big routine. Just small moments that make you feel good.,Friday,Email
+01JV2SQHTZYMEMBK3PZDS583MV,Favorite Summer Poll 2025 Email,2025-06-18,11:11 AM,0.50673,0.00666,0.00338,0.00371,0.00019,21339.0,16215.0,279,213,108,108,6.0,119.0,Vote: What's Your Favorite Summer Scent?,Plus 4 natural ways to keep your car smelling fresh,Wednesday,Email
+01JXWFCDSY19W8TMEMHRVVF4WV,Subscription Survey (4+ Orders 52 Weeks),2025-06-17,11:19 AM,0.60836,0.09598,0.00387,0.00077,0.0,1198.0,786.0,162,124,5,5,0.0,1.0,"Help Us Out & Get 15% Off, {{ person.first_name|title|default:'friend' }}!",Got 2 Minutes? 15% Off for Your Thoughts,Tuesday,Email
+01JV2VQ9E5EDE35ECZK2NKBABA,Cabana Reviews 2025,2025-06-14,08:18 AM,0.60727,0.00411,0.00332,0.00298,8e-05,62509.0,47389.0,569,321,263,259,6.0,233.0,Our best summer scent yet? 🤔,You decide. The 5 star ratings are rolling in,Saturday,Email
+01JWY7R1WBXD6GNPS1W379648E,Discovery Set Summer Travel Email 2025,2025-06-12,11:33 AM,0.70304,0.00381,0.00378,0.00202,5e-05,61108.0,46155.0,345,250,254,248,3.0,133.0,Going somewhere?,"For the road, the plane—or your everyday bag",Thursday,Email
+01JSYQMV5ZG2TZTZAE64G9BG5V,Behind the Scent: Coconut Pineapple 2025,2025-06-10,02:12 PM,0.65823,0.00392,0.00333,0.00271,6e-05,64053.0,47799.0,437,285,247,242,4.0,197.0,What’s really inside Coconut Pineapple? 🍍,The unexpected way we made this scent smell like the perfect beach day,Tuesday,Email
+01JX5VD5409E4X3VVGC3VZ7SVS,[Follow-up] Summer Car Fresheners 2025,2025-06-09,08:34 AM,0.27702,0.00632,0.00499,0.00041,0.0002,3479.0,2719.0,112,62,66,49,2.0,4.0,Add to car 🚗,Because clean should smell this good-even in your car,Monday,Email
+01JSYYBCKGDJFD94ZAY5FB2TE0,Summer Car Fresheners 2025,2025-06-07,08:34 AM,0.5044,0.00451,0.00453,0.00254,0.0,27963.0,20818.0,685,186,201,187,0.0,105.0,"For road trips, beach days & everyday",Because clean should smell this good-even in your car,Saturday,Email
+01JRZW7VWC5J2BYGRVXEN7FKE8,Summer Scent Quiz 2025,2025-06-05,01:00 AM,0.52961,0.00754,0.00525,0.00274,2e-05,30000.0,21979.0,514,313,220,218,1.0,114.0,Which summer scent are you? 🏖️,Coconut? Coastal? Discover which one is perfect for you,Thursday,Email
+01JV7VWH88PGS4TGDE8M357ZA4,Coastal Tide Feature 2025,2025-06-03,07:17 PM,0.72003,0.00701,0.00433,0.00209,6e-05,65777.0,48759.0,918,475,303,293,4.0,142.0,The coastal scent you've been waiting for is back! 🌊,"""It makes my home smell like a beach house right off the ocean""",Tuesday,Email
+01JT42NEWTTZSD31MJHYXA9P50,"Cabana Back in Stock, May 2025",2025-06-01,01:35 PM,0.69491,0.0048,0.00426,0.00247,3e-05,62461.0,46944.0,461,324,299,288,2.0,167.0,Back in Stock: Cabana 🌴,The summer scent that keeps selling out,Sunday,Email
+01JT3TFG83WTXCATYJBMK0GDDG,Summer 3 Wick Candles 2025,2025-05-30,11:46 AM,0.51444,0.00407,0.00193,0.00214,0.0001,13517.0,9852.0,130,78,38,37,2.0,41.0,For when the day finally slows down,"{{ person.first_name|title|default:'friend' }}, you deserve a moment that feels still.",Friday,Email
+01JV3046ETDGEJZEM9NS3TA853,Behind the Scent: Sea Salt Neroli 2025,2025-05-28,11:48 AM,0.43273,0.00576,0.00324,0.00292,0.00012,24822.0,18320.0,362,244,141,137,5.0,124.0,How We Captured the Coast in Full Bloom 🌺🌊,Smells like that just-back-from-the-beach feeling,Wednesday,Email
+01JT3HMS3AZTYY4BKR1C7BEXBN,Sea Salt Neroli Archive Reminder 2025,2025-05-24,08:13 AM,0.61339,0.00834,0.00298,0.00166,7e-05,24416.0,18092.0,341,246,88,88,2.0,49.0,Did you hear what’s back?,One of our most-loved scents is here—for now.,Saturday,Email
+01JT3GNFTBEDQCSB7CMF1E7PYD,Sea Salt Neroli Archive Event SMS 2025,2025-05-22,10:54 AM,,0.14441,0.00643,,,,,304,292,13,13,,,,,Thursday,SMS
+01JT3EK2FYWJ71KPTFJ4NN9816,Sea Salt Neroli Archive Launch 2025,2025-05-22,08:11 AM,0.59551,0.01493,0.00291,0.00164,6e-05,25785.0,19222.0,654,482,94,94,2.0,53.0,Sea Salt Neroli is back 🏖️,You’ve been asking. The beach-day scent is here—but not for long.,Thursday,Email
+01JT3PF1XVQCVW9TER2YJ70E9F,Sea Salt Neroli Archive Sneak Peek 2025,2025-05-20,12:11 PM,0.63202,0.00523,0.00304,0.00172,3e-05,24850.0,18737.0,213,155,93,90,1.0,51.0,Coming Soon... 🏖️,One of our most-loved summer scents is almost back,Tuesday,Email
+01JT3XTWQY0JK2HQ89HFFFS2SA,Summer Daily Rituals 2025,2025-05-17,08:33 AM,0.52135,0.00713,0.00264,0.00218,9e-05,24133.0,18134.0,346,248,95,92,3.0,76.0,This is how we use our sprays every day,From morning resets to bedtime rituals—your daily scent guide starts here,Saturday,Email
+01JSHH40370Y7R6NQ179R62RYH,Cabana Review Ask,2025-05-16,10:54 AM,0.8,0.0,0.0,0.0,0.0,5.0,4.0,0,0,0,0,0.0,0.0,"{{ person.first_name|title|default:'friend' }}, did you love Cabana?",Let us know what you think!,Friday,Email
+01JVAN8WS32PVC2Q54E00BVYXY,Coconut Pineapple Scent Feature 2025 (3 months),2025-05-15,03:08 PM,0.61111,0.01762,0.00542,0.00806,0.0,637.0,451.0,116,13,4,4,0.0,6.0,The must-have scent of the season 🥥,Your favorite coconut scent is back,Thursday,Email
+01JV2J661E27C32R1HE1FQDVJC,Coconut Pineapple Scent Feature 2025 (Less Engaged),2025-05-14,12:33 PM,0.17611,0.00359,0.00914,0.02056,0.00096,10912.0,8397.0,244,171,447,436,46.0,1001.0,The must-have scent of the season 🥥,Your favorite coconut scent is back,Wednesday,Email
+01JRZZC3GXXV7904A0EB8N74YW,Coconut Pineapple Scent Feature 2025 (Engaged),2025-05-14,11:54 AM,0.65533,0.0065,0.00185,0.00145,0.0,25580.0,19445.0,244,193,55,55,0.0,43.0,The must-have scent of the season 🥥,Your favorite coconut scent is back,Wednesday,Email
+01JV2GS7ZPY19P4A97GMJE2YA3,Last Call Spring Email 2025 (Spring Seasonal Purchasers),2025-05-13,08:08 AM,0.47084,0.00603,0.00342,0.00599,0.00033,3696.0,2890.0,54,37,21,21,2.0,37.0,Last Chance for Spring Scents 🌿,Grab your favorites while you can...,Tuesday,Email
+01JTXTV9E6KJTQA4HVBMYCRB29,[Follow-up] Last Call Spring Email 2025,2025-05-12,08:18 AM,0.2942,0.00856,0.00262,0.00103,0.0,3031.0,2579.0,109,75,23,23,0.0,9.0,Low stock alert: Spring scents,Grab your favorites while you can...,Monday,Email
+01JRZVC7H275WHCSESENM0D7ZY,Last Call Spring Email 2025,2025-05-10,08:18 AM,0.5103,0.00982,0.00193,0.00238,6e-05,22330.0,16889.0,485,325,64,64,2.0,79.0,Last Chance for Spring Scents 🌿,Grab your favorites while you can...,Saturday,Email
+01JSYHKD84T18VZEA6E8TPVFYY,Behind the Scent: Cabana 2025,2025-05-08,11:47 AM,0.48782,0.00712,0.00259,0.00256,0.00011,23347.0,17679.0,354,258,96,94,4.0,93.0,How we bottled a vacation ☀️,Here’s how we created your next favorite scent,Thursday,Email
+01JSYDP7A3ZAZC5MBV3KW2NEW9,Summer Discovery 2025,2025-05-06,12:12 PM,0.61925,0.00605,0.00225,0.00219,3e-05,53346.0,41240.0,553,403,152,150,2.0,146.0,Can’t pick one? Try them all.,Our Summer Discovery Set makes it easy,Tuesday,Email
+01JT7199C7VEZQ6ZFEWZQ0K614,[Follow-up] Mother's Day Gift Guide 2025,2025-05-04,11:51 AM,0.24752,0.00833,0.00256,0.00043,0.0,2695.0,2318.0,100,78,24,24,0.0,4.0,Seriously Good Summer Sets for Gifting (or Keeping),"Whether it's for Mother’s Day, Teacher Appreciation, or just because...",Sunday,Email
+01JT1S26ZGVW5GJXX12R3RMC92,[Follow-up] Cabana Scent Feature 2025,2025-05-03,10:54 AM,0.35345,0.00574,0.00235,0.00097,0.0,5127.0,4369.0,95,71,29,29,0.0,12.0,Smells like your next vacation ⛱️,The sun-soaked scent you've been waiting for,Saturday,Email
+01JNRR22RBXTBCXH7Q4NN4BNZ5,Mother's Day Gift Guide 2025,2025-05-01,11:51 AM,0.50417,0.00698,0.00284,0.00208,8e-05,23586.0,17913.0,349,248,104,101,3.0,74.0,Gifts That Surprise + Delight 🌊,"Whether it's for Mother’s Day, Teacher Appreciation, or just because...",Thursday,Email
+`,
+    flow_data: `
+Flow ID,Flow Name,Date,Message Channel,Status,Open Rate,Click Rate,Unsubscribe Rate,Bounce Rate,Spam Complaints Rate,Total Opens,Unique Opens,Total Clicks,Total Unsubscribes,Unique Unsubscribes,Spam Complaints,Bounces,Unique Clicks,Tags
+X5uuBu,Abandoned Cart,May 01 2025 - May 31 2025,Email,Manual,0.59836,0.02777,0.00626,0.01426,0.0,2102,1530,82,16,16,0,37,71,Abandoned Cart
+URuQQm,Bamboo Purchasers — Buy the Set!,May 01 2025 - May 31 2025,Email,Manual,0.55844,0.05195,0.01299,0.0,0.0,54,43,8,1,1,0,0,4,
+Sv2aV3,Blondewood Purchasers — Buy the Set!,May 01 2025 - May 31 2025,Email,Manual,0.60465,0.02791,0.0,0.0,0.0,181,130,6,0,0,0,0,6,
+Ra3i2j,Browse Abandonment,May 01 2025 - May 31 2025,Email,Manual,0.65812,0.0442,0.00494,0.00094,0.0,4073,2799,255,22,21,0,4,188,"Blondewood, Browse Abandonment"
+UdjnAE,Golden Grove Purchasers — Buy the Set!,May 01 2025 - May 31 2025,Email,Manual,0.58388,0.01809,0.00822,0.00328,0.00164,480,355,14,6,5,1,2,11,
+VnsSZr,Lavender Blossom Purchasers — Buy the Set!,May 01 2025 - May 31 2025,Email,Manual,0.66316,0.01053,0.0,0.0,0.0,90,63,2,0,0,0,0,1,
+WVQkqP,Newsletter Signup,May 01 2025 - May 31 2025,Email,Manual,0.62181,0.02385,0.00341,0.01345,0.0,580,365,17,2,2,0,8,14,Newsletter
+Ura52F,Pomelo Purchasers — Buy the Set!,May 01 2025 - May 31 2025,Email,Archived,0.59722,0.04167,0.0,0.0,0.0,77,43,5,0,0,0,0,3,
+Sv3KEL,Post Purchase- 1st order,May 01 2025 - May 31 2025,Email,Live,0.57505,0.01067,0.00847,0.00354,0.00017,14094,10187,226,150,150,3,63,189,Post Purchase
+RJm36M,Post Purchase- 2nd Order/Repeats,May 01 2025 - May 31 2025,Email,Live,0.58269,0.01186,0.00483,0.00197,0.0,3658,2653,96,22,22,0,9,54,Post Purchase
+WhFsCF,Post Purchase- 3rd Order/Fans,May 01 2025 - May 31 2025,Email,Live,0.59825,0.01627,0.00334,0.00291,0.0,2020,1434,54,8,8,0,7,39,Post Purchase
+SnMqew,Post Purchase- 4th Order/Fans,May 01 2025 - May 31 2025,Email,Live,0.66565,0.00608,0.00304,0.0,0.0,315,219,2,1,1,0,0,2,Post Purchase
+U3334r,Post Purchase- 5th Order/Superfans,May 01 2025 - May 31 2025,Email,Live,0.68243,0.02703,0.0,0.0,0.0,155,101,5,0,0,0,0,4,Post Purchase
+UctP9E,Post Purchase- 6+ Orders/Megafans,May 01 2025 - May 31 2025,Email,Live,0.71115,0.00676,0.00169,0.0,0.0,663,421,5,1,1,0,0,4,Post Purchase
+URwkiP,Product Review Ask,May 01 2025 - May 31 2025,Email,Live,0.56252,0.02002,0.00525,0.0036,0.00066,2381,1714,140,16,16,2,11,61,Review Ask
+YiLWd4,Scent Quiz,May 01 2025 - May 31 2025,Email,Live,0.59685,0.02677,0.01701,0.01029,0.0,2721,1895,117,55,54,0,33,85,Scent Quiz
+SnJkVA,Summer Waitlist SMS/Email,May 01 2025 - May 31 2025,Email,Archived,1.0,0.0,0.0,0.0,0.0,1,1,0,0,0,0,0,0,Waitlist
+X7s2fe,Woodland Sage Purchasers — Buy the Set!,May 01 2025 - May 31 2025,Email,Manual,0.60299,0.03284,0.01194,0.0,0.00299,278,202,16,4,4,1,0,11,
+X5uuBu,Abandoned Cart,May 01 2025 - May 31 2025,Email,Manual,0.59836,0.02777,0.00626,0.01426,0.0,2102,1530,82,16,16,0,37,71,Abandoned Cart
+URuQQm,Bamboo Purchasers — Buy the Set!,May 01 2025 - May 31 2025,Email,Manual,0.55844,0.05195,0.01299,0.0,0.0,54,43,8,1,1,0,0,4,
+Sv2aV3,Blondewood Purchasers — Buy the Set!,May 01 2025 - May 31 2025,Email,Manual,0.60465,0.02791,0.0,0.0,0.0,181,130,6,0,0,0,0,6,
+Ra3i2j,Browse Abandonment,May 01 2025 - May 31 2025,Email,Manual,0.65812,0.0442,0.00494,0.00094,0.0,4073,2799,255,22,21,0,4,188,"Blondewood, Browse Abandonment"
+UdjnAE,Golden Grove Purchasers — Buy the Set!,May 01 2025 - May 31 2025,Email,Manual,0.58388,0.01809,0.00822,0.00328,0.00164,480,355,14,6,5,1,2,11,
+VnsSZr,Lavender Blossom Purchasers — Buy the Set!,May 01 2025 - May 31 2025,Email,Manual,0.66316,0.01053,0.0,0.0,0.0,90,63,2,0,0,0,0,1,
+WVQkqP,Newsletter Signup,May 01 2025 - May 31 2025,Email,Manual,0.62181,0.02385,0.00341,0.01345,0.0,580,365,17,2,2,0,8,14,Newsletter
+Ura52F,Pomelo Purchasers — Buy the Set!,May 01 2025 - May 31 2025,Email,Archived,0.59722,0.04167,0.0,0.0,0.0,77,43,5,0,0,0,0,3,
+Sv3KEL,Post Purchase- 1st order,May 01 2025 - May 31 2025,Email,Live,0.57505,0.01067,0.00847,0.00354,0.00017,14094,10187,226,150,150,3,63,189,Post Purchase
+RJm36M,Post Purchase- 2nd Order/Repeats,May 01 2025 - May 31 2025,Email,Live,0.58269,0.01186,0.00483,0.00197,0.0,3658,2653,96,22,22,0,9,54,Post Purchase
+WhFsCF,Post Purchase- 3rd Order/Fans,May 01 2025 - May 31 2025,Email,Live,0.59825,0.01627,0.00334,0.00291,0.0,2020,1434,54,8,8,0,7,39,Post Purchase
+SnMqew,Post Purchase- 4th Order/Fans,May 01 2025 - May 31 2025,Email,Live,0.66565,0.00608,0.00304,0.0,0.0,315,219,2,1,1,0,0,2,Post Purchase
+U3334r,Post Purchase- 5th Order/Superfans,May 01 2025 - May 31 2025,Email,Live,0.68243,0.02703,0.0,0.0,0.0,155,101,5,0,0,0,0,4,Post Purchase
+UctP9E,Post Purchase- 6+ Orders/Megafans,May 01 2025 - May 31 2025,Email,Live,0.71115,0.00676,0.00169,0.0,0.0,663,421,5,1,1,0,0,4,Post Purchase
+URwkiP,Product Review Ask,May 01 2025 - May 31 2025,Email,Live,0.56252,0.02002,0.00525,0.0036,0.00066,2381,1714,140,16,16,2,11,61,Review Ask
+YiLWd4,Scent Quiz,May 01 2025 - May 31 2025,Email,Live,0.59685,0.02677,0.01701,0.01029,0.0,2721,1895,117,55,54,0,33,85,Scent Quiz
+SnJkVA,Summer Waitlist SMS/Email,May 01 2025 - May 31 2025,Email,Archived,1.0,0.0,0.0,0.0,0.0,1,1,0,0,0,0,0,0,Waitlist
+X7s2fe,Woodland Sage Purchasers — Buy the Set!,May 01 2025 - May 31 2025,Email,Manual,0.60299,0.03284,0.01194,0.0,0.00299,278,202,16,4,4,1,0,11,
+X5uuBu,Abandoned Cart,Jun 01 2025 - Jun 30 2025,Email,Manual,0.58233,0.03217,0.00864,0.01373,0.0,1866,1213,90,19,18,0,29,67,Abandoned Cart
+URuQQm,Bamboo Purchasers — Buy the Set!,Jun 01 2025 - Jun 30 2025,Email,Manual,0.51471,0.05882,0.01471,0.0,0.0,49,35,7,1,1,0,0,4,
+Sv2aV3,Blondewood Purchasers — Buy the Set!,Jun 01 2025 - Jun 30 2025,Email,Manual,0.55102,0.03401,0.0068,0.0,0.0,114,81,5,1,1,0,0,5,
+Ra3i2j,Browse Abandonment,Jun 01 2025 - Jun 30 2025,Email,Manual,0.64482,0.0408,0.00529,0.00127,0.00063,4724,3050,309,25,25,3,6,193,"Blondewood, Browse Abandonment"
+UdjnAE,Golden Grove Purchasers — Buy the Set!,Jun 01 2025 - Jun 30 2025,Email,Manual,0.59116,0.01105,0.00552,0.00549,0.0,318,214,4,2,2,0,2,4,
+VnsSZr,Lavender Blossom Purchasers — Buy the Set!,Jun 01 2025 - Jun 30 2025,Email,Manual,0.57576,0.0303,0.01515,0.0,0.0,47,38,2,1,1,0,0,2,
+WVQkqP,Newsletter Signup,Jun 01 2025 - Jun 30 2025,Email,Manual,0.50993,0.02815,0.00497,0.00165,0.0,520,308,27,3,3,0,1,17,Newsletter
+Ura52F,Pomelo Purchasers — Buy the Set!,Jun 01 2025 - Jun 30 2025,Email,Archived,0.55556,0.11111,0.0,0.0,0.0,28,20,4,0,0,0,0,4,
+Sv3KEL,Post Purchase- 1st order,Jun 01 2025 - Jun 30 2025,Email,Live,0.57634,0.01113,0.01022,0.00266,0.0002,13015,8856,236,159,157,3,41,171,Post Purchase
+RJm36M,Post Purchase- 2nd Order/Repeats,Jun 01 2025 - Jun 30 2025,Email,Live,0.57044,0.01256,0.00628,0.0023,0.0,3888,2725,93,30,30,0,11,60,Post Purchase
+WhFsCF,Post Purchase- 3rd Order/Fans,Jun 01 2025 - Jun 30 2025,Email,Live,0.58123,0.01998,0.00478,0.00303,0.00043,1878,1338,61,11,11,1,7,46,Post Purchase
+SnMqew,Post Purchase- 4th Order/Fans,Jun 01 2025 - Jun 30 2025,Email,Live,0.64384,0.02192,0.0,0.0,0.0,343,235,8,0,0,0,0,8,Post Purchase
+U3334r,Post Purchase- 5th Order/Superfans,Jun 01 2025 - Jun 30 2025,Email,Live,0.71304,0.02609,0.0,0.0,0.0,137,82,3,0,0,0,0,3,Post Purchase
+UctP9E,Post Purchase- 6+ Orders/Megafans,Jun 01 2025 - Jun 30 2025,Email,Live,0.72318,0.02361,0.00215,0.00214,0.0,577,337,14,1,1,0,1,11,Post Purchase
+URwkiP,Product Review Ask,Jun 01 2025 - Jun 30 2025,Email,Live,0.57219,0.02502,0.00246,0.00286,0.00041,2023,1395,105,6,6,1,7,61,Review Ask
+YiLWd4,Scent Quiz,Jun 01 2025 - Jun 30 2025,Email,Live,0.53795,0.02864,0.01814,0.0224,0.00095,1716,1127,80,38,38,2,48,60,Scent Quiz
+X7s2fe,Woodland Sage Purchasers — Buy the Set!,Jun 01 2025 - Jun 30 2025,Email,Manual,0.57828,0.03535,0.00253,0.00252,0.0,350,229,14,1,1,0,1,14,
+X5uuBu,Abandoned Cart,Jul 01 2025 - Jul 31 2025,Email,Manual,0.5978,0.0409,0.00891,0.00209,0.00052,1692,1140,148,18,17,1,4,78,Abandoned Cart
+URuQQm,Bamboo Purchasers — Buy the Set!,Jul 01 2025 - Jul 31 2025,Email,Manual,0.54545,0.01818,0.0,0.0,0.0,49,30,1,0,0,0,0,1,
+Sv2aV3,Blondewood Purchasers — Buy the Set!,Jul 01 2025 - Jul 31 2025,Email,Manual,0.60563,0.02817,0.01408,0.0,0.0,132,86,4,2,2,0,0,4,
+Ra3i2j,Browse Abandonment,Jul 01 2025 - Jul 31 2025,Email,Manual,0.65116,0.04307,0.00665,0.00212,0.00027,3874,2449,292,25,25,1,8,162,"Blondewood, Browse Abandonment"
+V24LBm,Customer Summer Waitlist SMS/Email,Jul 01 2025 - Jul 31 2025,Email,Archived,1.0,0.0,0.0,0.0,0.0,2,1,0,0,0,0,0,0,Waitlist
+UdjnAE,Golden Grove Purchasers — Buy the Set!,Jul 01 2025 - Jul 31 2025,Email,Manual,0.58549,0.03109,0.00518,0.0,0.0,314,226,15,2,2,0,0,12,
+VnsSZr,Lavender Blossom Purchasers — Buy the Set!,Jul 01 2025 - Jul 31 2025,Email,Manual,0.64912,0.05263,0.0,0.0,0.0,48,37,4,0,0,0,0,3,
+WVQkqP,Newsletter Signup,Jul 01 2025 - Jul 31 2025,Email,Manual,0.45359,0.04028,0.00876,0.0,0.0,430,259,31,5,5,0,0,23,Newsletter
+Ura52F,Pomelo Purchasers — Buy the Set!,Jul 01 2025 - Jul 31 2025,Email,Archived,0.6,0.04,0.0,0.0,0.0,41,30,2,0,0,0,0,2,
+Sv3KEL,Post Purchase- 1st order,Jul 01 2025 - Jul 31 2025,Email,Live,0.56062,0.01164,0.01481,0.00226,0.00015,10857,7417,215,202,196,2,30,154,Post Purchase
+RJm36M,Post Purchase- 2nd Order/Repeats,Jul 01 2025 - Jul 31 2025,Email,Live,0.56315,0.01419,0.0054,0.00358,0.0,4058,2818,117,27,27,0,18,71,Post Purchase
+WhFsCF,Post Purchase- 3rd Order/Fans,Jul 01 2025 - Jul 31 2025,Email,Live,0.5847,0.02034,0.00487,0.00221,0.0,1807,1322,57,13,11,0,5,46,Post Purchase
+SnMqew,Post Purchase- 4th Order/Fans,Jul 01 2025 - Jul 31 2025,Email,Live,0.64183,0.02006,0.0,0.0057,0.0,352,224,11,0,0,0,2,7,Post Purchase
+U3334r,Post Purchase- 5th Order/Superfans,Jul 01 2025 - Jul 31 2025,Email,Live,0.68908,0.05882,0.0,0.0,0.0,123,82,10,0,0,0,0,7,Post Purchase
+UctP9E,Post Purchase- 6+ Orders/Megafans,Jul 01 2025 - Jul 31 2025,Email,Live,0.66145,0.01566,0.00196,0.0,0.0,569,338,10,1,1,0,0,8,Post Purchase
+URwkiP,Product Review Ask,Jul 01 2025 - Jul 31 2025,Email,Live,0.56579,0.02726,0.01034,0.00234,0.0,1852,1204,87,22,22,0,5,58,Review Ask
+YiLWd4,Scent Quiz,Jul 01 2025 - Jul 31 2025,Email,Live,0.56696,0.03622,0.02223,0.00951,0.0011,3157,2066,172,82,81,4,35,132,Scent Quiz
+X7s2fe,Woodland Sage Purchasers — Buy the Set!,Jul 01 2025 - Jul 31 2025,Email,Manual,0.58199,0.03215,0.00322,0.0,0.0,266,181,14,1,1,0,0,10,
+WZu49d,(RIQ) Welcome Flow,Aug 01 2025 - Aug 31 2025,Email,Live,0.57309,0.06218,0.01839,0.00722,0.00066,6553,4332,696,143,139,5,55,470,Scent Quiz
+X5uuBu,Abandoned Cart,Aug 01 2025 - Aug 31 2025,Email,Manual,0.60285,0.03191,0.01343,0.00584,0.0,1030,718,45,16,16,0,7,38,Abandoned Cart
+URuQQm,Bamboo Purchasers — Buy the Set!,Aug 01 2025 - Aug 31 2025,Email,Manual,0.53846,0.07692,0.0,0.0,0.0,10,7,2,0,0,0,0,1,
+Sv2aV3,Blondewood Purchasers — Buy the Set!,Aug 01 2025 - Aug 31 2025,Email,Manual,0.56522,0.04348,0.04348,0.0,0.0,17,13,1,1,1,0,0,1,
+Ra3i2j,Browse Abandonment,Aug 01 2025 - Aug 31 2025,Email,Manual,0.67711,0.05463,0.00939,0.00174,0.0007,3005,1946,264,28,27,2,5,157,"Blondewood, Browse Abandonment"
+UdjnAE,Golden Grove Purchasers — Buy the Set!,Aug 01 2025 - Aug 31 2025,Email,Manual,0.71739,0.02174,0.04348,0.0,0.0,48,33,1,2,2,0,0,1,
+VnsSZr,Lavender Blossom Purchasers — Buy the Set!,Aug 01 2025 - Aug 31 2025,Email,Manual,0.88889,0.11111,0.0,0.0,0.0,10,8,2,0,0,0,0,1,
+WVQkqP,Newsletter Signup,Aug 01 2025 - Aug 31 2025,Email,Manual,0.54286,0.0381,0.00952,0.00474,0.0,212,114,10,2,2,0,1,8,Newsletter
+Ura52F,Pomelo Purchasers — Buy the Set!,Aug 01 2025 - Aug 31 2025,Email,Archived,0.7,0.2,0.0,0.0,0.0,9,7,2,0,0,0,0,2,
+Sv3KEL,Post Purchase- 1st order,Aug 01 2025 - Aug 31 2025,Email,Live,0.59943,0.01193,0.01238,0.00268,0.00052,11658,8036,208,170,166,7,36,160,Post Purchase
+RJm36M,Post Purchase- 2nd Order/Repeats,Aug 01 2025 - Aug 31 2025,Email,Live,0.60543,0.01554,0.00655,0.00261,0.00056,4783,3233,102,37,35,3,14,83,Post Purchase
+WhFsCF,Post Purchase- 3rd Order/Fans,Aug 01 2025 - Aug 31 2025,Email,Live,0.5906,0.02527,0.00474,0.00276,0.0,2137,1496,80,12,12,0,7,64,Post Purchase
+SnMqew,Post Purchase- 4th Order/Fans,Aug 01 2025 - Aug 31 2025,Email,Live,0.59453,0.01244,0.01244,0.00495,0.0,343,239,6,5,5,0,2,5,Post Purchase
+U3334r,Post Purchase- 5th Order/Superfans,Aug 01 2025 - Aug 31 2025,Email,Live,0.72059,0.03922,0.01471,0.0,0.0,248,147,9,3,3,0,0,8,Post Purchase
+UctP9E,Post Purchase- 6+ Orders/Megafans,Aug 01 2025 - Aug 31 2025,Email,Live,0.70799,0.02265,0.00238,0.0,0.0,1006,594,30,2,2,0,0,19,Post Purchase
+URwkiP,Product Review Ask,Aug 01 2025 - Aug 31 2025,Email,Live,0.5874,0.02714,0.00651,0.00217,0.0,1572,1082,129,12,12,0,4,50,Review Ask
+YiLWd4,Scent Quiz,Aug 01 2025 - Aug 31 2025,Email,Live,0.53436,0.0227,0.02554,0.00751,0.00032,2526,1695,98,85,81,1,24,72,Scent Quiz
+X7s2fe,Woodland Sage Purchasers — Buy the Set!,Aug 01 2025 - Aug 31 2025,Email,Manual,0.59722,0.01389,0.0,0.0,0.0,54,43,1,0,0,0,0,1,
+XMz4Jh,[RIQ] Browse Flow,Aug 01 2025 - Aug 31 2025,Email,Live,0.59675,0.03496,0.00742,0.00282,0.0,2583,1690,135,22,21,0,8,99,Abandoned Cart
+RcJPaZ,[RIQ] Cart Flow,Aug 01 2025 - Aug 31 2025,Email,Live,0.63616,0.04337,0.00882,0.00366,0.0,2711,1731,158,24,24,0,10,118,Abandoned Cart
+Vb5mSm,[RIQ] Checkout Flow,Aug 01 2025 - Aug 31 2025,Email,Live,0.58227,0.03089,0.00873,0.00335,0.0,1445,867,61,13,13,0,5,46,Abandoned Cart
+WZu49d,(RIQ) Welcome Flow,Sep 01 2025 - Sep 30 2025,Email,Live,0.51868,0.04788,0.01081,0.01078,0.00038,8385,5471,680,116,114,4,115,505,Scent Quiz
+Sv3KEL,Post Purchase- 1st order,Sep 01 2025 - Sep 30 2025,Email,Live,0.61361,0.01228,0.00684,0.0051,0.00061,14594,10046,244,116,112,10,84,201,Post Purchase
+RJm36M,Post Purchase- 2nd Order/Repeats,Sep 01 2025 - Sep 30 2025,Email,Live,0.61732,0.01495,0.00351,0.00533,0.0,4805,3344,103,19,19,0,29,81,Post Purchase
+WhFsCF,Post Purchase- 3rd Order/Fans,Sep 01 2025 - Sep 30 2025,Email,Live,0.61211,0.02146,0.00345,0.00572,0.00038,2354,1597,88,9,9,1,15,56,Post Purchase
+SnMqew,Post Purchase- 4th Order/Fans,Sep 01 2025 - Sep 30 2025,Email,Live,0.68,0.01714,0.0,0.00285,0.0,366,238,8,0,0,0,1,6,Post Purchase
+U3334r,Post Purchase- 5th Order/Superfans,Sep 01 2025 - Sep 30 2025,Email,Live,0.77703,0.02703,0.0,0.00671,0.0,196,115,6,0,0,0,1,4,Post Purchase
+UctP9E,Post Purchase- 6+ Orders/Megafans,Sep 01 2025 - Sep 30 2025,Email,Live,0.69256,0.01294,0.00162,0.00323,0.0,688,428,8,1,1,0,2,8,Post Purchase
+URwkiP,Product Review Ask,Sep 01 2025 - Sep 30 2025,Email,Live,0.57814,0.02172,0.00561,0.00627,0.0007,1172,825,52,8,8,1,9,31,Review Ask
+YiLWd4,Scent Quiz,Sep 01 2025 - Sep 30 2025,Email,Live,0.51416,0.01636,0.00755,0.02095,0.0,1294,817,29,12,12,0,34,26,Scent Quiz
+XMz4Jh,[RIQ] Browse Flow,Sep 01 2025 - Sep 30 2025,Email,Live,0.56664,0.04201,0.00536,0.0036,0.00037,7479,4545,497,43,43,3,29,337,Abandoned Cart
+YuEYDm,[RIQ] Browse Flow - Triple Pixel,Sep 01 2025 - Sep 30 2025,Email,Live,0.57143,0.03907,0.00488,0.01444,0.0,681,468,48,4,4,0,12,32,
+RcJPaZ,[RIQ] Cart Flow,Sep 01 2025 - Sep 30 2025,Email,Live,0.58435,0.03408,0.00343,0.00392,0.00017,5445,3412,247,20,20,1,23,199,Abandoned Cart
+T4M5V3,[RIQ] Cart Flow - Triple Pixel,Sep 01 2025 - Sep 30 2025,Email,Live,0.58458,0.02355,0.00428,0.02505,0.0,447,273,13,2,2,0,12,11,
+Vb5mSm,[RIQ] Checkout Flow,Sep 01 2025 - Sep 30 2025,Email,Live,0.59754,0.0355,0.01019,0.0028,0.00035,2582,1700,122,30,29,1,8,101,Abandoned Cart
+S9Rg7H,[RIQ] Checkout Flow - Triple Pixel,Sep 01 2025 - Sep 30 2025,Email,Live,0.63862,0.02103,0.00765,0.00191,0.0,525,334,12,4,4,0,1,11,
+WZu49d,(RIQ) Welcome Flow,Oct 01 2025 - Oct 30 2025,Email,Live,0.52775,0.04613,0.00767,0.01345,0.00011,7148,4954,596,72,72,1,128,433,Scent Quiz
+Sv3KEL,Post Purchase- 1st order,Oct 01 2025 - Oct 30 2025,Email,Live,0.59277,0.01183,0.00738,0.00483,0.00021,12578,8671,203,108,108,3,71,173,Post Purchase
+RJm36M,Post Purchase- 2nd Order/Repeats,Oct 01 2025 - Oct 30 2025,Email,Live,0.5976,0.01912,0.00437,0.00561,0.0,4737,3282,135,24,24,0,31,105,Post Purchase
+WhFsCF,Post Purchase- 3rd Order/Fans,Oct 01 2025 - Oct 30 2025,Email,Live,0.63366,0.02886,0.00178,0.00749,0.0,1963,1427,92,4,4,0,17,65,Post Purchase
+SnMqew,Post Purchase- 4th Order/Fans,Oct 01 2025 - Oct 30 2025,Email,Live,0.60502,0.02194,0.0094,0.00623,0.0,267,193,7,3,3,0,2,7,Post Purchase
+U3334r,Post Purchase- 5th Order/Superfans,Oct 01 2025 - Oct 30 2025,Email,Live,0.63462,0.01923,0.0,0.00952,0.0,104,66,3,0,0,0,1,2,Post Purchase
+UctP9E,Post Purchase- 6+ Orders/Megafans,Oct 01 2025 - Oct 30 2025,Email,Live,0.70825,0.0096,0.00384,0.00192,0.0,591,369,7,2,2,0,1,5,Post Purchase
+URwkiP,Product Review Ask,Oct 01 2025 - Oct 30 2025,Email,Live,0.59035,0.01801,0.00755,0.0052,0.0,1456,1016,48,13,13,0,9,31,Review Ask
+YiLWd4,Scent Quiz,Oct 01 2025 - Oct 30 2025,Email,Live,0.51528,0.02213,0.00738,0.01454,0.0,686,489,28,7,7,0,14,21,Scent Quiz
+XMz4Jh,[RIQ] Browse Flow,Oct 01 2025 - Oct 30 2025,Email,Live,0.56172,0.03485,0.00473,0.00451,0.00039,4357,2853,287,24,24,2,23,177,Abandoned Cart
+YuEYDm,[RIQ] Browse Flow - Triple Pixel,Oct 01 2025 - Oct 30 2025,Email,Live,0.5021,0.02521,0.0049,0.01108,0.0,1079,717,58,7,7,0,16,36,
+RcJPaZ,[RIQ] Cart Flow,Oct 01 2025 - Oct 30 2025,Email,Live,0.57552,0.0297,0.00379,0.00315,0.0,4333,2732,189,18,18,0,15,141,Abandoned Cart
+T4M5V3,[RIQ] Cart Flow - Triple Pixel,Oct 01 2025 - Oct 30 2025,Email,Live,0.57931,0.02529,0.0,0.04396,0.0,384,252,14,0,0,0,20,11,
+Vb5mSm,[RIQ] Checkout Flow,Oct 01 2025 - Oct 30 2025,Email,Live,0.53371,0.03045,0.00565,0.01118,0.0,1850,1227,92,13,13,0,26,70,Abandoned Cart
+S9Rg7H,[RIQ] Checkout Flow - Triple Pixel,Oct 01 2025 - Oct 30 2025,Email,Live,0.56145,0.0207,0.00517,0.00643,0.0,612,434,21,4,4,0,5,16,
+`,
+    revenue: `Month,campaign_revenue,email_revenue,flow_revenue,brand_revenue
+May 2025,6805.0,15899.47,9094.47,114577.8
+June 2025,13674.67,26643.10,12968.43,118075.78
+July 2025,12352.2,27371.03,15018.83,125860.74
+August 2025,13616.65,35803.81,22187.16,161302.73
+September 2025,19521.02,36666.47,17145.45,149504.45
+October 2025,16265.41,30960.80,14695.39,147722.48
+`,
+  },
 };
 
 // ============================================================================

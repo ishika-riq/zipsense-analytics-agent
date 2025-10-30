@@ -608,73 +608,122 @@ function App() {
   };
 
   const formatMessage = (content) => {
-    return content.split("\n").map((line, index) => {
+    const lines = content.split("\n");
+    const elements = [];
+    let currentList = null;
+    let currentListType = null;
+    let listStartNumber = 1;
+
+    for (let index = 0; index < lines.length; index++) {
+      const line = lines[index];
       let formattedLine = line;
 
-      if (line.startsWith("### ")) {
-        formattedLine = `<h3 style="font-size: 0.95rem; font-weight: 600; color: #1e293b; margin: 0.75rem 0 0.4rem 0;">${line.replace(
-          "### ",
-          ""
-        )}</h3>`;
-      } else if (line.startsWith("## ")) {
-        formattedLine = `<h2 style="font-size: 1rem; font-weight: 600; color: #1e293b; margin: 0.85rem 0 0.5rem 0;">${line.replace(
-          "## ",
-          ""
-        )}</h2>`;
-      } else if (line.startsWith("# ")) {
-        formattedLine = `<h1 style="font-size: 1.1rem; font-weight: 600; color: #1e293b; margin: 1rem 0 0.6rem 0;">${line.replace(
-          "# ",
-          ""
-        )}</h1>`;
+      // Check if line is a numbered list item
+      const numberedMatch = line.trim().match(/^(\d+)\.\s/);
+      const isNumberedItem = numberedMatch !== null;
+      const isBulletItem = line.trim().startsWith("- ") || line.trim().startsWith("* ");
+
+      // Handle list transitions
+      if (isNumberedItem || isBulletItem) {
+        const newListType = isNumberedItem ? "ol" : "ul";
+        
+        // Start new list if needed
+        if (!currentList || currentListType !== newListType) {
+          // Close previous list if exists
+          if (currentList) {
+            elements.push(
+              <div
+                key={`list-${elements.length}`}
+                dangerouslySetInnerHTML={{ __html: currentList }}
+              />
+            );
+          }
+          
+          // For numbered lists, check if we should start from a specific number
+          if (newListType === "ol" && numberedMatch) {
+            listStartNumber = parseInt(numberedMatch[1], 10);
+            currentList = `<ol start="${listStartNumber}" style="margin: 0.5rem 0; padding-left: 1.5rem; color: #475569;">`;
+          } else {
+            currentList = newListType === "ol" 
+              ? `<ol style="margin: 0.5rem 0; padding-left: 1.5rem; color: #475569;">` 
+              : `<ul style="margin: 0.5rem 0; padding-left: 1.5rem; color: #475569;">`;
+          }
+          currentListType = newListType;
+        }
+
+        // Add list item
+        const itemContent = line.trim().replace(/^(\d+\.|\-|\*)\s+/, "");
+        const processedContent = itemContent
+          .replace(/\*\*(.*?)\*\*/g, "<strong style='font-weight: 600; color: #1e293b;'>$1</strong>")
+          .replace(/\*(.*?)\*/g, "<em style='font-style: italic;'>$1</em>")
+          .replace(/`(.*?)`/g, "<code style='background-color: #f1f5f9; padding: 0.15rem 0.35rem; border-radius: 3px; font-size: 0.85em; font-family: monospace;'>$1</code>");
+        
+        currentList += `<li style="margin-bottom: 0.35rem;">${processedContent}</li>`;
+        continue;
       } else {
-        formattedLine = line.replace(
-          /\*\*(.*?)\*\*/g,
-          "<strong style='font-weight: 600; color: #1e293b;'>$1</strong>"
-        );
+        // Close any open list
+        if (currentList) {
+          currentList += currentListType === "ol" ? "</ol>" : "</ul>";
+          elements.push(
+            <div
+              key={`list-${elements.length}`}
+              dangerouslySetInnerHTML={{ __html: currentList }}
+            />
+          );
+          currentList = null;
+          currentListType = null;
+        }
       }
 
-      formattedLine = formattedLine.replace(
-        /\*(.*?)\*/g,
-        "<em style='font-style: italic;'>$1</em>"
-      );
-
-      formattedLine = formattedLine.replace(
-        /`(.*?)`/g,
-        "<code style='background-color: #f1f5f9; padding: 0.15rem 0.35rem; border-radius: 3px; font-size: 0.85em; font-family: monospace;'>$1</code>"
-      );
-
-      if (line.trim().startsWith("- ") || line.trim().startsWith("* ")) {
-        formattedLine = `<li style="margin-left: 1.25rem; margin-bottom: 0.25rem; color: #475569;">${formattedLine.replace(
-          /^[\-\*]\s+/,
-          ""
-        )}</li>`;
+      // Handle headers
+      if (line.startsWith("### ")) {
+        formattedLine = `<h3 style="font-size: 0.95rem; font-weight: 600; color: #1e293b; margin: 0.75rem 0 0.4rem 0;">${line.replace("### ", "")}</h3>`;
+      } else if (line.startsWith("## ")) {
+        formattedLine = `<h2 style="font-size: 1rem; font-weight: 600; color: #1e293b; margin: 0.85rem 0 0.5rem 0;">${line.replace("## ", "")}</h2>`;
+      } else if (line.startsWith("# ")) {
+        formattedLine = `<h1 style="font-size: 1.1rem; font-weight: 600; color: #1e293b; margin: 1rem 0 0.6rem 0;">${line.replace("# ", "")}</h1>`;
+      } else {
+        // Apply inline formatting
+        formattedLine = line
+          .replace(/\*\*(.*?)\*\*/g, "<strong style='font-weight: 600; color: #1e293b;'>$1</strong>")
+          .replace(/\*(.*?)\*/g, "<em style='font-style: italic;'>$1</em>")
+          .replace(/`(.*?)`/g, "<code style='background-color: #f1f5f9; padding: 0.15rem 0.35rem; border-radius: 3px; font-size: 0.85em; font-family: monospace;'>$1</code>");
       }
 
-      if (/^\d+\.\s/.test(line.trim())) {
-        formattedLine = `<li style="margin-left: 1.25rem; margin-bottom: 0.25rem; color: #475569; list-style-type: decimal;">${formattedLine.replace(
-          /^\d+\.\s+/,
-          ""
-        )}</li>`;
-      }
-
+      // Handle blockquotes
       if (line.trim().startsWith("> ")) {
-        formattedLine = `<blockquote style="border-left: 3px solid #8b5cf6; padding-left: 0.75rem; margin: 0.5rem 0; color: #64748b; font-style: italic;">${line.replace(
-          "> ",
-          ""
-        )}</blockquote>`;
+        const blockquoteContent = formattedLine.replace("> ", "");
+        formattedLine = `<blockquote style="border-left: 3px solid #8b5cf6; padding-left: 0.75rem; margin: 0.5rem 0; color: #64748b; font-style: italic;">${blockquoteContent}</blockquote>`;
       }
 
+      // Handle horizontal rules
       if (line.trim() === "---" || line.trim() === "***") {
         formattedLine = `<hr style="border: none; border-top: 1px solid #e2e8f0; margin: 0.75rem 0;" />`;
       }
 
-      return (
-        <React.Fragment key={index}>
-          <span dangerouslySetInnerHTML={{ __html: formattedLine }}></span>
-          {index < content.split("\n").length - 1 && <br />}
-        </React.Fragment>
+      // Add the formatted line (only if not empty or if it's the last line)
+      if (line.trim() !== "" || index === lines.length - 1) {
+        elements.push(
+          <React.Fragment key={`line-${index}`}>
+            <span dangerouslySetInnerHTML={{ __html: formattedLine }}></span>
+            {index < lines.length - 1 && line.trim() !== "" && <br />}
+          </React.Fragment>
+        );
+      }
+    }
+
+    // Close any remaining open list
+    if (currentList) {
+      currentList += currentListType === "ol" ? "</ol>" : "</ul>";
+      elements.push(
+        <div
+          key={`list-${elements.length}`}
+          dangerouslySetInnerHTML={{ __html: currentList }}
+        />
       );
-    });
+    }
+
+    return elements;
   };
 
   const formatTimestamp = (timestamp) => {
